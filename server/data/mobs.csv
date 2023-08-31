@@ -1,84 +1,84 @@
-id,name,type,function,javaEdition,bedrockEdition,educationEdition,image
-1,Abelha,Neutro,"Coletar polém das flores próximas, levar para a colmeia e produzir mel que pode ser coletado pelo jogador.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJx2yP.BeeFace.webp
-2,Afogado,Hostil,"Dificultar o jogador no seu trajeto/objetivo, pegar do chão tridentes que não foram gerados com eles e segurar um tridente invertido.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ3PVf.DrownedFace.webp
-3,Agente,Inutilizado,"Possui o seu próprio inventário de 27 itens, que pode ser manipulado por comandos que o jogador programa para usar, ou editado diretamente por meio de uma GUI à qual o jogador pode acessar no jogo.",Não,"Somente se os recursos da ""Edição Educacional"" estiverem ativados",Sim,https://i.im.ge/2023/08/29/mJYOk1.AgentFace.webp
-4,Aldeão,Passivo,Efetuar trocas com os jogadores e desempenhar funções (profissões) dentro de sua própria vila.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ33IT.VillagerFace.webp
-5,Aldeão zumbi,Hostil,"Criar obstáculos no caminho/objetivo do jogador e possibilitar sua transformação de volta em um aldeão, através da aplicação de uma poção de fraqueza e da oferta de uma maçã dourada.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYTQD.ZombieVillagerHead.webp
-6,Allay,Passivo,Trabalhar a favor do jogador ao recolher itens específicos que estão por perto.,Sim,Sim,Em breve,https://i.im.ge/2023/08/29/mJY73T.AllayFace.webp
-7,Aranha,Neutro,Complicar a jornada/meta do jogador durante a noite e durante o dia (caso o jogador a ataque).,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYLqL.SpiderFace.webp
-8,Aranha da caverna,Neutro,Complicar a jornada/meta do jogador durante a noite e durante o dia (caso o jogador a ataque).,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJY0Fa.CaveSpiderFace.webp
-9,Axolote,Passivo,"Assim como os Lobos podem ser usados para proteger o jogador em terra, o Axolote pode ser usado na água.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYwLz.AxolotlFace.webp
-10,Bacalhau,Passivo,"É usado para reproduzir jaguatiricas, para aumentar a velocidade de crescimento da jaguatirica bebê, para domar gatos, alimentar axolotes e alimentar jogadores.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYN4F.CodBody.webp
-11,Baiacu,Passivo,Usado para fazer poção de respiração aquática.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYAzX.PufferfishFace.webp
-12,Blaze,Hostil,"Dropar um item usado para fazer poções, transformar a pérola do ender em olho do ender e abrir o portal para o The End.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYEF8.BlazeFace.webp
-13,Bruxa,Hostil,"Dificultar o trajeto/objetivo do jogador, usar poções arremessáveis como arma de longa distância e poções benéficas em si mesmas defensivamente.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYxjh.WitchFace.webp
-14,Burro,Passivo,Meio de transporte ou reboque mais rápidos do jogo e que permite carregar seus itens.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYWsq.DonkeyFace.webp
-15,Cabra,Neutro,Tornar a jornada/meta do jogador mais desafiadora quando é atacada.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYZtp.GoatFace.webp
-16,Camelo,Passivo,"Meio de transporte excelente, com a capacidade singular de escalar paredes com altura de 1,5 bloco.",Sim,Sim,Não,https://i.im.ge/2023/08/29/mJ8vKG.camelo.png
-17,Cavaleiro esqueleto,Hostil,Liberar um maior número de esferas de experiência em comparação com um esqueleto comum.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJb2yK.SkeletonRiderFace.webp
-18,Cavalo,Passivo,Aumentar a velocidade de locomoção.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYzWm.HorseFace.webp
-19,Cavalo esqueleto,Passivo,"Regenerar a vida do jogador lentamente, como pode ser observado pela barra de vida quando este está montado nele.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYfO1.SkeletonHorseFace.webp
-20,Cavalo zumbi,Inutilizado,"Pode ser utilizado como um dos meios de transporte mais velozes do jogo. Além disso, tem a capacidade de escalar colinas e saltar cercas.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJboWJ.UndeadHorseHead.webp
-21,Coelho,Passivo,"Drop item que serve para fazer poções, além de servir como alimento para o jogador.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYJY0.RabbitFace.webp
-22,Coelho assassino,Inutilizado,Não possui nenhuma função além de dificultar o trajeto ou o objetivo do jogador.,Sim,Não,Não,https://i.im.ge/2023/08/29/mJbloy.KillerRabbitFace.webp
-23,Creeper,Hostil,"Dropa polvora, que serve para construir TNT no jogo. Além disso, ele se explode quando um jogador se aproxima dele.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYezG.CreeperFace.webp
-24,Cubo de Magma,Hostil,Soltar um item usado na fermentação para criar poções de resistência ao fogo e para criar blocos de magma.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbmw1.MagmaCubeFace.webp
-25,Defensor,Hostil,"Rastreiar e atacar todas as outras criaturas, exceto outros defensores. Além disso, o defensor pode seguir vibrações causadas por entidades que não sejam criaturas, como projéteis ou carrinhos de mina.",Sim,Sim,Em breve,https://i.im.ge/2023/08/29/mJbNXm.WardenFace.webp
-26,Devastador,Hostil,"Ele Atacar golpeando os inimigos com a cabeça, causando um forte knockback. Além disso, ele tem a capacidade de destruir certos tipos de blocos.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbPir.RavagerFace.webp
-27,Ender Dragon,Boss,"Por ser o chefe final, quando derrotado, você completa o jogo e recebe uma quantidade significativa de experiência que ele solta como recompensa.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbQOx.EnderdragonFace.webp
-28,Enderman,Neutro,Dropar item utilizado para teleportar e para ativar o portal do The End (necessário para derrotar o Ender Dragon).,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbFB6.EndermanFace.webp
-29,Endermite,Hostil,"Complica a progressão e os objetivos do jogador, além de atacar certas criaturas como Enderman e Golem de Ferro na Edição Bedrock.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbrhS.EndermiteFace.webp
-30,Esqueleto,Hostil,"Dropa ossos, usados para o crescimento de plantas, domesticação de cachorros e fabricação de tintura branca. Às vezes, também pode dropar um arco e flechas.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbq1X.SkeletonFace.webp
-31,Esqueleto wither,Hostil,"Dropa carvão, utilizado para aquecer itens, e ocasionalmente dropa um item raro usado para criar o Wither Boss.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbsm8.WitherSkeletonFace.webp
-32,Farejador,Passivo,"Vagar sem um rumo definido, evitando perigos e obstáculos. De vez em quando, fareja o ambiente ao seu redor, rastreia sementes abaixando o nariz e escava o chão para obtê-las.",Sim,Sim,Não,https://i.im.ge/2023/08/29/mJ8p6L.farejador.png
-33,Galinha,Passivo,"Dropa penas, que são usadas para fazer flechas, e ovos que, quando jogados, podem dar origem a novas galinhas.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbDXM.ChickenFace.webp
-34,Gato,Passivo,Mantém os creepers afastados do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbIhY.CatFace.webp
-35,Ghast,Hostil,Dropa lágrimas que são usadas para fazer poções.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbLbD.GhastFace.webp
-36,Girino,Passivo,"Cresce rapidamente e se transforma em uma das variantes de sapos, dependendo do local onde cresceu. Seu crescimento pode ser acelerado ao alimentá-lo com bolas de slime.",Sim,Sim,Em breve,https://i.im.ge/2023/08/29/mJb5Hp.TadpoleFace.webp
-37,Golem de ferro,Neutro,Proteger os aldeões de mobs hostis.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbyG0.IronGolemFace.webp
-38,Golem de neve,Passivo,Proteger o personagem de inimigos que encontrar no jogo.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbY1G.SnowGolemFace.webp
-39,Golfinho,Neutro,"Dropa peixes e quando você nada junto com ele, você ganha velocidade extra na natação.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJb8XJ.DolphinFace.webp
-40,Guardião,Hostil,"Nada ao redor na água, atacando qualquer jogador, lula ou peixe que esteja à vista.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcM74.GuardianFace.webp
-41,Guardião-mestre,Hostil,"Ataca o jogador e as lulas, porém segue um jogador sob os efeitos de uma poção de invisibilidade ou no modo espectador, mas não realiza ataques.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcTvq.ElderGuardianFace.webp
-42,Hoglin,Hostil,Dificulta o trajeto do jogador na dimensão do Nether e dropa carne de porco.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcrV1.HoglinFace.webp
-43,Homem-porco Zumbi,Neutro,Atacar quando for atacado.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8aZx.porco-zumbi.png
-44,Invocador,Hostil,"Ataca aldeões e golems, e dependendo da distância, ele foge dos jogadores para evitar ser atacado.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8rhm.EvokerFace.webp
-45,Jaguatirica,Passivo,Espanta Creepers e Fantasmas.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8lof.OcelotFace.webp
-46,Jockey de aranha,Hostil,Dificultar o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8oZ1.SpiderJockeyFace.webp
-47,Jockey de galinha,Hostil,Dificultar o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8QOp.ChickenJockeyFace.webp
-48,Lavagante,Passivo,Usado como transporte sobre a lava no Nether.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgeHq.StriderFace.webp
-49,Lhama,Neutro,Realiza grandes viagens devido à quantidade de itens que pode armazenar.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgGyC.LlamaFace.webp
-50,Lhama do vendedor,Neutro,Realiza grandes viagens devido à quantidade de itens que pode armazenar.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgBs4.TraderLlamaFace-Dungeons.webp
-51,Lobo,Neutro,Proteger contra qualquer criatura que tente atacar o jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgnBD.WolfFace.webp
-52,Lula,Passivo,Dropa item usado para fazer tintura preta.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgvhM.SquidFace.webp
-53,Lula-brilhante,Passivo,Dropa item usado para aplicar tinta brilhante.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgpoh.GlowSquidFace.webp
-54,Mooshroom,Passivo,Dropa carne e pode ser usada para preparar sopa de cogumelos como alimento.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgzW8.MooshroomFace.webp
-55,Mooshroom marrom,Passivo,"Dropa carne e pode ser usada para preparar sopa de cogumelos como alimento, sendo mais raras de se encontrar.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgkmX.BrownMooshroomFace.webp
-56,Morcego,Passivo,Não possui função.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgfO9.BatFace.webp
-57,Mula,Passivo,Usada para transporte.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgZyF.MuleFace.webp
-58,Ovelha,Passivo,"Dropa lã, que pode ser utilizada para criar itens têxteis, e também dropa carne como recurso alimentar.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgUtq.SheepFace.webp
-59,Panda,Neutro,"Ataca o jogador somente quando é atacado, porém realiza apenas um ataque em resposta.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgLqC.PandaFace.webp
-60,Papagaio,Passivo,"Reproduz os sons de monstros que estão nas proximidades e, assim, pode alertar o jogador da presença de um Creeper ou outros monstros antes que seja tarde.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgDn4.ParrotFace.webp
-61,Peixe tropical,Passivo,"Pode ser utilizado para alimentar jaguatiricas, gatos e até mesmo o próprio jogador.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgaLY.TropicalFishBody.webp
-62,Phantom,Hostil,Aparece durante a noite e ataca os jogadores que não dormiram por mais de três dias. Ele é encontrado voando em círculos sobre suas vítimas e as ataca fazendo rasantes.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgdRh.PhantomFace.webp
-63,Piglin,Neutro,"Realizar trocas com os jogadores utilizando barras de ouro como moeda, fornecendo diversos itens em troca.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgS98.PiglinFace.webp
-64,Piglin bárbaro,Hostil,"Realizar trocas com os jogadores utilizando barras de ouro como moeda, fornecendo diversos itens em troca.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJg2FX.PiglinBruteFace.webp
-65,Piglin-zumbi,Neutro,"Bater em portas de madeira e, no modo difícil, até mesmo quebrá-las. Alguns piglins-zumbis têm a habilidade de pegar itens.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgFPK.ZombifiedPiglinFace.webp
-66,Porco,Passivo,Dropa carne para alimentação do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJguqF.PigFace.webp
-67,Raposa,Passivo,"Quando a raposa adquire confiança no jogador, ela irá defendê-lo contra monstros caso ele seja atacado.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgXxz.FoxFace.webp
-68,Salmão,Passivo,"Pode ser utilizado para alimentar jaguatiricas, gatos e o próprio jogador.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgM8J.SalmonBody.webp
-69,Sapo,Passivo,"Ataca os slimes pequenos, que deixam cair bolas de slime quando derrotados, assim como cubos de magma que largam um bloco de glowstone.",Sim,Sim,Em breve,https://i.im.ge/2023/08/29/mJce9a.FrogFace.webp
-70,Saqueador,Hostil,Dificultar o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJc4fG.PillagerFace.webp
-71,Shulker,Hostil,"Dropa item que pode ser usado para criar baú, que também funciona como uma espécie de mochila.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/m4odzC.ShulkerFace.webp
-72,Slime,Hostil,"Dropa bolas de slime que podem ser usadas para capturar, domesticar e guiar animais, como vacas e cavalos.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcHx0.SlimeFace.webp
-73,Tartaruga,Passivo,"Dropa seu casco, que pode ser usado para construir um capacete que concede ao jogador o efeito de respiração aquática.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcpnT.TurtleFace.webp
-74,Traça,Hostil,Dificultar o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcC8M.SilverfishFace.webp
-75,Urso polar,Neutro,Dropar peixes.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcyr8.PolarBearFace.webp
-76,Vaca,Passivo,Dropa carne que pode ser usada como alimento e fornece leite que ajuda a curar envenenamento.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcPfX.CowFace.webp
-77,Vagante,Hostil,Dificultar o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcNN9.StrayFace.webp
-78,Vendedor ambulante,Passivo,"Realizar trocas com itens naturais mais vantajosos e, em alguns casos, menos arriscados de obter.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcmJF.WanderingTraderFace.webp
-79,Vex,Hostil,Dificultar o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJch0J.VexFace.webp
-80,Wither,Boss,"Dropa a Estrela do Nether, item raro.",Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcIVx.WitherFace.webp
-81,Zoglin,Hostil,Dropa carne de porco e dificulta o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcdD0.ZoglinFace.webp
-82,Zumbi,Hostil,Dificultar o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcqET.ZombieFace.webp
-83,Zumbi-múmia,Hostil,Dificultar o trajeto/objetivo do jogador.,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcsvc.HuskFace.webp
+id,name,type,role,hitPoints,javaEdition,bedrockEdition,educationEdition,image
+1,Abelha,Neutro,Coleta polém das flores próximas e produz mel que pode ser coletado pelo jogador.,5,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJx2yP.BeeFace.webp
+2,Afogado,Hostil,Dificulta o jogador no seu trajeto/objetivo. Pega do chão tridentes que não foram gerados com eles e consegue segurar um tridente invertido.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ3PVf.DrownedFace.webp
+3,Agente,Inutilizado,O jogador pode manipular o seu inventário de 27 itens através de comandos programados para usar.,Infinito,Não,"Somente se os recursos da ""Edição Educacional"" estiverem ativados",Sim,https://i.im.ge/2023/08/29/mJYOk1.AgentFace.webp
+4,Aldeão,Passivo,Efetua trocas com os jogadores e desempenhar funções (profissões) dentro de sua própria vila.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ33IT.VillagerFace.webp
+5,Aldeão zumbi,Hostil,Cria obstáculos no caminho/objetivo do jogador e possibilita sua transformação de volta em um aldeão através da aplicação de uma poção de fraqueza e da oferta de uma maçã dourada.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYTQD.ZombieVillagerHead.webp
+6,Allay,Passivo,Trabalha a favor do jogador ao recolher itens específicos que estão por perto.,8,Sim,Sim,Em breve,https://i.im.ge/2023/08/29/mJY73T.AllayFace.webp
+7,Aranha,Neutro,Complica a jornada/meta do jogador durante a noite e durante o dia (caso o jogador a ataque).,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYLqL.SpiderFace.webp
+8,Aranha da caverna,Neutro,Complica a jornada/meta do jogador durante a noite e durante o dia (caso o jogador a ataque).,6,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJY0Fa.CaveSpiderFace.webp
+9,Axolote,Passivo,Pode ser usado para defender o jogador quando estiver debaixo da água,7,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYwLz.AxolotlFace.webp
+10,Bacalhau,Passivo,É usado para reproduzir jaguatiricas e aumentar a velocidade de crescimento da jaguatirica bebê. Também pode alimentar o jogador e usado para domar gatos e alimentar axolotes.,3,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYN4F.CodBody.webp
+11,Baiacu,Passivo,Usado para fazer poção de respiração aquática.,3,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYAzX.PufferfishFace.webp
+12,Blaze,Hostil,Dropa um item usado para fazer poções e transformar a pérola do ender em olho do ender para abrir o portal do The End.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYEF8.BlazeFace.webp
+13,Bruxa,Hostil,Dificultar o trajeto/objetivo do jogador utilizando poções arremessáveis como arma de longa distância e poções benéficas em si mesmas defensivamente.,13,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYxjh.WitchFace.webp
+14,Burro,Passivo,Meio de transporte ou reboque mais rápidos do jogo. Também permite que carregue seus itens.,15,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYWsq.DonkeyFace.webp
+15,Cabra,Neutro,Torna a jornada/meta do jogador mais desafiadora quando é atacada.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYZtp.GoatFace.webp
+16,Camelo,Passivo,"Meio de transporte excelente quem tem a capacidade singular de escalar paredes com altura de 1,5 bloco.",16,Sim,Sim,Não,https://i.im.ge/2023/08/29/mJ8vKG.camelo.png
+17,Cavaleiro esqueleto,Hostil,Libera um maior número de esferas de experiência em comparação com um esqueleto comum.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJb2yK.SkeletonRiderFace.webp
+18,Cavalo,Passivo,Aumenta a velocidade de locomoção.,15,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYzWm.HorseFace.webp
+19,Cavalo esqueleto,Passivo,Regenera a vida do jogador lentamente quando este está montado nele. Podemos observar isso atravéz d barra de vida.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYfO1.SkeletonHorseFace.webp
+20,Cavalo zumbi,Inutilizado,Pode ser utilizado como um dos meios de transporte mais velozes do jogo. Também tem a capacidade de escalar colinas e saltar cercas.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJboWJ.UndeadHorseHead.webp
+21,Coelho,Passivo,Dropa item que serve para fazer poções e pode servir como alimento para o jogador.,3,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYJY0.RabbitFace.webp
+22,Coelho assassino,Inutilizado,Não possui nenhuma função além de dificultar o trajeto ou o objetivo do jogador.,3,Sim,Não,Não,https://i.im.ge/2023/08/29/mJbloy.KillerRabbitFace.webp
+23,Creeper,Hostil,Dropa polvora que é utilizada para construir TNT (dinamite) no jogo.  Também explode quando um jogador se aproxima.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJYezG.CreeperFace.webp
+24,Cubo de Magma,Hostil,Dropa item usado na fermentação para criar poções de resistência ao fogo e para criar blocos de magma.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbmw1.MagmaCubeFace.webp
+25,Defensor,Hostil,Rastreia e ataca todas as outras criaturas exceto outros defensores. Odefensor pode seguir vibrações causadas por outras entidades como projéteis ou carrinhos de mina.,250,Sim,Sim,Em breve,https://i.im.ge/2023/08/29/mJbNXm.WardenFace.webp
+26,Devastador,Hostil,Ataca golpeando os inimigos com a cabeça causando um forte knockback. Tem a capacidade de destruir certos tipos de blocos.,50,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbPir.RavagerFace.webp
+27,Ender Dragon,Boss,É o Boss final. Quando derrotado o jogador finaliza o jogo e recebe uma quantidade significativa de experiência que ele dropa como recompensa.,100,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbQOx.EnderdragonFace.webp
+28,Enderman,Neutro,Dropa item utilizado para teleportar e para ativar o portal do The End (necessário para derrotar o Ender Dragon).,20,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbFB6.EndermanFace.webp
+29,Endermite,Hostil,Complica a progressão e os objetivos do jogador também podendo atacar certas criaturas como Enderman e Golem de Ferro na Edição Bedrock.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbrhS.EndermiteFace.webp
+30,Esqueleto,Hostil,Dropa ossos utilizados para o crescimento de plantas/domesticação de cachorros e fabricação de tintura branca. Também pode dropar um arco e flechas.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbq1X.SkeletonFace.webp
+31,Esqueleto wither,Hostil,Dropa carvão  que é utilizado para aquecer itens e pode dropar ocasionalmente um item raro usado para criar o Wither Boss.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbsm8.WitherSkeletonFace.webp
+32,Farejador,Passivo,Vaga sem um rumo definido evitando perigos e obstáculos. De vez em quando pode farejar o ambiente ao seu redor e rastrear sementes abaixando o nariz e as coleta quando escava o chão.,7,Sim,Sim,Não,https://i.im.ge/2023/08/29/mJ8p6L.farejador.png
+33,Galinha,Passivo,Dropa penas que são usadas para fazer flechas e ovos que podem dar origem a novas galinhas quando são arremessados.,4,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbDXM.ChickenFace.webp
+34,Gato,Passivo,Mantém os creepers afastados do jogador.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbIhY.CatFace.webp
+35,Ghast,Hostil,Dropa lágrimas que são usadas para fazer poções.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbLbD.GhastFace.webp
+36,Girino,Passivo,Cresce rapidamente e se transforma em uma das variantes de sapos dependendo do local onde cresceu. Seu crescimento pode ser acelerado ao alimentá-lo com bolas de slime.,6,Sim,Sim,Em breve,https://i.im.ge/2023/08/29/mJb5Hp.TadpoleFace.webp
+37,Golem de ferro,Neutro,Protege os aldeões de mobs hostis.,50,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbyG0.IronGolemFace.webp
+38,Golem de neve,Passivo,Protege o personagem de inimigos que encontrar no jogo.,4,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJbY1G.SnowGolemFace.webp
+39,Golfinho,Neutro,Dropa peixes e pode te dar super velocidade caso nade junto com ele.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJb8XJ.DolphinFace.webp
+40,Guardião,Hostil,Nada ao redor na água atacando qualquer jogador ou mob que esteja à vista.,15,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcM74.GuardianFace.webp
+41,Guardião-mestre,Hostil,Ataca o jogador e as lulas. Caso o jogador esteja no modo espectador ou utilizar uma poção de invisibilidade ele não recebe ataques.,40,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcTvq.ElderGuardianFace.webp
+42,Hoglin,Hostil,Dificulta o trajeto do jogador na dimensão do Nether e dropa carne de porco.,20,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcrV1.HoglinFace.webp
+43,Homem-porco Zumbi,Neutro,Atacar quando for atacado.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8aZx.porco-zumbi.png
+44,Invocador,Hostil,Ataca aldeões e golems. Dependendo da distância pode fugir dos jogadores para evitar ser atacado.,12,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8rhm.EvokerFace.webp
+45,Jaguatirica,Passivo,Espanta Creepers e Fantasmas.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8lof.OcelotFace.webp
+46,Jockey de aranha,Hostil,Dificultar o trajeto/objetivo do jogador.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8oZ1.SpiderJockeyFace.webp
+47,Jockey de galinha,Hostil,Dificultar o trajeto/objetivo do jogador.,4,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJ8QOp.ChickenJockeyFace.webp
+48,Lavagante,Passivo,Usado como transporte sobre a lava no Nether.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgeHq.StriderFace.webp
+49,Lhama,Neutro,Realiza grandes viagens devido à quantidade de itens que pode armazenar.,9,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgGyC.LlamaFace.webp
+50,Lhama do vendedor,Neutro,Realiza grandes viagens devido à quantidade de itens que pode armazenar.,9,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgBs4.TraderLlamaFace-Dungeons.webp
+51,Lobo,Neutro,Protege contra qualquer criatura que tente atacar o jogador se for domado. ,4,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgnBD.WolfFace.webp
+52,Lula,Passivo,Dropa item usado para fazer tintura preta.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgvhM.SquidFace.webp
+53,Lula-brilhante,Passivo,Dropa item usado para aplicar tinta brilhante.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgpoh.GlowSquidFace.webp
+54,Mooshroom,Passivo,Dropa carne e pode ser usada para preparar sopa de cogumelos como alimento.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgzW8.MooshroomFace.webp
+55,Mooshroom marrom,Passivo,É um dos mobs mais difíceis de se encontrar e pode ser usada para preparar sopa de cogumelos como alimento ou morta para dropar carne.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgkmX.BrownMooshroomFace.webp
+56,Morcego,Passivo,Não possui função.,6,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgfO9.BatFace.webp
+57,Mula,Passivo,Usada para transporte.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgZyF.MuleFace.webp
+58,Ovelha,Passivo,Dropa lã e carne que pode ser utilizada para criar itens têxteis e também como recurso alimentar.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgUtq.SheepFace.webp
+59,Panda,Neutro,Responde ao ataque do jogador uma vez quando é atacado.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgLqC.PandaFace.webp
+60,Papagaio,Passivo,Reproduz os sons de monstros que estão nas proximidades podendo alertar o jogador da presença de um Creeper ou outros monstros antes que seja tarde.,6,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgDn4.ParrotFace.webp
+61,Peixe tropical,Passivo,Pode ser utilizado para alimentar jaguatiricas/gatos e até mesmo o próprio jogador.,3,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgaLY.TropicalFishBody.webp
+62,Phantom,Hostil,Aparece durante a noite e ataca os jogadores que não dormiram por mais de três dias. Ele é encontrado voando em círculos sobre suas vítimas e as ataca fazendo rasantes.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgdRh.PhantomFace.webp
+63,Piglin,Neutro,Realiza trocas com os jogadores utilizando barras de ouro como moeda.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgS98.PiglinFace.webp
+64,Piglin bárbaro,Hostil,Realiza trocas com os jogadores utilizando barras de ouro como moeda.,25,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJg2FX.PiglinBruteFace.webp
+65,Piglin-zumbi,Neutro,Bate em portas de madeira e pode chegar a quebrá-las caso o jogador estiver no modo difícil. Alguns piglins-zumbis têm a habilidade de pegar itens.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgFPK.ZombifiedPiglinFace.webp
+66,Porco,Passivo,Dropa carne para alimentação do jogador.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJguqF.PigFace.webp
+67,Raposa,Passivo,Quando a raposa adquire confiança no jogador começa a defendê-lo contra monstros caso ele seja atacado.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgXxz.FoxFace.webp
+68,Salmão,Passivo,Pode ser utilizado para alimentar jaguatiricas/gatos e o próprio jogador.,3,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJgM8J.SalmonBody.webp
+69,Sapo,Passivo, Ataca pequenos slimes que dropam bolas de slime da mesma forma que cubos de magma dropam blocos de glow atone.,10,Sim,Sim,Em breve,https://i.im.ge/2023/08/29/mJce9a.FrogFace.webp
+70,Saqueador,Hostil,Dificulta o trajeto/objetivo do jogador.,12,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJc4fG.PillagerFace.webp
+71,Shulker,Hostil,Dropa item que pode ser usado para criar um baú portátil/mochila.,15,Sim,Sim,Sim,https://i.im.ge/2023/08/29/m4odzC.ShulkerFace.webp
+72,Slime,Hostil,Dropa bolas de slime que podem ser usadas para capturar e guiar outros mobs do jogo.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcHx0.SlimeFace.webp
+73,Tartaruga,Passivo,Dropa o casco que serve para construir um capacete que concede ao jogador o efeito de respiração aquática.,15,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcpnT.TurtleFace.webp
+74,Traça,Hostil,Dificulta o trajeto/objetivo do jogador.,8,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcC8M.SilverfishFace.webp
+75,Urso polar,Neutro,Dropa peixes.,15,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcyr8.PolarBearFace.webp
+76,Vaca,Passivo,Dropa carne que pode ser usada como alimento e fornece leite que ajuda a curar envenenamento.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcPfX.CowFace.webp
+77,Vagante,Hostil,Dificulta o trajeto/objetivo do jogador.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcNN9.StrayFace.webp
+78,Vendedor ambulante,Passivo,Realiza trocas com itens naturais mais vantajosos e em alguns casos menos arriscados de obter.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcmJF.WanderingTraderFace.webp
+79,Vex,Hostil,Dificulta o trajeto/objetivo do jogador.,7,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJch0J.VexFace.webp
+80,Wither,Boss,Dropa a Estrela do Nether que é considerada um item raro.,150,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcIVx.WitherFace.webp
+81,Zoglin,Hostil,Dropa carne de porco e dificulta o trajeto/objetivo do jogador.,20,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcdD0.ZoglinFace.webp
+82,Zumbi,Hostil,Dificulta o trajeto/objetivo do jogador.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcqET.ZombieFace.webp
+83,Zumbi-múmia,Hostil,Dificulta o trajeto/objetivo do jogador.,10,Sim,Sim,Sim,https://i.im.ge/2023/08/29/mJcsvc.HuskFace.webp
