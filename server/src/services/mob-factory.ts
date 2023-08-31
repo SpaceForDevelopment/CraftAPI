@@ -18,7 +18,8 @@ export class MobFactory {
             try {
                 const mob = this.create(columns);
                 list.push(mob);
-            } catch (error) {
+            } 
+            catch (error) {
                 console.error('Error creating mob:', error);
             }
         }

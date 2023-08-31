@@ -5,7 +5,8 @@ export function removePrefixFromKeys(obj: any) {
         if (key.startsWith('_')) {
             const newKey = key.substr(1);
             renamedObj[newKey] = obj[key];
-        } else {
+        } 
+        else {
             renamedObj[key] = obj[key];
         }
     }

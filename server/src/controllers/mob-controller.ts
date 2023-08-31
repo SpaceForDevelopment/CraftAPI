@@ -20,5 +20,6 @@ export const getMobs = (req: Request, res: Response) => {
     }
 
     const renamedMobsData = mobsData.map((mob) => removePrefixFromKeys(mob));
+    
     res.status(200).json(renamedMobsData);
 };
