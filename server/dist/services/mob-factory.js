@@ -3,13 +3,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MobFactory = void 0;
 const fs_1 = __importDefault(require("fs"));
 const mob_js_1 = __importDefault(require("../models/mob.js"));
 class MobFactory {
     constructor(file) {
         this._data = fs_1.default.readFileSync(file, 'utf-8');
     }
-    get mobs() {
+    getMobs() {
         const list = [];
         let lines = this.readLines();
         for (let i = 1; i < lines.length; i++) {
@@ -19,7 +20,7 @@ class MobFactory {
                 list.push(mob);
             }
             catch (error) {
-                console.error('Erro ao criar mob:', error);
+                console.error('Error creating mob:', error);
             }
         }
         return list;
@@ -46,4 +47,4 @@ class MobFactory {
         return new mob_js_1.default(id, name, type, role, hitPoints, javaEdition, bedrockEdition, educationEdition, image);
     }
 }
-exports.default = MobFactory;
+exports.MobFactory = MobFactory;

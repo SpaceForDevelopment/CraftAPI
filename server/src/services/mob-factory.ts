@@ -1,14 +1,14 @@
 import fs from 'fs';
 import Mob from '../models/mob.js';
 
-export default class MobFactory {
+export class MobFactory {
     private _data: string;
 
     constructor(file: string) {
         this._data = fs.readFileSync(file, 'utf-8');
     }
 
-    get mobs(): Mob[] {
+    getMobs(): Mob[] {
         const list: Mob[] = [];
         let lines = this.readLines();
 
@@ -18,9 +18,8 @@ export default class MobFactory {
             try {
                 const mob = this.create(columns);
                 list.push(mob);
-            }
-            catch (error) {
-                console.error('Erro ao criar mob:', error);
+            } catch (error) {
+                console.error('Error creating mob:', error);
             }
         }
 

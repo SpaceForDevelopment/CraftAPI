@@ -4,46 +4,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const mob_factory_js_1 = __importDefault(require("./services/mob-factory.js"));
+const index_controller_js_1 = require("./controllers/index-controller.js");
+const mob_controller_js_1 = require("./controllers/mob-controller.js");
 const PORT = process.env.PORT || 3333;
 const app = (0, express_1.default)();
-let mobsData = [];
-try {
-    mobsData = new mob_factory_js_1.default('./data/mobs.csv').mobs;
-}
-catch (error) {
-    console.error('Error loading mobs data:', error);
-    mobsData = [];
-}
-function renameKeysWithPrefixRemoval(obj) {
-    const renamedObj = {};
-    for (const key in obj) {
-        if (key.startsWith('_')) {
-            const newKey = key.substr(1);
-            renamedObj[newKey] = obj[key];
-        }
-        else {
-            renamedObj[key] = obj[key];
-        }
-    }
-    return renamedObj;
-}
-const renamedMobsData = mobsData.map((mob) => renameKeysWithPrefixRemoval(mob));
-app.get('/', (req, res) => {
-    const duo = 'Artur Bomtempo e Letícia França';
-    const idClass = '3D1';
-    const subject = 'Framework';
-    const school = 'Colégio Cotemig';
-    res.status(200).json({
-        duo: duo,
-        class: idClass,
-        subject: subject,
-        school: school
-    });
-});
-app.get('/mobs', (req, res) => {
-    res.status(200).json(renamedMobsData);
-});
+app.get('/', index_controller_js_1.getIndex);
+app.get('/mobs', mob_controller_js_1.getMobs);
 app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
