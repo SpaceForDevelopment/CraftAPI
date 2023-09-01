@@ -1,11 +1,13 @@
 .header{
     width: 100%;
     height: 50px;
-    background-color: var(--black-color);
+    font-family: 'VT323', monospace;
+    background: url(../../assets/images/header-background.jpg);
     color: var(--white-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .header a{
