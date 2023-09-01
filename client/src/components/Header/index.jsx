@@ -7,7 +7,7 @@ function Header() {
             <header className={styles.header}>
                 <Link to="/">Home</Link>
                 <Link to="/mobs">Lista de mobs</Link>
-                <Link to="/detalhes-mob">Detalhes do mob</Link>
+                <Link to="/detalhes-mob">.</Link>
             </header>
         </>
     )
