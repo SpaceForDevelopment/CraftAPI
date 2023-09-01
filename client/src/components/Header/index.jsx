@@ -6,8 +6,8 @@ function Header() {
         <>
             <header className={styles.header}>
                 <Link to="/">Home</Link>
-                <Link to="/mobs">Mobs of Minecraft</Link>
-                <Link to="/detalhes-mob">Details</Link>
+                <Link to="/mobs">Lista de mobs</Link>
+                <Link to="/detalhes-mob">Detalhes</Link>
             </header>
         </>
     )

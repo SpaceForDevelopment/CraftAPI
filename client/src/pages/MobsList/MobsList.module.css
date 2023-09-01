@@ -1,0 +1,17 @@
+.mobs_cards_container{
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.message{
+    color: #00f;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 576px){
+    .mobs_cards_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
