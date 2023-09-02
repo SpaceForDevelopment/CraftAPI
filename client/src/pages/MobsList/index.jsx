@@ -34,7 +34,7 @@ function MobsList() {
                     <div className={styles.mobs_cards_container}>
                         {mobsData.map((mob) => (
                             <MobCard
-                                id={mob.id}
+                                key={mob.id}
                                 image={mob.image}
                                 name={mob.name}
                                 type={mob.type}

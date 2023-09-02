@@ -5,7 +5,7 @@ function MobCard({ id, image, name, type }) {
     return (
         <>
             <section className={styles.card}>
-                <div key={id}>
+                <div>
                     <img src={image} alt={name} />
                     <h2>{name}</h2>
                     <hr />
