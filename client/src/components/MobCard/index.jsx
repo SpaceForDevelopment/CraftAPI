@@ -1,7 +1,7 @@
 import styles from './MobCard.module.css';
 
 // eslint-disable-next-line react/prop-types
-function MobCard({ id, image, name, type }) {
+function MobCard({ image, name, type }) {
     return (
         <>
             <section className={styles.card}>
