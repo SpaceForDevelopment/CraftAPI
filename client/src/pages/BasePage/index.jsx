@@ -12,7 +12,7 @@ function BasePage() {
             </Container>
             <Footer />
         </main>
-    )
+    );
 }
 
 export default BasePage;

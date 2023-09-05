@@ -43,10 +43,10 @@ function MobsList() {
                     </div>
                 ) : (
                     <p className={styles.message}>Carregando países...</p>
-                )    
+                )
             }
-        </> 
-    )
+        </>
+    );
 }
 
 export default MobsList;

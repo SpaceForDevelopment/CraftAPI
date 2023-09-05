@@ -6,7 +6,7 @@ function Container({ children }) {
         <section className={styles.container}>
             {children}
         </section>
-    )
+    );
 }
 
 Container.propTypes = {

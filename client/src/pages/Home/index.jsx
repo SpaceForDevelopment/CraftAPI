@@ -1,50 +1,42 @@
 import styles from './Home.module.css';
-import github from '../../assets/images/github.png'
-import portfolio from '../../assets/images/portfolio.png'
-import leticia from '../../assets/images/leticiafranca.jpg'
-import artur from '../../assets/images/arturbomtempo.png'
+import github from '../../assets/images/Icons/github.png';
+import webIcon from '../../assets/images/Icons/web.png';
+import leticiaPhoto from '../../assets/images/Developers/leticia.jpg';
+import arturPhoto from '../../assets/images/Developers/artur.png';
 
 function Home() {
     return (
         <>
-            <content classname={styles.content}>
-
-                <div className={styles.divContent}>
+            <div className={styles.content}>
+                <div className={styles.div_content}>
                     <p>
-                    Hello! We are Artur and Letícia, creators of this project! All right with you? <br />
-
-                    This site was created with the intention of carrying out a school project. Where we 
-                    build an API and consume it on a website (with a theme of our choosing, so we chose 
-                    to do it over Minecraft Mobs). <br />
-                    
-                    We hope you like it, see you later!
+                        Olá! Somos Artur e Letícia, criadores deste projeto! Tudo bem para você? <br />
+                        Este site foi desenvolvido com a intenção de realizar um trabalho escolar, e consiste na construção
+                        de uma API e consumação dela em uma página da web. <br />
+                        Esperamos que você goste! :)
                     </p>
                 </div>
-
-                <allcards className={styles.allcards}>
-                    <card className={styles.cardsContent}>
-                        <img src={artur} alt="fotoArtur" className={styles.nossasfotos} />
-                        
+                <div className={styles.all_cards}>
+                    <div className={styles.cards_content}>
+                        <img src={arturPhoto} alt="Foto de perfil do Artur" className={styles.photos} />
                         <div>
-                            <p className={styles.nossosnomes}>Artur Bomtempo <br /></p>
-                            <a href="https://github.com/ArturColen" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" className={styles.iconesCards} /></a>
-                            <a href="https://arturbomtempo.vercel.app" target="_blank" rel="noopener noreferrer"><img src={portfolio} alt="portfolio" className={styles.iconesCards} /></a>
+                            <p className={styles.names}>Artur Bomtempo</p>
+                            <a href="https://github.com/ArturColen" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" className={styles.card_icons} /></a>
+                            <a href="https://arturbomtempo.vercel.app" target="_blank" rel="noopener noreferrer"><img src={webIcon} alt="Portfólio" className={styles.card_icons} /></a>
                         </div>
-                    </card>
-
-                    <card className={styles.cardsContent}>
-                        <img src={leticia} alt="fotoLeticia" className={styles.nossasfotos}/>
-                        
+                    </div>
+                    <div className={styles.cards_content}>
+                        <img src={leticiaPhoto} alt="Foto de perfil da Letícia" className={styles.photos} />
                         <div>
-                            <p className={styles.nossosnomes}>Letícia França <br /></p>
-                            <a href="https://github.com/LeticiaSFranca" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" className={styles.iconesCards} /></a>
-                            <a href="https://lsfranca.netlify.app/" target="_blank" rel="noopener noreferrer"><img src={portfolio} alt="portfolio" className={styles.iconesCards} /></a>
+                            <p className={styles.names}>Letícia França</p>
+                            <a href="https://github.com/LeticiaSFranca" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" className={styles.card_icons} /></a>
+                            <a href="https://lsfranca.netlify.app/" target="_blank" rel="noopener noreferrer"><img src={webIcon} alt="Portfólio" className={styles.card_icons} /></a>
                         </div>
-                    </card>
-                </allcards>
-            </content>
-        </> 
-    )
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default Home;

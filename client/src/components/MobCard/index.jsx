@@ -13,7 +13,7 @@ function MobCard({ image, name, type }) {
                 </div>
             </section>
         </>
-    )
+    );
 }
 
 export default MobCard
