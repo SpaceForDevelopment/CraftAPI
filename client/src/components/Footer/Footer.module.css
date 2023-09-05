@@ -1,11 +1,22 @@
 .footer {
     width: 100%;
-    height: 50px;
-    background-color: var(--black-color);
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #171615;
     color: var(--white-color);
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1.125rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.logocotemig{
+    margin-top: 20px;
+    width: 180px;
 }

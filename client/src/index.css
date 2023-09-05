@@ -14,3 +14,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #E3E3E3;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0F0F0F;
+  /* background: linear-gradient(60deg, #62760C 0%, #523906 112.71%); */
+  width: 10px;
+}
