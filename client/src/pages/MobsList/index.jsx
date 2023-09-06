@@ -28,7 +28,7 @@ function MobsList() {
     
     return (
         <>
-            <h1>Lista dos mobs</h1>
+            <h1 className={styles.titleListMobs}>Lista de Mobs</h1>
             {
                 mobsData.length > 0 ? (
                     <div className={styles.mobs_cards_container}>
@@ -42,7 +42,7 @@ function MobsList() {
                         ))}
                     </div>
                 ) : (
-                    <p className={styles.message}>Carregando países...</p>
+                    <p className={styles.message}>Carregando mobs...</p>
                 )
             }
         </>

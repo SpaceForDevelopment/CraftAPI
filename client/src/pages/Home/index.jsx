@@ -11,10 +11,10 @@ function Home() {
             <div className={styles.content}>
                 <div className={styles.div_content}>
                     <p>
-                        Olá! Somos Artur e Letícia, criadores deste projeto! Tudo bem para você? <br />
-                        Este site foi desenvolvido com a intenção de realizar um trabalho escolar, e consiste na construção
-                        de uma API e consumação dela em uma página da web. <br />
-                        Esperamos que você goste!
+                        Olá! Somos Artur e Letícia, criadores deste projeto! Tudo bem com você? <br /> <br />
+                        Este site foi desenvolvido com a intenção de realizar um trabalho escolar, e consiste em construir
+                        uma API e consumir ela em uma página da web. <br /> <br />
+                        Esperamos que goste!
                     </p>
                 </div>
                 <div className={styles.all_cards}>
