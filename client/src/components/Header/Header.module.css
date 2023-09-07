@@ -4,7 +4,6 @@
     padding-top: 35px;
     padding-bottom: 35px;
     background-color: #171615;
-    /* background: url(../../assets/images/dirt.png); */
     color: var(--white-color);
     display: flex;
     align-items: center;
@@ -12,7 +11,7 @@
 }
 
 .header a{
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: bolder;
     padding: 0 2vw;
     color: var(--white-color);
@@ -39,4 +38,16 @@
 
 .logoCraftAPI{
     width: 50px;
+}
+
+@media screen and (max-width: 576px){
+    .header a{
+        font-size: 13px;
+        margin-right: 17px;
+    }
+
+    .iconesHeader{
+        width: 20px;
+        margin-right: 3px;
+    }
 }

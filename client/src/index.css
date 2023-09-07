@@ -24,6 +24,6 @@ body::-webkit-scrollbar-track{
 }
 
 body::-webkit-scrollbar-thumb{
-  background-color: #0F0F0F;
+  background: url(../../client/src/assets/images/Home/portal.jpg);
   width: 10px;
 }
