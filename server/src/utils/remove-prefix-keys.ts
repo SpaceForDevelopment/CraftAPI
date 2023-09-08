@@ -12,4 +12,4 @@ export function removePrefixFromKeys(obj: any) {
     }
 
     return renamedObj;
-};
+}

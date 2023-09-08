@@ -12,4 +12,4 @@ export const getIndex = (req: Request, res: Response) => {
         subject: subject,
         school: school
     });
-};
+}

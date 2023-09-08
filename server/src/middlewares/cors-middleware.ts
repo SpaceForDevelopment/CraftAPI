@@ -8,4 +8,4 @@ export const configureCORS = (app: express.Express) => {
         
         next();
   });
-};
+}

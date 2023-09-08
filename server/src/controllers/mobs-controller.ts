@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { MobFactory } from '../services/mob-factory.js';
+import { MobFactory } from '../services/mobs-factory.js';
 import { removePrefixFromKeys } from '../utils/remove-prefix-keys.js';
 
 export const getMobs = (req: Request, res: Response) => {
@@ -22,4 +22,4 @@ export const getMobs = (req: Request, res: Response) => {
     const renamedMobsData = mobsData.map((mob) => removePrefixFromKeys(mob));
     
     res.status(200).json(renamedMobsData);
-};
+}
