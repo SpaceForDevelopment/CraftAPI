@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getMobs = void 0;
-const mob_factory_js_1 = require("../services/mob-factory.js");
+const mobs_factory_js_1 = require("../services/mobs-factory.js");
 const remove_prefix_keys_js_1 = require("../utils/remove-prefix-keys.js");
 const getMobs = (req, res) => {
-    const mobFactory = new mob_factory_js_1.MobFactory('./data/mobs.csv');
+    const mobFactory = new mobs_factory_js_1.MobFactory('./data/mobs.csv');
     const mobsData = mobFactory.getMobs();
     const idQueryParam = req.query.id;
     if (idQueryParam && typeof idQueryParam === 'string') {
