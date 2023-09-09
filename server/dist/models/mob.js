@@ -21,11 +21,11 @@ class Mob {
     get type() {
         return this._type;
     }
-    get hitPoints() {
-        return this._hitPoints;
-    }
     get role() {
         return this._role;
+    }
+    get hitPoints() {
+        return this._hitPoints;
     }
     get javaEdition() {
         return this._javaEdition;

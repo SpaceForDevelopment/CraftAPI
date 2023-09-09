@@ -33,12 +33,12 @@ export default class Mob {
         return this._type;
     }
 
-    get hitPoints() {
-        return this._hitPoints;
-    }
-
     get role() {
         return this._role;
+    }
+
+    get hitPoints() {
+        return this._hitPoints;
     }
 
     get javaEdition() {
