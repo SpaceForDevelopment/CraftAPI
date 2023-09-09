@@ -1,0 +1,12 @@
+id,name,availability,description,rarity,minimumPickaxe,explosionResistance,image
+1,Carvão,Superfície,Combustível essencial para processar minérios e cozinhar alimentos.,Muito comum,Madeira,-,https://i.im.ge/2023/09/09/wezUbp.Minrio-de-carvo-EJ2-EB2.webp
+2,Cobre,Superfície,Metal usado para criar itens decorativos e condutores elétricos.,Comum,Pedra,3,https://i.im.ge/2023/09/09/wez071.Copper-Ore-U-BE1.webp
+3,Detritos ancestrais,Nether,São usados para criar Netherite (material de alto nível para aprimorar equipamentos).,Muito raro,Diamante,1200,https://i.im.ge/2023/09/09/wez9pm.Ancient-Debris-JE1-BE1.webp
+4,Diamante,Superfície,Recurso usado para criar ferramentas e armaduras resistentes.,Raro,Ferro,3,https://i.im.ge/2023/09/09/wezycL.Diamond-Ore-JE5-BE5.webp
+5,Esmeralda,Superfície,Pedra preciosa usada para fazer comércio com aldeões e obter itens valiosos.,Incomum,Ferro,15,https://i.im.ge/2023/09/09/wezc6S.Deepslate-Emerald-Ore-JE1-BE1.webp
+6,Ferro,Superfície,Recurso importante usado para criar ferramentas/armaduras e trilhos.,Comum,Pedra,15,https://i.im.ge/2023/09/09/wezZcK.Iron-Ore-JE6-BE4.webp
+7,Lápis-lazúl,Superfície,Gema usada para criar tintas e encantar itens.,Incomum,Pedra,15,https://i.im.ge/2023/09/09/wezfDX.Lapis-Lazuli-Ore-JE4-BE4.webp
+8,Ouro,Superfície,Metal valioso usado para criar ferramentas/armaduras e trilhos.,Raro,Ferro,3,https://i.im.ge/2023/09/09/wez4l4.Deepslate-Gold-Ore-pre-release-4.webp
+9,Ouro do Nether,Nether,Recurso usado para criar itens e blocos relacionados ao Nether e também para fazer comércio com Piglins.,Comum,Madeira,3,https://i.im.ge/2023/09/09/weHlSm.Nether-Gold-Ore-JE1.webp
+10,Quartzo do Nether,Nether,Minério usado para criar blocos e itens decorativos.,Muito comum,Madeira,3,https://i.im.ge/2023/09/09/weHOr0.Nether-Quartz-Ore-JE3-BE2.webp
+11,Redstone,Superfície,Recurso essencial usado para criar circuitos elétricos e dispositivos de automação.,Incomum,Ferro,15,https://i.im.ge/2023/09/09/weH2gc.Redstone-Ore-JE4-BE3.webp
