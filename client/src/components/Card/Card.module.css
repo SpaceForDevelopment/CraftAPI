@@ -1,11 +1,9 @@
 .card{
     padding: 15px;
-    /* background: url(../../assets/images/Home/cobblestone.png); */
-    background-color: #171615;
+    background-color: var(--bg-color);
     color: var(--white-color);
     text-align: center;
     text-shadow: 3px 3px 3px #0f0f0f;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,21 +12,20 @@
     box-shadow: 3px 3px 3px #0f0f0f;
 }
 
-hr{
+.card img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    padding-bottom: 10px;
+}
+
+.card hr{
     margin: 1vh 0;
     opacity: .4;
 }
 
-img{
-    width: 90px;
-    padding-bottom: 10px;
-}
-
 @media screen and (max-width: 576px){
     .card{
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-right: 5px;
-        padding-left: 5px;
+        padding: 15px 5px;
     }
 }

@@ -5,8 +5,8 @@ function Footer() {
     return (
         <>
             <footer className={styles.footer}>
-                Desenvolvido por Artur Bomtempo e Letícia França <br />
-                <a href="https://www.cotemig.com.br/" target="_blank" rel="noopener noreferrer"><img src={cotemigLogo} alt="Logo do Cotemig" className={styles.logo_cotemig} /></a>
+                <a href="https://www.cotemig.com.br/" target="_blank" rel="noopener noreferrer"><img src={cotemigLogo} alt="Logo do Cotemig" className={styles.logo_cotemig} /></a> <br />
+                Desenvolvido por Artur Bomtempo e Letícia França
             </footer>
         </>
     );

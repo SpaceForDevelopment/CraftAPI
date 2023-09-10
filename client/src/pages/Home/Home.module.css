@@ -16,7 +16,7 @@
     border-radius: 60px;
     box-shadow: 5px 5px 5px #0f0f0f;
     height: 350px;
-    background: url(../../assets/images/Home/madeira.jpg);
+    background: url(../../assets/images/Home/wood.jpg);
 }
 
 .div_content > p{
@@ -27,7 +27,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: bolder;
-    color: #FFFFFF;
+    color: var(--white-color);
     -webkit-text-stroke: 1px #0f0f0f;
 }
 
@@ -43,7 +43,7 @@
     width: 400px;
     height: 400px;
     background: url(../../assets/images/Home/ground.png);
-    color: #FFFFFF;
+    color: var(--white-color);
     font-weight: bolder;
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
