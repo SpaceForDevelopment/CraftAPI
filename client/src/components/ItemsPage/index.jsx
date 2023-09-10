@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 // eslint-disable-next-line react/prop-types
-function Items({ subject, singularSubject, pageTitle }) {
+function ItemsPage({ subject, singularSubject, pageTitle }) {
     const [apiData, setApiData] = useState([]);
 
     useEffect(() => {
@@ -55,4 +55,4 @@ function Items({ subject, singularSubject, pageTitle }) {
     );
 }
 
-export default Items;
+export default ItemsPage;

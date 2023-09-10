@@ -3,12 +3,10 @@ import cotemigLogo from '../../assets/images/Icons/cotemig.png';
 
 function Footer() {
     return (
-        <>
-            <footer className={styles.footer}>
-                <a href="https://www.cotemig.com.br/" target="_blank" rel="noopener noreferrer"><img src={cotemigLogo} alt="Logo do Cotemig" className={styles.logo_cotemig} /></a> <br />
-                Desenvolvido por Artur Bomtempo e Letícia França
-            </footer>
-        </>
+        <footer className={styles.footer}>
+            <a href="https://www.cotemig.com.br/" target="_blank" rel="noopener noreferrer"><img src={cotemigLogo} alt="Logo do Cotemig" className={styles.logo_cotemig} /></a> <br />
+            Desenvolvido por Artur Bomtempo e Letícia França
+        </footer>
     );
 }
 
