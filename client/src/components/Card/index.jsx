@@ -1,7 +1,8 @@
-import styles from './MobCard.module.css';
+import styles from './Card.module.css';
+
 
 // eslint-disable-next-line react/prop-types
-function MobCard({ image, name, type }) {
+function Card({ image, name, type }) {
     return (
         <>
             <section className={styles.card}>
@@ -16,4 +17,4 @@ function MobCard({ image, name, type }) {
     );
 }
 
-export default MobCard
+export default Card
