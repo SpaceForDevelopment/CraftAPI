@@ -12,11 +12,9 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 95%;
-    border-radius: 60px;
-    box-shadow: 5px 5px 5px #0f0f0f;
+    width: 100%;
     height: 350px;
-    background: url(../../assets/images/Home/wood.jpg);
+    background-color: #016A70;
 }
 
 .div_content > p{
@@ -27,7 +25,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: bolder;
-    color: var(--white-color);
+    color: #F0F0F0;
     -webkit-text-stroke: 1px #0f0f0f;
 }
 

@@ -1,7 +1,9 @@
 .card_content{
     width: 400px;
     height: 400px;
-    background: url(../../assets/images/Home/ground.png);
+    background: url(../../assets/images/Home/terra-do-minecraft.jpg);
+    background-position: center;
+    background-size: cover;
     color: var(--white-color);
     font-weight: bolder;
     font-family: 'Poppins', sans-serif;
@@ -31,6 +33,7 @@
 .photos{
     border-radius: 100px;
     width: 200px;
+    box-shadow: 5px 5px 5px #0f0f0f98;
 }
 
 @media screen and (max-width: 576px) {

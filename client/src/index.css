@@ -8,6 +8,7 @@
   --white-color: #fff;
   --black-color: #000;
   --bg-color: #171615;
+  background-color: #F0F0F0;
 }
 
 *{
@@ -25,6 +26,6 @@ body::-webkit-scrollbar-track{
 }
 
 body::-webkit-scrollbar-thumb{
-  background: url(../../client/src/assets/images/Home/portal.jpg);
+  background-color: #171615;
   width: 10px;
 }
