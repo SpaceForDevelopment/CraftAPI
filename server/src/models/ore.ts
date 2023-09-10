@@ -1,19 +1,19 @@
 export default class Ore {
     private _id: number;
     private _name: string;
+    private _type: string;
     private _availability: string;
     private _description: string;
-    private _rarity: string;
     private _minimumPickaxe: string;
     private _explosionResistance: string;
     private _image: string;
 
-    constructor(id: number, name: string, availability: string, description: string, rarity: string, minimumPickaxe: string, explosionResistance: string, image: string) {
+    constructor(id: number, name: string, type: string, availability: string, description: string, minimumPickaxe: string, explosionResistance: string, image: string) {
         this._id = id;
         this._name = name;
+        this._type = type;
         this._availability = availability;
         this._description = description;
-        this._rarity = rarity;
         this._minimumPickaxe = minimumPickaxe;
         this._explosionResistance = explosionResistance;
         this._image = image;
@@ -26,6 +26,10 @@ export default class Ore {
     get name() {
         return this._name;
     }
+
+    get type() {
+        return this._type;
+    }
     
     get availability() {
         return this._availability;
@@ -33,10 +37,6 @@ export default class Ore {
 
     get description() {
         return this._description;
-    }
-
-    get rarity() {
-        return this._rarity;
     }
 
     get minimumPickaxe() {

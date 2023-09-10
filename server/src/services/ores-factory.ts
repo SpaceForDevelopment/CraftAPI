@@ -42,13 +42,13 @@ export class OreFactory {
 
         const id = parseInt(columns[0].trim());
         const name = columns[1].trim();
-        const availability = columns[2].trim();
-        const description = columns[3].trim();
-        const rarity = columns[4].trim();
+        const type = columns[2].trim();
+        const availability = columns[3].trim();
+        const description = columns[4].trim();
         const minimumPickaxe = columns[5].trim();
         const explosionResistance = columns[6].trim();
         const image = columns[7].trim();
         
-        return new Ore(id, name, availability, description, rarity, minimumPickaxe, explosionResistance, image);
+        return new Ore(id, name, type, availability, description, minimumPickaxe, explosionResistance, image);
     }
 }
