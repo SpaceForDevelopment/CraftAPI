@@ -31,9 +31,9 @@ function MobDetails() {
     
     return (
         <>
-            <p>Nome do mob: {mobData?.name}</p>
-            <p>Tipo do mob: {mobData?.type}</p>
-            <p>Papel: {mobData?.role}</p>
+            <h1>{mobData?.name}</h1>
+            <p>Tipo: {mobData?.type}</p>
+            <p>Função: {mobData?.role}</p>
             <p>Pontos de vida: {mobData?.hitPoints}</p>
             <p>Disponível na Edição Java: {mobData?.javaEdition}</p>
             <p>Disponível na Edição Bedrock: {mobData?.bedrockEdition}</p>

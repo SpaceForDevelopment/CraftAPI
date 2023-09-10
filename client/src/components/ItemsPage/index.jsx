@@ -9,6 +9,8 @@ function Items({ subject, singularSubject, pageTitle }) {
     const [apiData, setApiData] = useState([]);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+        
         const loadDataAPI = async () => {
             try {
                 const response = await fetch(`https://craft-api.onrender.com/${subject}`);

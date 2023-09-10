@@ -1,11 +1,14 @@
 import styles from './Home.module.css';
-import github from '../../assets/images/Icons/github.png';
-import webIcon from '../../assets/images/Icons/web.png';
-import linkedin from "../../assets/images/Icons/linkedin.png";
-import leticiaPhoto from '../../assets/images/Developers/leticia.jpg';
-import arturPhoto from '../../assets/images/Developers/artur.png';
+import { useEffect } from 'react';
+import ProfileCard from '../../components/ProfileCard';
+import leticia from '../../assets/images/Developers/leticia.jpg';
+import artur from '../../assets/images/Developers/artur.png';
 
 function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <>
             <div className={styles.content}>
@@ -18,24 +21,20 @@ function Home() {
                     </p>
                 </div>
                 <div className={styles.all_cards}>
-                    <div className={styles.cards_content}>
-                        <img src={arturPhoto} alt="Foto de perfil do Artur" className={styles.photos} />
-                        <div>
-                            <p className={styles.names}>Artur Bomtempo</p>
-                            <a href="https://github.com/ArturColen" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" className={styles.card_icons} /></a>
-                            <a href="https://arturbomtempo.vercel.app" target="_blank" rel="noopener noreferrer"><img src={webIcon} alt="Portfólio" className={styles.card_icons} /></a>
-                            <a href="https://www.linkedin.com/in/artur-bomtempo/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="LinkedIn" className={styles.card_icons} /></a>
-                        </div>
-                    </div>
-                    <div className={styles.cards_content}>
-                        <img src={leticiaPhoto} alt="Foto de perfil da Letícia" className={styles.photos} />
-                        <div>
-                            <p className={styles.names}>Letícia França</p>
-                            <a href="https://github.com/LeticiaSFranca" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" className={styles.card_icons} /></a>
-                            <a href="https://lsfranca.netlify.app/" target="_blank" rel="noopener noreferrer"><img src={webIcon} alt="Portfólio" className={styles.card_icons} /></a>
-                            <a href="https://www.linkedin.com/in/leticiasfranca/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="LinkedIn" className={styles.card_icons} /></a>
-                        </div>
-                    </div>
+                    <ProfileCard
+                        profilePhoto={artur}
+                        name='Artur Bomtempo'
+                        githubLink='https://github.com/ArturColen'
+                        portfolioLink='https://arturbomtempo.vercel.app/'
+                        linkedinLink='https://www.linkedin.com/in/artur-bomtempo/'
+                    />
+                    <ProfileCard
+                        profilePhoto={leticia}
+                        name='Letícia França'
+                        githubLink='https://github.com/LeticiaSFranca'
+                        portfolioLink='https://lsfranca.netlify.app/'
+                        linkedinLink='https://www.linkedin.com/in/leticiasfranca/'
+                    />
                 </div>
             </div>
         </>
