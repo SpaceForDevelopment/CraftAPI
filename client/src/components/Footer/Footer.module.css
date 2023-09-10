@@ -3,15 +3,13 @@
     height: auto;
     padding-top: 30px;
     padding-bottom: 20px;
-    background-color: #171615;
+    background-color: var(--bg-color);
     color: var(--white-color);
-    /* font-weight: bold; */
     font-size: 1.125rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }

@@ -2,17 +2,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.titleListMobs{
+.title{
     background-color: #C2E8FF;
     -webkit-background-clip: text;
     background-clip: text;
-
     color: transparent;
     font-size: 50px;
     -webkit-text-stroke: 1.3px #3F75A9;
+    text-align: center;
+    margin: 3vh 0 5vh 0;
 }
 
-.mobs_cards_container{
+.cards_container{
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -20,22 +21,22 @@
     font-weight: bolder;
 }
 
-.message{
-    background: url(../../assets/images/Home/ground.png);
-    -webkit-background-clip: text;
-    background-clip: text;
+.card_link{
+    text-decoration: none;
+}
 
-    color: transparent;
+.message{
+    color: var(--black-color);
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 576px){
-    .mobs_cards_container{
+    .cards_container{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .titleListMobs{
+    .title{
         font-size: 40px;
     }
 }
