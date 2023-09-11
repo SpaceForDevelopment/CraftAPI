@@ -7,6 +7,7 @@ function Equipment() {
             subject='equipment'
             singularSubject='equipamento'
             pageTitle='Equipamentos'
+            loadingText='equipamentos'
         />
     );
 }

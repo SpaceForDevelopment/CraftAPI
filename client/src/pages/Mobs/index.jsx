@@ -7,6 +7,7 @@ function Mobs() {
             subject='mobs'
             singularSubject='mob'
             pageTitle='Mobs'
+            loadingText='mobs'
         />
     );
 }

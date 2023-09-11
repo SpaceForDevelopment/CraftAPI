@@ -4,6 +4,7 @@ import ProfileCard from '../../components/ProfileCard';
 import leticia from '../../assets/images/Developers/leticia.jpg';
 import artur from '../../assets/images/Developers/artur.png';
 
+
 function Home() {
     useEffect(() => {
         window.scrollTo(0, 0);

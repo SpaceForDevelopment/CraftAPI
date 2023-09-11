@@ -25,17 +25,35 @@
 }
 
 .message{
-    color: var(--black-color);
+    color: var(--bg-color);
     font-size: 20px;
     font-weight: bold;
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 1237px) {
+    .cards_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 933px) {
+    .cards_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 629px) {
     .cards_container{
         grid-template-columns: repeat(1, 1fr);
     }
 
     .title{
         font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 381px) {
+    .title{
+        font-size: 30px;
     }
 }

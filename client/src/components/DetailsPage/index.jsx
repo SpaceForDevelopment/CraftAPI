@@ -38,45 +38,58 @@ function DetailsPage({ id, subject }) {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.nomeDetalhes}>{apiData?.name}</h1>
+            <h1 className={styles.name_details}>{apiData?.name}</h1>
             <br />
-            <hr className={styles.hrDetails} />
-            <p><b>Tipo:</b> {apiData?.type}</p>
+            <hr className={styles.hr_details} />
             <br />
             {subject === 'mobs' && apiData && (
                 <>
+                    <p><b>Tipo:</b> {apiData.type}</p>
+                    <br />
                     <p><b>Função:</b> {apiData.role}</p>
                     <br />
                     <p><b>Quantidade de vida :</b> {apiData.hitPoints}</p>
                     <br />
-                    <p><b>Possui na edição java? :</b> {apiData.javaEdition}</p>
+                    <p><b>Possui na edição java?</b> {apiData.javaEdition}</p>
                     <br />
-                    <p><b>Possui na edição bedrock? :</b> {apiData.bedrockEdition}</p>
+                    <p><b>Possui na edição bedrock?</b> {apiData.bedrockEdition}</p>
                     <br />
-                    <p><b>Possui na edição education? :</b> {apiData.educationEdition}</p>
+                    <p><b>Possui na edição education?</b> {apiData.educationEdition}</p>
                     <br /> 
                 </>
             )}
             {subject === 'equipment' && apiData && (
                 <>
-                    <p>Função: {apiData.role}</p>
-                    <p>Materiais para criação: {apiData.materials}</p>
-                    <p>Durabilidade: {apiData.durability}</p>
-                    <p>Raridade: {apiData.rarity}</p>
-                    <p>É renovável? {apiData.renewable}</p>
+                    <p><b>Tipo:</b> {apiData.type}</p>
+                    <br />
+                    <p><b>Função:</b> {apiData.role}</p>
+                    <br />
+                    <p><b>Materiais para criação:</b> {apiData.materials}</p>
+                    <br />
+                    <p><b>Durabilidade:</b> {apiData.durability}</p>
+                    <br />
+                    <p><b>Raridade:</b> {apiData.rarity}</p>
+                    <br />
+                    <p><b>É renovável?</b> {apiData.renewable}</p>
+                    <br />
                 </>
             )}
             {subject === 'ores' && apiData && (
                 <>
-                    <p>Disponível no(a): {apiData.availability}</p>
-                    <p>Descrição: {apiData.description}</p>
-                    <p>Picareta mínima para quebrar: {apiData.minimumPickaxe}</p>
-                    <p>Nível de resistência à explosão: {apiData.explosionResistance}</p>
+                    <p><b>Tipo:</b> {apiData.type}</p>
+                    <br />
+                    <p><b>Disponível no(a)</b> {apiData.availability}</p>
+                    <br />
+                    <p><b>Descrição:</b> {apiData.description}</p>
+                    <br />
+                    <p><b>Picareta mínima para quebrar:</b> {apiData.minimumPickaxe}</p>
+                    <br />
+                    <p><b>Nível de resistência à explosão:</b> {apiData.explosionResistance}</p>
+                    <br />
                 </>
             )}
-
-            <hr className={styles.hrDetails} />
-            <img src={apiData?.image} className={styles.imageDetails} alt={apiData?.name} />
+            <hr className={styles.hr_details} />
+            <img src={apiData?.image} className={styles.image_details} alt={apiData?.name} />
         </div>
     );
 }

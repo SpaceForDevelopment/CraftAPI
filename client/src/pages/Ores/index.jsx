@@ -1,4 +1,4 @@
-import ItemsPage from "../../components/ItemsPage";
+import ItemsPage from '../../components/ItemsPage';
 
 
 function Ores() {
@@ -7,6 +7,7 @@ function Ores() {
             subject='ores'
             singularSubject='minerio'
             pageTitle='Minerios'
+            loadingText='minérios'
         />
     );
 }

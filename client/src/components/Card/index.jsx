@@ -15,4 +15,4 @@ function Card({ image, name, type }) {
     );
 }
 
-export default Card
+export default Card;

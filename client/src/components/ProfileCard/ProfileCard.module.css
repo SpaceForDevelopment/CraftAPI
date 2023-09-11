@@ -1,7 +1,7 @@
 .card_content{
     width: 400px;
     height: 400px;
-    background-color: #0f0f0f;
+    background-color: var(--bg-color);
     background-position: center;
     background-size: cover;
     color: var(--white-color);
@@ -24,7 +24,6 @@
 }
 
 .card_icons:hover{
-    width: 40px;
     padding: 3px;
     border-radius: 30px;
     cursor: pointer;
@@ -34,7 +33,7 @@
 
 .names{
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .photos{
@@ -42,10 +41,18 @@
     width: 200px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 878px) {
     .card_content{
         margin-top: 30px;
         width: 300px;
         margin-right: 0;
+    }
+
+    .names{
+        font-size: 20px;
+    }
+
+    .card_icons{
+        width: 25px;
     }
 }

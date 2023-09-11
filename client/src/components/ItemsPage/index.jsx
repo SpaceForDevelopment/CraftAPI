@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 // eslint-disable-next-line react/prop-types
-function ItemsPage({ subject, singularSubject, pageTitle }) {
+function ItemsPage({ subject, singularSubject, pageTitle, loadingText }) {
     const [apiData, setApiData] = useState([]);
 
     useEffect(() => {
@@ -48,7 +48,7 @@ function ItemsPage({ subject, singularSubject, pageTitle }) {
                         ))}
                     </div>
                 ) : (
-                    <p className={styles.message}>Carregando {pageTitle}...</p>
+                    <p className={styles.message}>Carregando {loadingText}...</p>
                 )
             }
         </>

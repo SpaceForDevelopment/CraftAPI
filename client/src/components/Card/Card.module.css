@@ -3,13 +3,13 @@
     background-color: var(--bg-color);
     color: var(--white-color);
     text-align: center;
-    text-shadow: 3px 3px 3px #0f0f0f;
+    text-shadow: 3px 3px 3px var(--shadow-color);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border-radius: 20px;
-    box-shadow: 3px 3px 3px #0f0f0f;
+    box-shadow: 3px 3px 3px var(--shadow-color);
 }
 
 .card img{
@@ -24,7 +24,7 @@
     opacity: .4;
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
     .card{
         padding: 15px 5px;
     }

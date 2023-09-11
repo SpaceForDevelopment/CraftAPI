@@ -1,45 +1,49 @@
-.texto404{
+.container{
+    width: 100%;
+    height: 69vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     flex-direction: column;
-
-    margin-top: 300px;
 }
 
-.t404{
+.text_404{
     font-family: 'Minecrafter';
     text-align: center;
     font-weight: bolder;
     font-size: 150px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--bg-color);
 }
 
-.pnf{
+.subtitle{
     font-family: 'Minecrafter';
     text-align: center;
     font-size: 50px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--bg-color);
 }
 
-.creeper404{
-    width: 300px;
+@media screen and (max-width: 835px) {
+    .text_404{
+        font-size: 100px;
+    }
+
+    .subtitle{
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 576px) {
-    .texto404{
-        margin-top: 280px;
-        margin-bottom: 0;
+    .text_404{
+        font-size: 55px;
     }
-    
-    .t404{
-        font-size: 70px;
+
+    .subtitle{
+        font-size: 20px;
     }
 }

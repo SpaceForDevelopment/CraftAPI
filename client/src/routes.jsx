@@ -22,8 +22,8 @@ function AppRoutes() {
                         <Route path="/detalhes-equipamento/:id" element={<EquipmentDetails />} />
                         <Route path="/minerios" element={<Ores />}></Route>
                         <Route path="/detalhes-minerio/:id" element={<OreDetails />} />
-                        <Route path="*" element={<Page404 />}></Route>
                     </Route>
+                    <Route path="*" element={<Page404 />}></Route>
                 </Routes>
             </BrowserRouter>
         </>

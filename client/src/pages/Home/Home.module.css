@@ -27,19 +27,16 @@
     border-radius: 40px;
     height: 350px;
     background-color: var(--primary-color);
-    box-shadow: 5px 5px 5px #0f0f0f98;
+    box-shadow: 5px 5px 5px var(--shadow-light-color);
 }
 
 .div_content > p{
-    padding-top: 60px;
-    padding-right: 150px;
-    padding-left: 150px;
-    padding-bottom: 60px;
+    padding: 60px 150px;
     font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
-    color: #F0F0F0;
-    text-shadow: 3px 3px 3px #0f0f0f98;
+    color: var(--white-color);
+    text-shadow: 3px 3px 3px var(--shadow-light-color);
 }
 
 .all_cards{
@@ -50,25 +47,38 @@
     flex-direction: row;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1034px) {
+    .title{
+        font-size: 55px;
+    }
+
+    .div_content{
+        width: 78%;
+        height: 400px;
+    }
+
+    .div_content > p{
+        padding: 30px 20px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 878px) {
+    .title{
+        font-size: 55px;
+    }
+
     .all_cards{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
     }
 
     .div_content{
-        width: 90%;
-        border-radius: 40px;
+        width: 300px;
         height: 350px;
     }
 
     .div_content > p{
-        padding-top: 30px;
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-bottom: 30px;
-        font-size: 20px;
+        padding: 30px 20px;
+        font-size: 18px;
     }
 }

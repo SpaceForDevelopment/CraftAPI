@@ -1,21 +1,20 @@
-/* === Minecrafter Font ===  */
 @font-face {
   font-family: 'Minecrafter';
   src: url('./assets/fonts/Minecrafter/Minecrafter.Reg.ttf') format('truetype');
 }
 
 :root{
-  background-color: #f0f0f0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   /* === Color Variables === */
-  --white-color: #fff;
-  --black-color: #000;
-  --primary-color: #529525;
+  --white-color: #f0f0f0;
+  --primary-color: #60af28;
   --bg-color: #171615;
+  --shadow-color: #0f0f0f;
+  --shadow-light-color: #0f0f0f98;
 }
 
 *{

@@ -1,7 +1,9 @@
-import { useNavigate } from 'react-router-dom';
 import styles from './Page404.module.css';
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import creeper from '../../assets/images/Icons/creeperEscuro.png';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 
 function Page404() {
     const navigate = useNavigate();
@@ -12,10 +14,12 @@ function Page404() {
 
     return (
         <>
-            <div className={styles.texto404}>
-                <h1 className={styles.t404}>Erro 4<img src={creeper} alt="creeper" className='creeper404'/>4</h1>
-                <h2 className={styles.pnf}>Page Not Found</h2>
+            <Header />
+            <div className={styles.container}>
+                <h1 className={styles.text_404}>Erro 404</h1>
+                <h2 className={styles.subtitle}>Page Not Found</h2>
             </div>
+            <Footer />
         </>
     );
 }
