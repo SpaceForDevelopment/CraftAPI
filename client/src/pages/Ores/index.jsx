@@ -6,7 +6,7 @@ function Ores() {
         <ItemsPage
             subject='ores'
             singularSubject='minerio'
-            pageTitle='Minérios'
+            pageTitle='Minerios'
         />
     );
 }

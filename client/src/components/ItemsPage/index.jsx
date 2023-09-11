@@ -48,7 +48,7 @@ function ItemsPage({ subject, singularSubject, pageTitle }) {
                         ))}
                     </div>
                 ) : (
-                    <p className={styles.message}>Carregando {subject}...</p>
+                    <p className={styles.message}>Carregando {pageTitle}...</p>
                 )
             }
         </>

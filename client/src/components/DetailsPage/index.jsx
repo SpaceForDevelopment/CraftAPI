@@ -1,6 +1,11 @@
 import styles from './DetailsPage.module.css';
 import { useEffect, useState } from 'react';
 
+
+function removeAccents(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 function DetailsPage({ id, subject }) {
     const [apiData, setApiData] = useState(null);
 
@@ -16,6 +21,11 @@ function DetailsPage({ id, subject }) {
                 }
 
                 const data = await response.json();
+
+                if (data?.name) {
+                    data.name = removeAccents(data.name);
+                }
+                
                 setApiData(data);
             }
             catch (error) {
