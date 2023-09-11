@@ -57,4 +57,18 @@
         justify-content: center;
         flex-direction: column;
     }
+
+    .div_content{
+        width: 90%;
+        border-radius: 40px;
+        height: 350px;
+    }
+
+    .div_content > p{
+        padding-top: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        font-size: 20px;
+    }
 }
