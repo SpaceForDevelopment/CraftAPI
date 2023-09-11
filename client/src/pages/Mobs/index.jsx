@@ -6,7 +6,7 @@ function Mobs() {
         <ItemsPage
             subject='mobs'
             singularSubject='mob'
-            pageTitle='Mobs do jogo'
+            pageTitle='Mobs'
         />
     );
 }

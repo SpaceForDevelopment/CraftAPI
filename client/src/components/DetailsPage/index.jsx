@@ -28,9 +28,9 @@ function DetailsPage({ id, subject }) {
 
     return (
         <div className={styles.container}>
-            <h1>{apiData?.name}</h1>
+            <h1 className={styles.nomeDetalhes}>{apiData?.name}</h1>
             <br />
-            <hr />
+            <hr className={styles.hrDetails} />
             <p><b>Tipo:</b> {apiData?.type}</p>
             <br />
             {subject === 'mobs' && apiData && (
@@ -65,7 +65,7 @@ function DetailsPage({ id, subject }) {
                 </>
             )}
 
-            <hr />
+            <hr className={styles.hrDetails} />
             <img src={apiData?.image} className={styles.imageDetails} alt={apiData?.name} />
         </div>
     );

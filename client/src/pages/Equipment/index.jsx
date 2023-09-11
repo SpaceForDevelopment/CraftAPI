@@ -6,7 +6,7 @@ function Equipment() {
         <ItemsPage
             subject='equipment'
             singularSubject='equipamento'
-            pageTitle='Equipamentos do jogo'
+            pageTitle='Equipamentos'
         />
     );
 }

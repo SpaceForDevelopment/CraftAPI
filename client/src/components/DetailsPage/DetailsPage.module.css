@@ -18,7 +18,7 @@
     width: 100px;
 }
 
-hr{
+.hrDetails{
     width: 70%;
     color: #F0F0F0;
     border: 0.001;
@@ -26,11 +26,11 @@ hr{
     margin-top: 20px;
 }
 
-h1{
+.nomeDetalhes{
     margin-bottom: -10px;
     margin-top: 20px;
 }
 
-p{
+.container>p{
     max-width: 500px;
 }
