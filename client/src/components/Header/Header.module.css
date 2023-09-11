@@ -43,7 +43,6 @@
 @media screen and (max-width: 576px){
     .header a{
         font-size: 13px;
-        margin-right: 17px;
     }
 
     .header_icons{

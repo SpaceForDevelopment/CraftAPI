@@ -22,7 +22,9 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 100%;
+    width: 60%;
+    margin-bottom: 20px;
+    border-radius: 40px;
     height: 350px;
     background-color: var(--primary-color);
     box-shadow: 5px 5px 5px #0f0f0f98;
@@ -30,13 +32,14 @@
 
 .div_content > p{
     padding-top: 60px;
-    padding-right: 250px;
-    padding-left: 250px;
+    padding-right: 150px;
+    padding-left: 150px;
     padding-bottom: 60px;
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: bolder;
-    color: #0f0f0f;
+    color: #F0F0F0;
+    text-shadow: 3px 3px 3px #0f0f0f98;
 }
 
 .all_cards{
@@ -53,5 +56,19 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .div_content{
+        width: 90%;
+        border-radius: 40px;
+        height: 350px;
+    }
+
+    .div_content > p{
+        padding-top: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        font-size: 20px;
     }
 }

@@ -1,0 +1,45 @@
+.texto404{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    margin-top: 300px;
+}
+
+.t404{
+    font-family: 'Minecrafter';
+    text-align: center;
+    font-weight: bolder;
+    font-size: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pnf{
+    font-family: 'Minecrafter';
+    text-align: center;
+    font-size: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creeper404{
+    width: 300px;
+}
+
+@media screen and (max-width: 576px) {
+    .texto404{
+        margin-top: 280px;
+        margin-bottom: 0;
+    }
+    
+    .t404{
+        font-size: 70px;
+    }
+}
