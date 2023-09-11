@@ -3,12 +3,12 @@
 }
 
 .title{
-    background-color: #C2E8FF;
+    background-color: #016A70;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 50px;
-    -webkit-text-stroke: 1.3px #3F75A9;
+    font-size: 70px;
+    text-shadow: 3px 3px 3px #016a7091;
     text-align: center;
     margin: 3vh 0 5vh 0;
 }

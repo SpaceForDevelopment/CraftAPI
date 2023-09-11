@@ -28,15 +28,23 @@ function DetailsPage({ id, subject }) {
 
     return (
         <div className={styles.container}>
-            <h1>{apiData?.name}</h1>
-            <p>Tipo: {apiData?.type}</p>
+            <h1 className={styles.nomeDetalhes}>{apiData?.name}</h1>
+            <br />
+            <hr className={styles.hrDetails} />
+            <p><b>Tipo:</b> {apiData?.type}</p>
+            <br />
             {subject === 'mobs' && apiData && (
                 <>
-                    <p>Função: {apiData.role}</p>
-                    <p>Quantidade de vida: {apiData.hitPoints}</p>
-                    <p>Possui na edição java? {apiData.javaEdition}</p>
-                    <p>Possui na edição bedrock? {apiData.bedrockEdition}</p>
-                    <p>Possui na edição education? {apiData.educationEdition}</p>
+                    <p><b>Função:</b> {apiData.role}</p>
+                    <br />
+                    <p><b>Quantidade de vida :</b> {apiData.hitPoints}</p>
+                    <br />
+                    <p><b>Possui na edição java? :</b> {apiData.javaEdition}</p>
+                    <br />
+                    <p><b>Possui na edição bedrock? :</b> {apiData.bedrockEdition}</p>
+                    <br />
+                    <p><b>Possui na edição education? :</b> {apiData.educationEdition}</p>
+                    <br /> 
                 </>
             )}
             {subject === 'equipment' && apiData && (
@@ -56,7 +64,9 @@ function DetailsPage({ id, subject }) {
                     <p>Nível de resistência à explosão: {apiData.explosionResistance}</p>
                 </>
             )}
-            <img src={apiData?.image} alt={apiData?.name} />
+
+            <hr className={styles.hrDetails} />
+            <img src={apiData?.image} className={styles.imageDetails} alt={apiData?.name} />
         </div>
     );
 }
