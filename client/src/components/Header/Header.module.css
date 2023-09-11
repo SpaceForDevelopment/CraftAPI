@@ -5,7 +5,7 @@
     padding-bottom: 35px;
     background-color: var(--bg-color);
     color: var(--white-color);
-    box-shadow: 4px 4px 4px #0f0f0f98;
+    box-shadow: 0px 4px 4px #0f0f0f98;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,10 +26,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* font-family: 'Minecrafter', sans-serif; */
 }
 
 .header a:hover{
-    color: #76b24a;
+    color: var(--primary-color);
     cursor: pointer;
     transition: ease-in-out 0.5s;
 }

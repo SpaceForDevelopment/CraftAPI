@@ -11,6 +11,7 @@ function Home() {
     
     return (
         <div className={styles.content}>
+            <h1 className={styles.title}>Craft api</h1>
             <div className={styles.div_content}>
                 <p>
                     Olá! Somos Artur e Letícia, criadores deste projeto! Tudo bem com você? <br /> <br />

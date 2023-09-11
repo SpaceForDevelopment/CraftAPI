@@ -3,12 +3,11 @@
 }
 
 .title{
-    background-color: #016A70;
+    font-family: 'Minecrafter', sans-serif;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: var(--primary-color);
     font-size: 70px;
-    text-shadow: 3px 3px 3px #016a7091;
     text-align: center;
     margin: 3vh 0 5vh 0;
 }

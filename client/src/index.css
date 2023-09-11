@@ -1,4 +1,11 @@
+/* === Minecrafter Font ===  */
+@font-face {
+  font-family: 'Minecrafter';
+  src: url('./assets/fonts/Minecrafter/Minecrafter.Reg.ttf') format('truetype');
+}
+
 :root{
+  background-color: #f0f0f0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -7,8 +14,8 @@
   /* === Color Variables === */
   --white-color: #fff;
   --black-color: #000;
+  --primary-color: #016a70;
   --bg-color: #171615;
-  background-color: #F0F0F0;
 }
 
 *{
