@@ -47,7 +47,14 @@
     flex-direction: row;
 }
 
-@media screen and (max-width: 1034px) {
+@media screen and (max-width: 1226px) {
+
+    .div_content > p{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 1068px) {
     .title{
         font-size: 55px;
     }
@@ -55,11 +62,6 @@
     .div_content{
         width: 78%;
         height: 400px;
-    }
-
-    .div_content > p{
-        padding: 30px 20px;
-        font-size: 25px;
     }
 }
 
