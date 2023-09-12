@@ -23,6 +23,11 @@
   box-sizing: border-box;
 }
 
+::selection{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
 body::-webkit-scrollbar{
   width: 5px;
 }
