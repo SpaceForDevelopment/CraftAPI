@@ -14,8 +14,7 @@ The project consists of listing all the mobs, equipment and ores in Minecraft an
 * [Express.js](https://expressjs.com/pt-br/): optimize the construction of web applications and APIs
 
 ## 📁 Project access
-- You can view the hosted page by clicking [here](https://craft-api.vercel.app/).
-- 
+You can view the hosted page by clicking [here](https://craft-api.vercel.app/).
 
 ## 👥 Developers
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/96635074?v=4" width=115><br><sub>Artur Bomtempo</sub>](https://github.com/ArturColen) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/99284224?v=4" width=115><br><sub>Letícia França</sub>](https://github.com/LeticiaSFranca) |
