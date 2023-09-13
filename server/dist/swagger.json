@@ -1,0 +1,269 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "CraftAPI",
+        "description": "This simple API was developed for a school project and aims to provide some information about Minecraft, such as the mobs, equipment and ores present in the game.",
+        "termsOfService": "https://craft-api.vercel.app/termos/",
+        "contact": {
+            "email": "arturbcolen@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://craft-api.onrender.com/"
+        }
+    ],
+    "paths": {
+        "/mobs": {
+            "get": {
+                "summary": "Display of all API mobs",
+                "description": "This route is responsible for displaying all 83 of the API's mobs.",
+                "tags": ["Mobs"],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Mob"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/mobs?id={id}": {
+            "get": {
+                "summary": "Search for a mob by ID",
+                "description": "This route is responsible for displaying a mob from its ID passed in the URL query.",
+                "tags": ["Mobs"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Mob ID to search",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Mob"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/equipment": {
+            "get": {
+                "summary": "Display of all API equipment",
+                "description": "This route is responsible for displaying all 27 of the API's equipment.",
+                "tags": ["Equipment"],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Equipment"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/equipment?id={id}": {
+            "get": {
+                "summary": "Search for a equipment by ID",
+                "description": "This route is responsible for displaying a equipment from its ID passed in the URL query.",
+                "tags": ["Equipment"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Equipment ID to search",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Equipment"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ores": {
+            "get": {
+                "summary": "Display of all API ores",
+                "description": "This route is responsible for displaying all 11 of the API's ores.",
+                "tags": ["Ores"],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Ore"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ores?id={id}": {
+            "get": {
+                "summary": "Search for an ore by ID",
+                "description": "This route is responsible for displaying an ore from its ID passed in the URL query.",
+                "tags": ["Ores"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Ore ID to search",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Ore"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Mob": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "number",
+                        "format": "int32",
+                        "minimum": 1,
+                        "maximum": 83
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "role": {
+                        "type": "string"
+                    },
+                    "hitPoints": {
+                        "type": "string"
+                    },
+                    "javaEdition": {
+                        "type": "string"
+                    },
+                    "bedrockEdition": {
+                        "type": "string"
+                    },
+                    "educationEdition": {
+                        "type": "string"
+                    },
+                    "image": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Equipment": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "number",
+                        "format": "int32",
+                        "minimum": 1,
+                        "maximum": 27
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "role": {
+                        "type": "string"
+                    },
+                    "materials": {
+                        "type": "string"
+                    },
+                    "durability": {
+                        "type": "string"
+                    },
+                    "rarity": {
+                        "type": "string"
+                    },
+                    "renewable": {
+                        "type": "string"
+                    },
+                    "image": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Ore": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "number",
+                        "format": "int32",
+                        "minimum": 1,
+                        "maximum": 11
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "availability": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "minimumPickaxe": {
+                        "type": "string"
+                    },
+                    "explosionResistance": {
+                        "type": "string"
+                    },
+                    "image": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
