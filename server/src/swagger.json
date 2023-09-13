@@ -3,7 +3,7 @@
     "info": {
         "title": "CraftAPI",
         "description": "This simple API was developed for a school project and aims to provide some information about Minecraft, such as the mobs, equipment and ores present in the game.",
-        "termsOfService": "https://craft-api.vercel.app/termos/",
+        "termsOfService": "https://craft-api.vercel.app/terms/",
         "contact": {
             "email": "arturbcolen@gmail.com"
         },

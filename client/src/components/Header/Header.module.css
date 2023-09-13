@@ -5,7 +5,6 @@
     padding-bottom: 35px;
     background-color: var(--bg-color);
     color: var(--white-color);
-    box-shadow: 0px 4px 4px var(--shadow-light-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +20,6 @@
     padding: 0 2vw;
     color: var(--white-color);
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
     font-family: 100px;
     display: flex;
     align-items: center;

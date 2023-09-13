@@ -2,6 +2,7 @@ import styles from './ItemsPage.module.css';
 import Card from '../Card';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PageTitle from '../PageTitle';
 
 
 // eslint-disable-next-line react/prop-types
@@ -32,7 +33,7 @@ function ItemsPage({ subject, singularSubject, pageTitle, loadingText }) {
     
     return (
         <>
-            <h1 className={styles.title}>{pageTitle}</h1>
+            <PageTitle title={pageTitle} />
             {
                 apiData.length > 0 ? (
                     <div className={styles.cards_container}>

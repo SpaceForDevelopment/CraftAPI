@@ -8,6 +8,7 @@ import Equipment from './pages/Equipment';
 import EquipmentDetails from './pages/EquipmentDetails';
 import Ores from './pages/Ores';
 import OreDetails from './pages/OreDetails';
+import TermsOfService from './pages/TermsOfService';
 
 function AppRoutes() {
     return (
@@ -22,6 +23,7 @@ function AppRoutes() {
                         <Route path="/detalhes-equipamento/:id" element={<EquipmentDetails />} />
                         <Route path="/minerios" element={<Ores />}></Route>
                         <Route path="/detalhes-minerio/:id" element={<OreDetails />} />
+                        <Route path="/terms" element={<TermsOfService />} />
                     </Route>
                     <Route path="*" element={<Page404 />}></Route>
                 </Routes>

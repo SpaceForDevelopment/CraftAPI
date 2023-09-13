@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import ProfileCard from '../../components/ProfileCard';
 import leticia from '../../assets/images/Developers/leticia.jpg';
 import artur from '../../assets/images/Developers/artur.png';
+import PageTitle from '../../components/PageTitle';
 
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
     
     return (
         <div className={styles.content}>
-            <h1 className={styles.title}>Craft api</h1>
+            <PageTitle title='Craft api' />
             <div className={styles.div_content}>
                 <p>
                     Olá! Somos Artur e Letícia, criadores deste projeto! Tudo bem com você? <br /> <br />
