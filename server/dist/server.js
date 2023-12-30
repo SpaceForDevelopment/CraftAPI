@@ -21,11 +21,6 @@ app.use('/', index_router_js_1.default);
 app.use('/mobs', mobs_route_js_1.default);
 app.use('/equipment', equipment_route_js_1.default);
 app.use('/ores', ores_route_js_1.default);
-app.use((req, res) => {
-    res.status(404).json({
-        message: 'Rota não encontrada.'
-    });
-});
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

@@ -22,12 +22,6 @@ app.use('/mobs', mobRouter);
 app.use('/equipment', equipmentRouter);
 app.use('/ores', oreRouter);
 
-app.use((req: Request, res: Response) => {
-    res.status(404).json({
-        message: 'Rota não encontrada.'
-    });
-});
-
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
