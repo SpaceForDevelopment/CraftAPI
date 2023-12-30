@@ -1,43 +1,42 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-class Mob {
-    constructor(id, name, type, role, hitPoints, javaEdition, bedrockEdition, educationEdition, image) {
-        this._id = id;
-        this._name = name;
-        this._type = type;
-        this._role = role;
-        this._hitPoints = hitPoints;
-        this._javaEdition = javaEdition;
-        this._bedrockEdition = bedrockEdition;
-        this._educationEdition = educationEdition;
-        this._image = image;
-    }
-    get id() {
-        return this._id;
-    }
-    get name() {
-        return this._name;
-    }
-    get type() {
-        return this._type;
-    }
-    get role() {
-        return this._role;
-    }
-    get hitPoints() {
-        return this._hitPoints;
-    }
-    get javaEdition() {
-        return this._javaEdition;
-    }
-    get bedrockEdition() {
-        return this._bedrockEdition;
-    }
-    get educationEdition() {
-        return this._educationEdition;
-    }
-    get image() {
-        return this._image;
-    }
-}
+const mongoose_1 = __importDefault(require("mongoose"));
+const MobSchema = new mongoose_1.default.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    type: {
+        type: String,
+        required: true,
+    },
+    role: {
+        type: String,
+        required: true,
+    },
+    hitPoints: {
+        type: String,
+        required: true,
+    },
+    javaEdition: {
+        type: String,
+        required: true,
+    },
+    bedrockEdition: {
+        type: String,
+        required: true,
+    },
+    educationEdition: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+});
+const Mob = mongoose_1.default.model('Mob', MobSchema);
 exports.default = Mob;

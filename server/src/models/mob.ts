@@ -1,59 +1,40 @@
-export default class Mob {
-    private _id: number;
-    private _name: string;
-    private _type: string;
-    private _role: string;
-    private _hitPoints: string;
-    private _javaEdition: string;
-    private _bedrockEdition: string;
-    private _educationEdition: string;
-    private _image: string;
+import mongoose from 'mongoose';
 
-    constructor(id: number, name: string, type: string, role: string, hitPoints: string, javaEdition: string, bedrockEdition: string, educationEdition: string, image: string) {
-        this._id = id;
-        this._name = name;
-        this._type = type;
-        this._role = role;
-        this._hitPoints = hitPoints;
-        this._javaEdition = javaEdition;
-        this._bedrockEdition = bedrockEdition;
-        this._educationEdition = educationEdition;
-        this._image = image;
-    }
+const MobSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    type: {
+        type: String,
+        required: true,
+    },
+    role: {
+        type: String,
+        required: true,
+    },
+    hitPoints: {
+        type: String,
+        required: true,
+    },
+    javaEdition: {
+        type: String,
+        required: true,
+    },
+    bedrockEdition: {
+        type: String,
+        required: true,
+    },
+    educationEdition: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+});
 
-    get id() {
-        return this._id;
-    }
+const Mob = mongoose.model('Mob', MobSchema);
 
-    get name() {
-        return this._name;
-    }
-    
-    get type() {
-        return this._type;
-    }
-
-    get role() {
-        return this._role;
-    }
-
-    get hitPoints() {
-        return this._hitPoints;
-    }
-
-    get javaEdition() {
-        return this._javaEdition;
-    }    
-    
-    get bedrockEdition() {
-        return this._bedrockEdition;
-    }
-
-    get educationEdition() {
-        return this._educationEdition;
-    }
-
-    get image() {
-        return this._image;
-    }
-}
+export default Mob;

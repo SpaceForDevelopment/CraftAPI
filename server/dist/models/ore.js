@@ -1,39 +1,38 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-class Ore {
-    constructor(id, name, type, availability, description, minimumPickaxe, explosionResistance, image) {
-        this._id = id;
-        this._name = name;
-        this._type = type;
-        this._availability = availability;
-        this._description = description;
-        this._minimumPickaxe = minimumPickaxe;
-        this._explosionResistance = explosionResistance;
-        this._image = image;
-    }
-    get id() {
-        return this._id;
-    }
-    get name() {
-        return this._name;
-    }
-    get type() {
-        return this._type;
-    }
-    get availability() {
-        return this._availability;
-    }
-    get description() {
-        return this._description;
-    }
-    get minimumPickaxe() {
-        return this._minimumPickaxe;
-    }
-    get explosionResistance() {
-        return this._explosionResistance;
-    }
-    get image() {
-        return this._image;
-    }
-}
+const mongoose_1 = __importDefault(require("mongoose"));
+const OreSchema = new mongoose_1.default.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    type: {
+        type: String,
+        required: true,
+    },
+    availability: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
+    minimumPickaxe: {
+        type: String,
+        required: true,
+    },
+    explosionResistance: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+});
+const Ore = mongoose_1.default.model('Ore', OreSchema);
 exports.default = Ore;

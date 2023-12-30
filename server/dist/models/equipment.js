@@ -1,43 +1,42 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-class Equipment {
-    constructor(id, name, type, role, materials, durability, rarity, renewable, image) {
-        this._id = id;
-        this._name = name;
-        this._type = type;
-        this._role = role;
-        this._materials = materials;
-        this._durability = durability;
-        this._rarity = rarity;
-        this._renewable = renewable;
-        this._image = image;
-    }
-    get id() {
-        return this._id;
-    }
-    get name() {
-        return this._name;
-    }
-    get type() {
-        return this._type;
-    }
-    get role() {
-        return this._role;
-    }
-    get materials() {
-        return this._materials;
-    }
-    get durability() {
-        return this._durability;
-    }
-    get rarity() {
-        return this._rarity;
-    }
-    get renewable() {
-        return this._renewable;
-    }
-    get image() {
-        return this._image;
-    }
-}
+const mongoose_1 = __importDefault(require("mongoose"));
+const EquipmentSchema = new mongoose_1.default.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    type: {
+        type: String,
+        required: true,
+    },
+    role: {
+        type: String,
+        required: true,
+    },
+    materials: {
+        type: String,
+        required: true,
+    },
+    durability: {
+        type: String,
+        required: true,
+    },
+    rarity: {
+        type: String,
+        required: true,
+    },
+    renewable: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+});
+const Equipment = mongoose_1.default.model('Equipment', EquipmentSchema);
 exports.default = Equipment;

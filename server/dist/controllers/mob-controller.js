@@ -23,14 +23,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteEquipmentController = exports.updateEquipmentController = exports.createEquipmentController = exports.findEquipmentByIdController = exports.findAllEquipmentController = void 0;
-const equipmentService = __importStar(require("../services/equipment/equipment-service.js"));
-const equipmentValidations_service_js_1 = require("../services/equipment/equipmentValidations-service.js");
-const findAllEquipmentController = async (req, res) => {
+exports.deleteMobController = exports.updateMobController = exports.createMobController = exports.findMobByIdController = exports.findAllMobsController = void 0;
+const mobService = __importStar(require("../services/mobs/mob-service.js"));
+const mobValidations_service_js_1 = require("../services/mobs/mobValidations-service.js");
+const findAllMobsController = async (req, res) => {
     try {
-        const equipment = await equipmentService.findAllEquipmentService();
+        const mobs = await mobService.findAllMobsService();
         res.status(200).json({
-            Equipment: equipment
+            Mobs: mobs
         });
     }
     catch (error) {
@@ -39,16 +39,16 @@ const findAllEquipmentController = async (req, res) => {
         });
     }
 };
-exports.findAllEquipmentController = findAllEquipmentController;
-const findEquipmentByIdController = async (req, res) => {
+exports.findAllMobsController = findAllMobsController;
+const findMobByIdController = async (req, res) => {
     try {
-        const idEquipment = req.query.id;
-        if (!idEquipment) {
+        const idMob = req.query.id;
+        if (!idMob) {
             throw new Error("O 'id' não foi fornecido na consulta.");
         }
-        const equipment = await equipmentService.findEquipmentByIdService(idEquipment);
+        const mob = await mobService.findMobByIdService(idMob);
         res.status(200).json({
-            Equipment: equipment
+            Mob: mob
         });
     }
     catch (error) {
@@ -57,15 +57,15 @@ const findEquipmentByIdController = async (req, res) => {
         });
     }
 };
-exports.findEquipmentByIdController = findEquipmentByIdController;
-const createEquipmentController = async (req, res) => {
+exports.findMobByIdController = findMobByIdController;
+const createMobController = async (req, res) => {
     try {
-        const equipmentData = req.body;
-        (0, equipmentValidations_service_js_1.validateEquipmentData)(equipmentData);
-        const createdEquipment = await equipmentService.createEquipmentService(equipmentData);
+        const mobData = req.body;
+        (0, mobValidations_service_js_1.validateMobData)(mobData);
+        const createdMob = await mobService.createMobService(mobData);
         res.status(201).json({
-            message: 'Equipamento criado com sucesso',
-            Equipment: createdEquipment,
+            message: 'Mob criado com sucesso',
+            Mob: createdMob,
         });
     }
     catch (error) {
@@ -74,19 +74,19 @@ const createEquipmentController = async (req, res) => {
         });
     }
 };
-exports.createEquipmentController = createEquipmentController;
-const updateEquipmentController = async (req, res) => {
+exports.createMobController = createMobController;
+const updateMobController = async (req, res) => {
     try {
-        const idEquipment = req.params.id;
-        const equipmentData = req.body;
-        if (!idEquipment) {
+        const idMob = req.params.id;
+        const mobData = req.body;
+        if (!idMob) {
             throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
         }
-        (0, equipmentValidations_service_js_1.validateEquipmentData)(equipmentData);
-        const updatedEquipment = await equipmentService.updateEquipmentService(idEquipment, equipmentData);
+        (0, mobValidations_service_js_1.validateMobData)(mobData);
+        const updatedMob = await mobService.updateMobService(idMob, mobData);
         res.status(200).json({
             message: 'Dados atualizados com sucesso.',
-            Equipment: updatedEquipment,
+            Mob: updatedMob,
         });
     }
     catch (error) {
@@ -95,14 +95,14 @@ const updateEquipmentController = async (req, res) => {
         });
     }
 };
-exports.updateEquipmentController = updateEquipmentController;
-const deleteEquipmentController = async (req, res) => {
+exports.updateMobController = updateMobController;
+const deleteMobController = async (req, res) => {
     try {
-        const idEquipment = req.params.id;
-        if (!idEquipment) {
+        const idMob = req.params.id;
+        if (!idMob) {
             throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
         }
-        await equipmentService.deleteEquipmentService(idEquipment);
+        await mobService.deleteMobService(idMob);
         res.status(200).json({
             message: 'Exclusão feita com sucesso!'
         });
@@ -113,4 +113,4 @@ const deleteEquipmentController = async (req, res) => {
         });
     }
 };
-exports.deleteEquipmentController = deleteEquipmentController;
+exports.deleteMobController = deleteMobController;

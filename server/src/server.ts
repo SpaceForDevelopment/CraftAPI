@@ -1,18 +1,33 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import { configureCORS } from './middlewares/cors-middleware.js';
-import router from './routes/index.js';
-import swaggerUI from 'swagger-ui-express';
-import swaggerDocs from './swagger.json';
+import mobRouter from './routes/mobs-route.js';
+import equipmentRouter from './routes/equipment-route.js';
+import oreRouter from './routes/ores-route.js';
+import { errorMiddleware } from './middlewares/error-middleware.js';
+import indexRouter from './routes/index-router.js';
+const connectDatabase = require('./database/db.js');
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const app = express();
+app.use(express.json());
+
+connectDatabase();
 
 configureCORS(app);
 
-app.use('/', router);
+app.use(errorMiddleware);
 
-router.use('/documentation', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+app.use('/', indexRouter);
+app.use('/mobs', mobRouter);
+app.use('/equipment', equipmentRouter);
+app.use('/ores', oreRouter);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.use((req: Request, res: Response) => {
+    res.status(404).json({
+        message: 'Rota não encontrada.'
+    });
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });

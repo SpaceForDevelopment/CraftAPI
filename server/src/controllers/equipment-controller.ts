@@ -1,24 +1,106 @@
 import { Request, Response } from 'express';
-import { EquipmentFactory } from '../services/equipment-factory.js';
-import { removePrefixFromKeys } from '../utils/remove-prefix-keys.js';
+import { EquipmentInterface } from '../interfaces/equipment-interface.js';
+import * as equipmentService from '../services/equipment/equipment-service.js';
+import { validateEquipmentData } from '../services/equipment/equipmentValidations-service.js';
 
-export const getEquipment = (req: Request, res: Response) => {
-    const equipmentFactory = new EquipmentFactory('./data/equipment.csv');
-    const equipmentData = equipmentFactory.getEquipment();
-    const idQueryParam = req.query.id;
+export const findAllEquipmentController = async (req: Request, res: Response) => {
+    try {
+        const equipment = await equipmentService.findAllEquipmentService();
 
-    if (idQueryParam && typeof idQueryParam === 'string') {
-        const equipmentId = parseInt(idQueryParam);
-        const selectedEquipment = equipmentData.find(equipment => equipment.id === equipmentId);
-
-        if (selectedEquipment) {
-            const equipmentData = removePrefixFromKeys(selectedEquipment);
-            res.status(200).json(equipmentData);
-            return;
-        }
+        res.status(200).json({
+            Equipment: equipment
+        });
     }
+    catch (error) {
+        res.status(404).json({
+            message: (error as Error).message
+        });
+    }
+};
 
-    const renamedEquipmentData = equipmentData.map((equipment) => removePrefixFromKeys(equipment));
+export const findEquipmentByIdController = async (req: Request, res: Response) => {
+    try {
+        const idEquipment = req.query.id as string | undefined;
 
-    res.status(200).json(renamedEquipmentData);
-}
+        if (!idEquipment) {
+            throw new Error("O 'id' não foi fornecido na consulta.");
+        }
+
+        const equipment = await equipmentService.findEquipmentByIdService(idEquipment);
+
+        res.status(200).json({
+            Equipment: equipment
+        });
+    }
+    catch (error) {
+        res.status(404).json({
+            message: (error as Error).message
+        });
+    }
+};
+
+export const createEquipmentController = async (req: Request, res: Response) => {
+    try {
+        const equipmentData = req.body as EquipmentInterface;
+
+        validateEquipmentData(equipmentData);
+
+        const createdEquipment = await equipmentService.createEquipmentService(equipmentData);
+
+        res.status(201).json({
+            message: 'Equipamento criado com sucesso',
+            Equipment: createdEquipment,
+        });
+    }
+    catch (error) {
+        res.status(500).json({
+            message: (error as Error).message,
+        });
+    }
+};
+
+export const updateEquipmentController = async (req: Request, res: Response) => {
+    try {
+        const idEquipment = req.params.id as string | undefined;
+        const equipmentData = req.body as EquipmentInterface;
+
+        if (!idEquipment) {
+            throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
+        }
+
+        validateEquipmentData(equipmentData);
+
+        const updatedEquipment = await equipmentService.updateEquipmentService(idEquipment, equipmentData);
+
+        res.status(200).json({
+            message: 'Dados atualizados com sucesso.',
+            Equipment: updatedEquipment,
+        });
+    }
+    catch (error) {
+        res.status(404).json({
+            message: (error as Error).message,
+        });
+    }
+};
+
+export const deleteEquipmentController = async (req: Request, res: Response) => {
+    try {
+        const idEquipment = req.params.id as string | undefined;
+
+        if (!idEquipment) {
+            throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
+        }
+
+        await equipmentService.deleteEquipmentService(idEquipment);
+
+        res.status(200).json({
+            message: 'Exclusão feita com sucesso!'
+        });
+    }
+    catch (error) {
+        res.status(404).json({
+            message: (error as Error).message,
+        });
+    }
+};

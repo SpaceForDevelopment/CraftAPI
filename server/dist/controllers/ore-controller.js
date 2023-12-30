@@ -23,14 +23,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteEquipmentController = exports.updateEquipmentController = exports.createEquipmentController = exports.findEquipmentByIdController = exports.findAllEquipmentController = void 0;
-const equipmentService = __importStar(require("../services/equipment/equipment-service.js"));
-const equipmentValidations_service_js_1 = require("../services/equipment/equipmentValidations-service.js");
-const findAllEquipmentController = async (req, res) => {
+exports.deleteOreController = exports.updateOreController = exports.createOreController = exports.findOreByIdController = exports.findAllOresController = void 0;
+const oreService = __importStar(require("../services/ores/ore-service.js"));
+const oreValidations_service_js_1 = require("../services/ores/oreValidations-service.js");
+const findAllOresController = async (req, res) => {
     try {
-        const equipment = await equipmentService.findAllEquipmentService();
+        const ores = await oreService.findAllOresService();
         res.status(200).json({
-            Equipment: equipment
+            Ores: ores
         });
     }
     catch (error) {
@@ -39,16 +39,16 @@ const findAllEquipmentController = async (req, res) => {
         });
     }
 };
-exports.findAllEquipmentController = findAllEquipmentController;
-const findEquipmentByIdController = async (req, res) => {
+exports.findAllOresController = findAllOresController;
+const findOreByIdController = async (req, res) => {
     try {
-        const idEquipment = req.query.id;
-        if (!idEquipment) {
+        const idOre = req.query.id;
+        if (!idOre) {
             throw new Error("O 'id' não foi fornecido na consulta.");
         }
-        const equipment = await equipmentService.findEquipmentByIdService(idEquipment);
+        const ore = await oreService.findOreByIdService(idOre);
         res.status(200).json({
-            Equipment: equipment
+            Ore: ore
         });
     }
     catch (error) {
@@ -57,15 +57,15 @@ const findEquipmentByIdController = async (req, res) => {
         });
     }
 };
-exports.findEquipmentByIdController = findEquipmentByIdController;
-const createEquipmentController = async (req, res) => {
+exports.findOreByIdController = findOreByIdController;
+const createOreController = async (req, res) => {
     try {
-        const equipmentData = req.body;
-        (0, equipmentValidations_service_js_1.validateEquipmentData)(equipmentData);
-        const createdEquipment = await equipmentService.createEquipmentService(equipmentData);
+        const oreData = req.body;
+        (0, oreValidations_service_js_1.validateOreData)(oreData);
+        const createdOre = await oreService.createOreService(oreData);
         res.status(201).json({
-            message: 'Equipamento criado com sucesso',
-            Equipment: createdEquipment,
+            message: 'Minério criado com sucesso',
+            Ore: createdOre,
         });
     }
     catch (error) {
@@ -74,19 +74,19 @@ const createEquipmentController = async (req, res) => {
         });
     }
 };
-exports.createEquipmentController = createEquipmentController;
-const updateEquipmentController = async (req, res) => {
+exports.createOreController = createOreController;
+const updateOreController = async (req, res) => {
     try {
-        const idEquipment = req.params.id;
-        const equipmentData = req.body;
-        if (!idEquipment) {
+        const idOre = req.params.id;
+        const oreData = req.body;
+        if (!idOre) {
             throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
         }
-        (0, equipmentValidations_service_js_1.validateEquipmentData)(equipmentData);
-        const updatedEquipment = await equipmentService.updateEquipmentService(idEquipment, equipmentData);
+        (0, oreValidations_service_js_1.validateOreData)(oreData);
+        const updatedOre = await oreService.updateOreService(idOre, oreData);
         res.status(200).json({
             message: 'Dados atualizados com sucesso.',
-            Equipment: updatedEquipment,
+            Ore: updatedOre,
         });
     }
     catch (error) {
@@ -95,14 +95,14 @@ const updateEquipmentController = async (req, res) => {
         });
     }
 };
-exports.updateEquipmentController = updateEquipmentController;
-const deleteEquipmentController = async (req, res) => {
+exports.updateOreController = updateOreController;
+const deleteOreController = async (req, res) => {
     try {
-        const idEquipment = req.params.id;
-        if (!idEquipment) {
+        const idOre = req.params.id;
+        if (!idOre) {
             throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
         }
-        await equipmentService.deleteEquipmentService(idEquipment);
+        await oreService.deleteOreService(idOre);
         res.status(200).json({
             message: 'Exclusão feita com sucesso!'
         });
@@ -113,4 +113,4 @@ const deleteEquipmentController = async (req, res) => {
         });
     }
 };
-exports.deleteEquipmentController = deleteEquipmentController;
+exports.deleteOreController = deleteOreController;

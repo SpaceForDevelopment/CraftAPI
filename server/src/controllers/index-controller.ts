@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-export const getIndex = (req: Request, res: Response) => {
+export const indexController = async (req: Request, res: Response) => {
     const duo = 'Artur Bomtempo e Letícia França';
     const idClass = '3D1';
     const subject = 'Framework';
@@ -12,4 +12,4 @@ export const getIndex = (req: Request, res: Response) => {
         subject: subject,
         school: school
     });
-}
+};
