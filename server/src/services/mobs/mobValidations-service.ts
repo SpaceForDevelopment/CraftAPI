@@ -45,30 +45,30 @@ export const validateMobData = (mobData: MobInterface) => {
         throw new Error('Favor preencher corretamente se o mob está disponível na versão Java!');
     }
     else if (typeof mobData.javaEdition !== 'string') {
-        throw new Error('O campo "javaEdition" deve ser uma string válida!');
+        throw new Error("O campo 'javaEdition' deve ser uma string válida!");
     }
     else if (mobData.javaEdition.trim() === '') {
-        throw new Error('"javaEdition" não pode ser um campo vazio!');
+        throw new Error("'javaEdition' não pode ser um campo vazio!");
     }
 
     if (!mobData.bedrockEdition) {
         throw new Error('Favor preencher corretamente se o mob está disponível na versão Bedrock!');
     }
     else if (typeof mobData.bedrockEdition !== 'string') {
-        throw new Error('O campo "bedrockEdition" deve ser uma string válida!');
+        throw new Error("O campo 'bedrockEdition' deve ser uma string válida!");
     }
     else if (mobData.bedrockEdition.trim() === '') {
-        throw new Error('"bedrockEdition" não pode ser um campo vazio!');
+        throw new Error("'bedrockEdition' não pode ser um campo vazio!");
     }
 
     if (!mobData.educationEdition) {
         throw new Error('Favor preencher corretamente se o mob está disponível na versão Education!');
     }
     else if (typeof mobData.educationEdition !== 'string') {
-        throw new Error('O campo "educationEdition" deve ser uma string válida!');
+        throw new Error("O campo 'educationEdition' deve ser uma string válida!");
     }
     else if (mobData.educationEdition.trim() === '') {
-        throw new Error('"educationEdition" não pode ser um campo vazio!');
+        throw new Error("'educationEdition' não pode ser um campo vazio!");
     }
 
     const imageLinkRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
