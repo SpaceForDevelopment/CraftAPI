@@ -32,13 +32,13 @@ export const validateEquipmentData = (equipmentData: EquipmentInterface) => {
     }
 
     if (!equipmentData.materials) {
-        throw new Error('Favor preencher corretamente os materiais para construção do equipamento!');
+        throw new Error('Favor preencher corretamente o campo dos materiais para construção do equipamento!');
     }
     else if (typeof equipmentData.materials !== 'string') {
-        throw new Error('Os materiais para construção do equipamento deve ser uma string válida!');
+        throw new Error('Os campo de materiais para construção do equipamento deve ser uma string válida!');
     }
     else if (equipmentData.materials.trim() === '') {
-        throw new Error('Os materiais para construção do equipamento não pode ser um campo vazio!');
+        throw new Error('O campo dos materiais para construção do equipamento não pode ser vazio!');
     }
 
     if (!equipmentData.durability) {
@@ -65,10 +65,10 @@ export const validateEquipmentData = (equipmentData: EquipmentInterface) => {
         throw new Error('Favor preencher corretamente se o equipamento é renovável!');
     }
     else if (typeof equipmentData.renewable !== 'string') {
-        throw new Error('O campo "renewable" deve ser uma string válida!');
+        throw new Error("O campo 'renewable' deve ser uma string válida!");
     }
     else if (equipmentData.renewable.trim() === '') {
-        throw new Error('"Renewable" não pode ser um campo vazio!');
+        throw new Error("'Renewable' não pode ser um campo vazio!");
     }
 
     const imageLinkRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;

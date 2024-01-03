@@ -52,9 +52,16 @@ const findMobByIdController = async (req, res) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: error.message
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para exibição do mob.',
+            });
+        }
+        else {
+            res.status(500).json({
+                message: error.message,
+            });
+        }
     }
 };
 exports.findMobByIdController = findMobByIdController;
@@ -90,9 +97,16 @@ const updateMobController = async (req, res) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: error.message,
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para atualização do mob.',
+            });
+        }
+        else {
+            res.status(500).json({
+                message: error.message,
+            });
+        }
     }
 };
 exports.updateMobController = updateMobController;
@@ -108,9 +122,16 @@ const deleteMobController = async (req, res) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: error.message,
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para exclusão do mob.',
+            });
+        }
+        else {
+            res.status(500).json({
+                message: error.message,
+            });
+        }
     }
 };
 exports.deleteMobController = deleteMobController;

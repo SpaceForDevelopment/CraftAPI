@@ -52,9 +52,16 @@ const findEquipmentByIdController = async (req, res) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: error.message
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para exibição do equipamento.',
+            });
+        }
+        else {
+            res.status(500).json({
+                message: error.message,
+            });
+        }
     }
 };
 exports.findEquipmentByIdController = findEquipmentByIdController;
@@ -90,9 +97,16 @@ const updateEquipmentController = async (req, res) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: error.message,
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para atualização do equipamento.',
+            });
+        }
+        else {
+            res.status(500).json({
+                message: error.message,
+            });
+        }
     }
 };
 exports.updateEquipmentController = updateEquipmentController;
@@ -108,9 +122,16 @@ const deleteEquipmentController = async (req, res) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: error.message,
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para exclusão do equipamento.',
+            });
+        }
+        else {
+            res.status(500).json({
+                message: error.message,
+            });
+        }
     }
 };
 exports.deleteEquipmentController = deleteEquipmentController;

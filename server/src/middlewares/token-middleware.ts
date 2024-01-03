@@ -32,7 +32,7 @@ export const verifyTokenInBack = async (req: Request, res: Response, next: NextF
         next();
     } catch (error) {
         res.status(401).json({ 
-            message: 'Acesso não autorizado!' 
+            message: 'Acesso não autorizado!'
         });
     }
 }

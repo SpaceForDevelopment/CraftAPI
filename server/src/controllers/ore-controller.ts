@@ -33,9 +33,16 @@ export const findOreByIdController = async (req: Request, res: Response) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: (error as Error).message
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para exibição do minério.',
+            });
+        } 
+        else {
+            res.status(500).json({
+                message: (error as Error).message,
+            });
+        }
     }
 };
 
@@ -78,9 +85,16 @@ export const updateOreController = async (req: Request, res: Response) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: (error as Error).message,
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para atualização do minério.',
+            });
+        } 
+        else {
+            res.status(500).json({
+                message: (error as Error).message,
+            });
+        }
     }
 };
 
@@ -99,8 +113,15 @@ export const deleteOreController = async (req: Request, res: Response) => {
         });
     }
     catch (error) {
-        res.status(404).json({
-            message: (error as Error).message,
-        });
+        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+            res.status(400).json({
+                message: 'O ID fornecido não é válido para exclusão do minério.',
+            });
+        } 
+        else {
+            res.status(500).json({
+                message: (error as Error).message,
+            });
+        }
     }
 };
