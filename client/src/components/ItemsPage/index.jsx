@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import PageTitle from '../PageTitle';
 
 
-// eslint-disable-next-line react/prop-types
-function ItemsPage({ subject, singularSubject, pageTitle, loadingText }) {
+function ItemsPage({ subject, singularSubject, pluralSubject }) {
     const [apiData, setApiData] = useState([]);
 
     useEffect(() => {
@@ -21,7 +20,7 @@ function ItemsPage({ subject, singularSubject, pageTitle, loadingText }) {
                 }
 
                 const data = await response.json();
-                setApiData(data);
+                setApiData(data[subject]);
             }
             catch (error) {
                 console.error('Erro ao buscar dados:', error);
@@ -33,14 +32,14 @@ function ItemsPage({ subject, singularSubject, pageTitle, loadingText }) {
     
     return (
         <>
-            <PageTitle title={pageTitle} />
+            <PageTitle title={pluralSubject} />
             {
                 apiData.length > 0 ? (
                     <div className={styles.cards_container}>
                         {apiData.map((item) => (
-                            <Link key={item.id} to={`/detalhes-${singularSubject}/${item.id}`} className={styles.card_link}>
+                            <Link key={item._id} to={`/detalhes-${singularSubject}/${item._id}`} className={styles.card_link}>
                                 <Card
-                                    key={item.id}
+                                    key={item._id}
                                     image={item.image}
                                     name={item.name}
                                     type={item.type}
@@ -49,7 +48,7 @@ function ItemsPage({ subject, singularSubject, pageTitle, loadingText }) {
                         ))}
                     </div>
                 ) : (
-                    <p className={styles.message}>Carregando {loadingText}...</p>
+                    <p className={styles.message}>Carregando {pluralSubject}...</p>
                 )
             }
         </>

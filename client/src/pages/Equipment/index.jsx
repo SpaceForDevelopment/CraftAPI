@@ -4,10 +4,9 @@ import ItemsPage from '../../components/ItemsPage';
 function Equipment() {
     return (
         <ItemsPage
-            subject='equipment'
+            subject='Equipment'
             singularSubject='equipamento'
-            pageTitle='Equipamentos'
-            loadingText='equipamentos'
+            pluralSubject='equipamentos'
         />
     );
 }

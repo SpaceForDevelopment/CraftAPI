@@ -4,10 +4,9 @@ import ItemsPage from '../../components/ItemsPage';
 function Mobs() {
     return (
         <ItemsPage
-            subject='mobs'
+            subject='Mobs'
             singularSubject='mob'
-            pageTitle='Mobs'
-            loadingText='mobs'
+            pluralSubject='mobs'
         />
     );
 }

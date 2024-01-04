@@ -4,10 +4,9 @@ import ItemsPage from '../../components/ItemsPage';
 function Ores() {
     return (
         <ItemsPage
-            subject='ores'
+            subject='Ores'
             singularSubject='minerio'
-            pageTitle='Minerios'
-            loadingText='minérios'
+            pluralSubject='minerios'
         />
     );
 }

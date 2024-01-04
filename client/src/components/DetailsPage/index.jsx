@@ -1,35 +1,37 @@
 import styles from './DetailsPage.module.css';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-function DetailsPage({ id, subject }) {
+function DetailsPage({ id, subject, singularSubject }) {
     const [apiData, setApiData] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
         
         const loadApiData = async () => {
             try {
-                const response = await fetch(`https://craft-api.onrender.com/${subject}?id=${id}`);
+                const response = await fetch(`https://craft-api.onrender.com/${subject}/search?id=${id}`);
 
                 if (!response.ok) {
-                    throw new Error('Falha ao buscar dados');
+                    navigate('/erro-404');
                 }
 
                 const data = await response.json();
 
-                if (data?.name) {
-                    data.name = removeAccents(data.name);
+                if (data[singularSubject].name) {
+                    data[singularSubject].name = removeAccents(data[singularSubject].name);
                 }
-                
-                setApiData(data);
+
+                setApiData(data[singularSubject]);
             }
             catch (error) {
-                console.error('Erro ao buscar dados:', error);
+                console.error('Erro ao buscar dados: ', error);
             }
         }
 
