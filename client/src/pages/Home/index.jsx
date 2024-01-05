@@ -1,8 +1,6 @@
 import styles from './Home.module.css';
 import { useEffect } from 'react';
 import ProfileCard from '../../components/ProfileCard';
-import leticia from '../../assets/images/Developers/leticia.jpg';
-import artur from '../../assets/images/Developers/artur.png';
 import PageTitle from '../../components/PageTitle';
 
 
@@ -24,17 +22,17 @@ function Home() {
             </div>
             <div className={styles.all_cards}>
                 <ProfileCard
-                    profilePhoto={artur}
+                    profilePhoto='https://avatars.githubusercontent.com/u/96635074?v=4'
                     name='Artur Bomtempo'
                     githubLink='https://github.com/ArturColen'
-                    portfolioLink='https://arturbomtempo.vercel.app/'
+                    portfolioLink='https://arturbomtempo.com/'
                     linkedinLink='https://www.linkedin.com/in/artur-bomtempo/'
                 />
                 <ProfileCard
-                    profilePhoto={leticia}
+                    profilePhoto='https://avatars.githubusercontent.com/u/99284224?v=4'
                     name='Letícia França'
                     githubLink='https://github.com/LeticiaSFranca'
-                    portfolioLink='https://lsfranca.netlify.app/'
+                    portfolioLink='https://lsfranca.vercel.app/'
                     linkedinLink='https://www.linkedin.com/in/leticiasfranca/'
                 />
             </div>
