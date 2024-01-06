@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import ProfileCard from '../../components/ProfileCard';
 import PageTitle from '../../components/PageTitle';
 
-
 function Home() {
     useEffect(() => {
         window.scrollTo(0, 0);

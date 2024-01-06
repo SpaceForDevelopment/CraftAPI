@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageTitle from '../PageTitle';
 
-
 function ItemsPage({ subject, singularSubject, pluralSubject }) {
     const [apiData, setApiData] = useState([]);
 
@@ -13,7 +12,7 @@ function ItemsPage({ subject, singularSubject, pluralSubject }) {
         
         const loadDataAPI = async () => {
             try {
-                const response = await fetch(`https://craft-api.onrender.com/${subject}`);
+                const response = await fetch(`https://server-craft-api.vercel.app/${subject}`);
 
                 if (!response.ok) {
                     throw new Error('Falha ao buscar dados');

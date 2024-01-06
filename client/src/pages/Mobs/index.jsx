@@ -1,6 +1,5 @@
 import ItemsPage from '../../components/ItemsPage';
 
-
 function Mobs() {
     return (
         <ItemsPage

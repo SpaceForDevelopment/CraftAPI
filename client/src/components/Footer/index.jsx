@@ -1,7 +1,6 @@
 import styles from './Footer.module.css';
 import cotemig from '../../assets/images/Icons/cotemig.png';
 
-
 function Footer() {
     return (
         <footer className={styles.footer}>

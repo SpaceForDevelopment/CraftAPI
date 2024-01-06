@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import DetailsPage from '../../components/DetailsPage';
 
-
 function MobDetails() {
     const { id } = useParams();
     

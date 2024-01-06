@@ -1,7 +1,5 @@
 import styles from './Terms.module.css';
 
-
-// eslint-disable-next-line react/prop-types
 function Terms({ subtitle, content }) {
     return (
         <section className={styles.term_container}>

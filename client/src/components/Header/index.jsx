@@ -5,7 +5,6 @@ import creeper from '../../assets/images/HeaderIcons/creeper.png';
 import sword from '../../assets/images/HeaderIcons/sword.png';
 import pickaxe from '../../assets/images/HeaderIcons/pickaxe.png';
 
-
 function Header() {
     return (
         <header className={styles.header}>

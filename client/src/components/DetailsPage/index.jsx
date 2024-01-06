@@ -2,7 +2,6 @@ import styles from './DetailsPage.module.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
@@ -16,7 +15,7 @@ function DetailsPage({ id, subject, singularSubject }) {
         
         const loadApiData = async () => {
             try {
-                const response = await fetch(`https://craft-api.onrender.com/${subject}/search?id=${id}`);
+                const response = await fetch(`https://server-craft-api.vercel.app/${subject}/search?id=${id}`);
 
                 if (!response.ok) {
                     navigate('/erro-404');

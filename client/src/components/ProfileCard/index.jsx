@@ -3,8 +3,6 @@ import github from '../../assets/images/Icons/github.png';
 import webIcon from '../../assets/images/Icons/web.png';
 import linkedin from "../../assets/images/Icons/linkedin.png";
 
-
-// eslint-disable-next-line react/prop-types
 function ProfileCard({ profilePhoto, name, githubLink, portfolioLink, linkedinLink }) {
     return (
         <div className={styles.card_content}>
