@@ -24,7 +24,7 @@ function Home() {
                     profilePhoto='https://avatars.githubusercontent.com/u/96635074?v=4'
                     name='Artur Bomtempo'
                     githubLink='https://github.com/ArturColen'
-                    portfolioLink='https://arturbomtempo.com/'
+                    portfolioLink='https://arturbomtempo.dev/'
                     linkedinLink='https://www.linkedin.com/in/artur-bomtempo/'
                 />
                 <ProfileCard
