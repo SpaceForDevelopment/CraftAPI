@@ -10,7 +10,7 @@ import Ores from './pages/Ores';
 import OreDetails from './pages/OreDetails';
 import TermsOfService from './pages/TermsOfService';
 
-function AppRoutes() {
+export function AppRoutes() {
     return (
         <>
             <BrowserRouter>
@@ -31,5 +31,3 @@ function AppRoutes() {
         </>
     )
 }
-
-export default AppRoutes;
