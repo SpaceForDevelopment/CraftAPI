@@ -6,7 +6,7 @@ function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-function DetailsPage({ id, subject, singularSubject }) {
+export function DetailsPage({ id, subject, singularSubject }) {
     const [apiData, setApiData] = useState(null);
     const navigate = useNavigate();
 
@@ -94,5 +94,3 @@ function DetailsPage({ id, subject, singularSubject }) {
         </div>
     );
 }
-
-export default DetailsPage;

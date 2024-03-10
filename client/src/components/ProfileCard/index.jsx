@@ -3,7 +3,7 @@ import github from '../../assets/images/Icons/github.png';
 import webIcon from '../../assets/images/Icons/web.png';
 import linkedin from "../../assets/images/Icons/linkedin.png";
 
-function ProfileCard({ profilePhoto, name, githubLink, portfolioLink, linkedinLink }) {
+export function ProfileCard({ profilePhoto, name, githubLink, portfolioLink, linkedinLink }) {
     return (
         <div className={styles.card_content}>
             <img src={profilePhoto} alt={name} className={styles.photos} />
@@ -16,5 +16,3 @@ function ProfileCard({ profilePhoto, name, githubLink, portfolioLink, linkedinLi
         </div>
     );
 }
-
-export default ProfileCard;

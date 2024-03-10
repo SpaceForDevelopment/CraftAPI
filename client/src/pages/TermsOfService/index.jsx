@@ -1,5 +1,5 @@
-import PageTitle from '../../components/PageTitle';
-import Terms from '../../components/Terms';
+import { PageTitle } from '../../components/PageTitle';
+import { Terms } from '../../components/Terms';
 
 function TermsOfService() {
     return (

@@ -5,7 +5,7 @@ import creeper from '../../assets/images/HeaderIcons/creeper.png';
 import sword from '../../assets/images/HeaderIcons/sword.png';
 import pickaxe from '../../assets/images/HeaderIcons/pickaxe.png';
 
-function Header() {
+export function Header() {
     return (
         <header className={styles.header}>
             <Link to="/"><img src={home} alt="Imagem do bloco de terra" className={styles.header_icons} />Home</Link>
@@ -15,5 +15,3 @@ function Header() {
         </header>
     );
 }
-
-export default Header;

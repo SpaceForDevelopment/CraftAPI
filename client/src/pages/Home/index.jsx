@@ -1,7 +1,7 @@
 import styles from './Home.module.css';
 import { useEffect } from 'react';
-import ProfileCard from '../../components/ProfileCard';
-import PageTitle from '../../components/PageTitle';
+import { ProfileCard } from '../../components/ProfileCard';
+import { PageTitle } from '../../components/PageTitle';
 
 function Home() {
     useEffect(() => {

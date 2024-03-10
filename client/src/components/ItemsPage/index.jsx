@@ -1,10 +1,10 @@
 import styles from './ItemsPage.module.css';
-import Card from '../Card';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import PageTitle from '../PageTitle';
+import { Card } from '../Card';
+import { PageTitle } from '../PageTitle';
 
-function ItemsPage({ subject, singularSubject, pluralSubject }) {
+export function ItemsPage({ subject, singularSubject, pluralSubject }) {
     const [apiData, setApiData] = useState([]);
 
     useEffect(() => {
@@ -53,5 +53,3 @@ function ItemsPage({ subject, singularSubject, pluralSubject }) {
         </>
     );
 }
-
-export default ItemsPage;

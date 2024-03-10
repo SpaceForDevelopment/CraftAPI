@@ -1,4 +1,4 @@
-import ItemsPage from '../../components/ItemsPage';
+import { ItemsPage } from '../../components/ItemsPage';
 
 function Equipment() {
     return (
