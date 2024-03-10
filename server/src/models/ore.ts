@@ -31,6 +31,4 @@ const OreSchema = new mongoose.Schema({
     },
 });
 
-const Ore = mongoose.model('Ore', OreSchema);
-
-export default Ore;
+export const Ore = mongoose.model('Ore', OreSchema);

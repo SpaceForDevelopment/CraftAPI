@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Mob = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const MobSchema = new mongoose_1.default.Schema({
     name: {
@@ -38,5 +39,4 @@ const MobSchema = new mongoose_1.default.Schema({
         required: true,
     },
 });
-const Mob = mongoose_1.default.model('Mob', MobSchema);
-exports.default = Mob;
+exports.Mob = mongoose_1.default.model('Mob', MobSchema);

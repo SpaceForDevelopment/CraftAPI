@@ -1,11 +1,11 @@
 import express, { Request, Response } from 'express';
 import { configureCORS } from './middlewares/cors-middleware.js';
-import mobRouter from './routes/mobs-route.js';
-import equipmentRouter from './routes/equipment-route.js';
-import oreRouter from './routes/ores-route.js';
+import { mobRouter } from './routes/mobs-route.js';
+import { indexRouter } from './routes/index-router.js';
+import { equipmentRouter } from './routes/equipment-route.js';
+import { oreRouter } from './routes/ores-route.js';
 import { errorMiddleware } from './middlewares/error-middleware.js';
-import indexRouter from './routes/index-router.js';
-const connectDatabase = require('./database/db.js');
+const { connectDatabase } = require('./database/db.js');
 
 const port = process.env.PORT || 3000;
 const app = express();

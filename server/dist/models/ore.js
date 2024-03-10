@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ore = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const OreSchema = new mongoose_1.default.Schema({
     name: {
@@ -34,5 +35,4 @@ const OreSchema = new mongoose_1.default.Schema({
         required: true,
     },
 });
-const Ore = mongoose_1.default.model('Ore', OreSchema);
-exports.default = Ore;
+exports.Ore = mongoose_1.default.model('Ore', OreSchema);

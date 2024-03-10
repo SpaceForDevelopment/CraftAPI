@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { MobInterface } from '../interfaces/mob-interface.js';
-import Mob from '../models/mob.js';
+import { Mob } from '../models/mob.js';
 
 export const findAllMobsRepository = () => Mob.find();
 

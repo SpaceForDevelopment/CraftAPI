@@ -14,4 +14,4 @@ oreRouter.put('/:id', verifyTokenInBack, updateOreController);
 
 oreRouter.delete('/:id', verifyTokenInBack, deleteOreController);
 
-export default oreRouter;
+export { oreRouter };

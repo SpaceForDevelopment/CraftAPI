@@ -9,4 +9,4 @@ indexRouter.get('/', indexController);
 
 indexRouter.use('/documentation', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
-export default indexRouter;
+export { indexRouter };

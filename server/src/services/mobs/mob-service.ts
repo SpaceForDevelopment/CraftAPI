@@ -1,10 +1,10 @@
 import { MobInterface } from '../../interfaces/mob-interface.js';
-import * as mobRepository from '../../repositories/mob-repository.js';
+import { createMobRepository, deleteMobRepository, findAllMobsRepository, findMobByIdRepository, updateMobRepository } from '../../repositories/mob-repository.js';
 import { validateMobData } from './mobValidations-service.js';
 
 export const findAllMobsService = async () => {
     try {
-        const mobs = await mobRepository.findAllMobsRepository();
+        const mobs = await findAllMobsRepository();
         return mobs;
     }
     catch (error) {
@@ -18,7 +18,7 @@ export const findMobByIdService = async (idMob: string) => {
             throw new Error('Id do mob não informado!');
         }
 
-        const mob = await mobRepository.findMobByIdRepository(idMob);
+        const mob = await findMobByIdRepository(idMob);
 
         if (!mob) {
             throw new Error('Mob não encontrado!');
@@ -35,7 +35,7 @@ export const createMobService = async (mobData: MobInterface) => {
     try {
         validateMobData(mobData);
 
-        const createdMob = await mobRepository.createMobRepository(mobData);
+        const createdMob = await createMobRepository(mobData);
 
         return createdMob;
     }
@@ -48,13 +48,13 @@ export const updateMobService = async (idMob: string, mobData: MobInterface) => 
     try {
         validateMobData(mobData);
 
-        const updatedMob = await mobRepository.updateMobRepository(idMob, mobData);
+        const updatedMob = await updateMobRepository(idMob, mobData);
 
         if (!updatedMob) {
             throw new Error('Mob não encontrado!');
         }
 
-        const updatedMobDocument = await mobRepository.findMobByIdRepository(idMob);
+        const updatedMobDocument = await findMobByIdRepository(idMob);
 
         if (!updatedMobDocument) {
             throw new Error('Mob não encontrado!');
@@ -69,7 +69,7 @@ export const updateMobService = async (idMob: string, mobData: MobInterface) => 
 
 export const deleteMobService = async (idMob: string) => {
     try {
-        const deletedMob = await mobRepository.deleteMobRepository(idMob);
+        const deletedMob = await deleteMobRepository(idMob);
 
         if (!deletedMob) {
             throw new Error('Mob não encontrado!');

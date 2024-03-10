@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { EquipmentInterface } from '../interfaces/equipment-interface.js';
-import Equipment from '../models/equipment.js';
+import { Equipment } from '../models/equipment.js';
 
 export const findAllEquipmentRepository = () => Equipment.find();
 

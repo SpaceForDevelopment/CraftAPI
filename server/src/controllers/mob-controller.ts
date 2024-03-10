@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import { MobInterface } from '../interfaces/mob-interface.js';
-import * as mobService from '../services/mobs/mob-service.js';
 import { validateMobData } from '../services/mobs/mobValidations-service.js';
+import { createMobService, deleteMobService, findAllMobsService, findMobByIdService, updateMobService } from '../services/mobs/mob-service.js';
 
 export const findAllMobsController = async (req: Request, res: Response) => {
     try {
-        const mobs = await mobService.findAllMobsService();
+        const mobs = await findAllMobsService();
 
         res.status(200).json({
             Mobs: mobs
@@ -23,10 +23,10 @@ export const findMobByIdController = async (req: Request, res: Response) => {
         const idMob = req.query.id as string | undefined;
 
         if (!idMob) {
-            throw new Error("O 'id' não foi fornecido na consulta.");
+            throw new Error('O "id" não foi fornecido na consulta.');
         }
 
-        const mob = await mobService.findMobByIdService(idMob);
+        const mob = await findMobByIdService(idMob);
 
         res.status(200).json({
             Mob: mob
@@ -35,7 +35,7 @@ export const findMobByIdController = async (req: Request, res: Response) => {
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para exibição do mob.',
+                message: 'O "id" fornecido não é válido para exibição do mob.',
             });
         } 
         else {
@@ -52,7 +52,7 @@ export const createMobController = async (req: Request, res: Response) => {
 
         validateMobData(mobData);
 
-        const createdMob = await mobService.createMobService(mobData);
+        const createdMob = await createMobService(mobData);
 
         res.status(201).json({
             message: 'Mob criado com sucesso',
@@ -72,12 +72,12 @@ export const updateMobController = async (req: Request, res: Response) => {
         const mobData = req.body as MobInterface;
 
         if (!idMob) {
-            throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
+            throw new Error('O parâmetro "id" não foi fornecido na consulta.');
         }
 
         validateMobData(mobData);
 
-        const updatedMob = await mobService.updateMobService(idMob, mobData);
+        const updatedMob = await updateMobService(idMob, mobData);
 
         res.status(200).json({
             message: 'Dados atualizados com sucesso.',
@@ -87,7 +87,7 @@ export const updateMobController = async (req: Request, res: Response) => {
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para atualização do mob.',
+                message: 'O "id" fornecido não é válido para atualização do mob.',
             });
         } 
         else {
@@ -103,10 +103,10 @@ export const deleteMobController = async (req: Request, res: Response) => {
         const idMob = req.params.id as string | undefined;
 
         if (!idMob) {
-            throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
+            throw new Error('O parâmetro "id" não foi fornecido na consulta.');
         }
 
-        await mobService.deleteMobService(idMob);
+        await deleteMobService(idMob);
 
         res.status(200).json({
             message: 'Exclusão feita com sucesso!'
@@ -115,7 +115,7 @@ export const deleteMobController = async (req: Request, res: Response) => {
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para exclusão do mob.',
+                message: 'O "id" fornecido não é válido para exclusão do mob.',
             });
         } 
         else {

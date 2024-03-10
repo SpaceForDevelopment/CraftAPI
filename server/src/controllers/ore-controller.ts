@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import { OreInterface } from '../interfaces/ore-interface.js';
-import * as oreService from '../services/ores/ore-service.js';
 import { validateOreData } from '../services/ores/oreValidations-service.js';
+import { createOreService, deleteOreService, findAllOresService, findOreByIdService, updateOreService } from '../services/ores/ore-service.js';
 
 export const findAllOresController = async (req: Request, res: Response) => {
     try {
-        const ores = await oreService.findAllOresService();
+        const ores = await findAllOresService();
 
         res.status(200).json({
             Ores: ores
@@ -23,10 +23,10 @@ export const findOreByIdController = async (req: Request, res: Response) => {
         const idOre = req.query.id as string | undefined;
 
         if (!idOre) {
-            throw new Error("O 'id' não foi fornecido na consulta.");
+            throw new Error('O "id" não foi fornecido na consulta.');
         }
 
-        const ore = await oreService.findOreByIdService(idOre);
+        const ore = await findOreByIdService(idOre);
 
         res.status(200).json({
             Ore: ore
@@ -35,7 +35,7 @@ export const findOreByIdController = async (req: Request, res: Response) => {
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para exibição do minério.',
+                message: 'O "id" fornecido não é válido para exibição do minério.',
             });
         } 
         else {
@@ -52,7 +52,7 @@ export const createOreController = async (req: Request, res: Response) => {
 
         validateOreData(oreData);
 
-        const createdOre = await oreService.createOreService(oreData);
+        const createdOre = await createOreService(oreData);
 
         res.status(201).json({
             message: 'Minério criado com sucesso',
@@ -72,12 +72,12 @@ export const updateOreController = async (req: Request, res: Response) => {
         const oreData = req.body as OreInterface;
 
         if (!idOre) {
-            throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
+            throw new Error('O parâmetro "id" não foi fornecido na consulta.');
         }
 
         validateOreData(oreData);
 
-        const updatedOre = await oreService.updateOreService(idOre, oreData);
+        const updatedOre = await updateOreService(idOre, oreData);
 
         res.status(200).json({
             message: 'Dados atualizados com sucesso.',
@@ -87,7 +87,7 @@ export const updateOreController = async (req: Request, res: Response) => {
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para atualização do minério.',
+                message: 'O "id" fornecido não é válido para atualização do minério.',
             });
         } 
         else {
@@ -103,10 +103,10 @@ export const deleteOreController = async (req: Request, res: Response) => {
         const idOre = req.params.id as string | undefined;
 
         if (!idOre) {
-            throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
+            throw new Error('O parâmetro "id" não foi fornecido na consulta.');
         }
 
-        await oreService.deleteOreService(idOre);
+        await deleteOreService(idOre);
 
         res.status(200).json({
             message: 'Exclusão feita com sucesso!'
@@ -115,7 +115,7 @@ export const deleteOreController = async (req: Request, res: Response) => {
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para exclusão do minério.',
+                message: 'O "id" fornecido não é válido para exclusão do minério.',
             });
         } 
         else {

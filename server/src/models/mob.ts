@@ -35,6 +35,4 @@ const MobSchema = new mongoose.Schema({
     },
 });
 
-const Mob = mongoose.model('Mob', MobSchema);
-
-export default Mob;
+export const Mob = mongoose.model('Mob', MobSchema);

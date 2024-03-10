@@ -14,4 +14,4 @@ equipmentRouter.put('/:id', verifyTokenInBack, updateEquipmentController);
 
 equipmentRouter.delete('/:id', verifyTokenInBack, deleteEquipmentController);
 
-export default equipmentRouter;
+export { equipmentRouter };

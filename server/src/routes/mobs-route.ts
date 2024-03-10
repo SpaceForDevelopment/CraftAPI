@@ -14,4 +14,4 @@ mobRouter.put('/:id', verifyTokenInBack, updateMobController);
 
 mobRouter.delete('/:id', verifyTokenInBack, deleteMobController);
 
-export default mobRouter;
+export { mobRouter };

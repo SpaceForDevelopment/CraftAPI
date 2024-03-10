@@ -1,10 +1,10 @@
 import { OreInterface } from '../../interfaces/ore-interface.js';
-import * as oreRepository from '../../repositories/ore-repository.js';
+import { createOreRepository, deleteOreRepository, findAllOresRepository, findOreByIdRepository, updateOreRepository } from '../../repositories/ore-repository.js';
 import { validateOreData } from './oreValidations-service.js';
 
 export const findAllOresService = async () => {
     try {
-        const ores = await oreRepository.findAllOresRepository();
+        const ores = await findAllOresRepository();
         return ores;
     }
     catch (error) {
@@ -18,7 +18,7 @@ export const findOreByIdService = async (idOre: string) => {
             throw new Error('Id do minério não informado!');
         }
 
-        const ore = await oreRepository.findOreByIdRepository(idOre);
+        const ore = await findOreByIdRepository(idOre);
 
         if (!ore) {
             throw new Error('Minério não encontrado!');
@@ -35,7 +35,7 @@ export const createOreService = async (oreData: OreInterface) => {
     try {
         validateOreData(oreData);
 
-        const createdOre = await oreRepository.createOreRepository(oreData);
+        const createdOre = await createOreRepository(oreData);
 
         return createdOre;
     }
@@ -48,13 +48,13 @@ export const updateOreService = async (idOre: string, oreData: OreInterface) => 
     try {
         validateOreData(oreData);
 
-        const updatedOre = await oreRepository.updateOreRepository(idOre, oreData);
+        const updatedOre = await updateOreRepository(idOre, oreData);
 
         if (!updatedOre) {
             throw new Error('Minério não encontrado!');
         }
 
-        const updatedOreDocument = await oreRepository.findOreByIdRepository(idOre);
+        const updatedOreDocument = await findOreByIdRepository(idOre);
 
         if (!updatedOreDocument) {
             throw new Error('Minério não encontrado!');
@@ -69,7 +69,7 @@ export const updateOreService = async (idOre: string, oreData: OreInterface) => 
 
 export const deleteOreService = async (idOre: string) => {
     try {
-        const deletedOre = await oreRepository.deleteOreRepository(idOre);
+        const deletedOre = await deleteOreRepository(idOre);
 
         if (!deletedOre) {
             throw new Error('Minério não encontrado!');

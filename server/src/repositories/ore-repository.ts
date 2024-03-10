@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { OreInterface } from '../interfaces/ore-interface.js';
-import Ore from '../models/ore.js';
+import { Ore } from '../models/ore.js';
 
 export const findAllOresRepository = () => Ore.find();
 

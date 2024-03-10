@@ -1,10 +1,10 @@
 import { EquipmentInterface } from '../../interfaces/equipment-interface.js';
-import * as equipmentRepository from '../../repositories/equipment-repository.js';
+import { createEquipmentRepository, deleteEquipmentRepository, findAllEquipmentRepository, findEquipmentByIdRepository, updateEquipmentRepository } from '../../repositories/equipment-repository.js';
 import { validateEquipmentData } from './equipmentValidations-service.js';
 
 export const findAllEquipmentService = async () => {
     try {
-        const equipment = await equipmentRepository.findAllEquipmentRepository();
+        const equipment = await findAllEquipmentRepository();
         return equipment;
     }
     catch (error) {
@@ -18,7 +18,7 @@ export const findEquipmentByIdService = async (idEquipment: string) => {
             throw new Error('Id do equipamento não informado!');
         }
 
-        const equipment = await equipmentRepository.findEquipmentByIdRepository(idEquipment);
+        const equipment = await findEquipmentByIdRepository(idEquipment);
 
         if (!equipment) {
             throw new Error('Equipamento não encontrado!');
@@ -35,7 +35,7 @@ export const createEquipmentService = async (equipmentData: EquipmentInterface) 
     try {
         validateEquipmentData(equipmentData);
 
-        const createdEquipment = await equipmentRepository.createEquipmentRepository(equipmentData);
+        const createdEquipment = await createEquipmentRepository(equipmentData);
 
         return createdEquipment;
     }
@@ -48,13 +48,13 @@ export const updateEquipmentService = async (idEquipment: string, equipmentData:
     try {
         validateEquipmentData(equipmentData);
 
-        const updatedEquipment = await equipmentRepository.updateEquipmentRepository(idEquipment, equipmentData);
+        const updatedEquipment = await updateEquipmentRepository(idEquipment, equipmentData);
 
         if (!updatedEquipment) {
             throw new Error('Equipamento não encontrado!');
         }
 
-        const updatedEquipmentDocument = await equipmentRepository.findEquipmentByIdRepository(idEquipment);
+        const updatedEquipmentDocument = await findEquipmentByIdRepository(idEquipment);
 
         if (!updatedEquipmentDocument) {
             throw new Error('Equipamento não encontrado!');
@@ -69,7 +69,7 @@ export const updateEquipmentService = async (idEquipment: string, equipmentData:
 
 export const deleteEquipmentService = async (idEquipment: string) => {
     try {
-        const deletedEquipment = await equipmentRepository.deleteEquipmentRepository(idEquipment);
+        const deletedEquipment = await deleteEquipmentRepository(idEquipment);
 
         if (!deletedEquipment) {
             throw new Error('Equipamento não encontrado!');

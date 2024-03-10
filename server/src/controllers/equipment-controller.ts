@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import { EquipmentInterface } from '../interfaces/equipment-interface.js';
-import * as equipmentService from '../services/equipment/equipment-service.js';
 import { validateEquipmentData } from '../services/equipment/equipmentValidations-service.js';
+import { createEquipmentService, deleteEquipmentService, findAllEquipmentService, findEquipmentByIdService, updateEquipmentService } from '../services/equipment/equipment-service.js';
 
 export const findAllEquipmentController = async (req: Request, res: Response) => {
     try {
-        const equipment = await equipmentService.findAllEquipmentService();
+        const equipment = await findAllEquipmentService();
 
         res.status(200).json({
             Equipment: equipment
@@ -23,10 +23,10 @@ export const findEquipmentByIdController = async (req: Request, res: Response) =
         const idEquipment = req.query.id as string | undefined;
 
         if (!idEquipment) {
-            throw new Error("O 'id' não foi fornecido na consulta.");
+            throw new Error('O "id" não foi fornecido na consulta.');
         }
 
-        const equipment = await equipmentService.findEquipmentByIdService(idEquipment);
+        const equipment = await findEquipmentByIdService(idEquipment);
 
         res.status(200).json({
             Equipment: equipment
@@ -35,7 +35,7 @@ export const findEquipmentByIdController = async (req: Request, res: Response) =
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para exibição do equipamento.',
+                message: 'O "id" fornecido não é válido para exibição do equipamento.',
             });
         } 
         else {
@@ -52,7 +52,7 @@ export const createEquipmentController = async (req: Request, res: Response) => 
 
         validateEquipmentData(equipmentData);
 
-        const createdEquipment = await equipmentService.createEquipmentService(equipmentData);
+        const createdEquipment = await createEquipmentService(equipmentData);
 
         res.status(201).json({
             message: 'Equipamento criado com sucesso',
@@ -72,12 +72,12 @@ export const updateEquipmentController = async (req: Request, res: Response) => 
         const equipmentData = req.body as EquipmentInterface;
 
         if (!idEquipment) {
-            throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
+            throw new Error('O parâmetro "id" não foi fornecido na consulta.');
         }
 
         validateEquipmentData(equipmentData);
 
-        const updatedEquipment = await equipmentService.updateEquipmentService(idEquipment, equipmentData);
+        const updatedEquipment = await updateEquipmentService(idEquipment, equipmentData);
 
         res.status(200).json({
             message: 'Dados atualizados com sucesso.',
@@ -87,7 +87,7 @@ export const updateEquipmentController = async (req: Request, res: Response) => 
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para atualização do equipamento.',
+                message: 'O "id" fornecido não é válido para atualização do equipamento.',
             });
         } 
         else {
@@ -103,10 +103,10 @@ export const deleteEquipmentController = async (req: Request, res: Response) => 
         const idEquipment = req.params.id as string | undefined;
 
         if (!idEquipment) {
-            throw new Error("O parâmetro 'id' não foi fornecido na consulta.");
+            throw new Error('O parâmetro "id" não foi fornecido na consulta.');
         }
 
-        await equipmentService.deleteEquipmentService(idEquipment);
+        await deleteEquipmentService(idEquipment);
 
         res.status(200).json({
             message: 'Exclusão feita com sucesso!'
@@ -115,7 +115,7 @@ export const deleteEquipmentController = async (req: Request, res: Response) => 
     catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
-                message: 'O ID fornecido não é válido para exclusão do equipamento.',
+                message: 'O "id" fornecido não é válido para exclusão do equipamento.',
             });
         } 
         else {
