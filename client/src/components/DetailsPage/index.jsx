@@ -15,7 +15,7 @@ export function DetailsPage({ id, subject, singularSubject }) {
         
         const loadApiData = async () => {
             try {
-                const response = await fetch(`https://server-craft-api.vercel.app/${subject}/search?id=${id}`);
+                const response = await fetch(`https://server-craftapi.vercel.app/${subject}/search?id=${id}`);
 
                 if (!response.ok) {
                     navigate('/erro-404');
