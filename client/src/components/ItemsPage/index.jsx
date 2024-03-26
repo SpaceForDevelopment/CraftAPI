@@ -12,7 +12,7 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
         
         const loadDataAPI = async () => {
             try {
-                const response = await fetch(`https://server-craftapi.vercel.app/${subject}`);
+                const response = await fetch(`https://server-craft-api.vercel.app/${subject}`);
 
                 if (!response.ok) {
                     throw new Error('Falha ao buscar dados');
