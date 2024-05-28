@@ -45,40 +45,41 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .tittle_developers {
     font-family: 'Minecrafter';
     color: var(--primary-color);
     font-size: 40px;
+    text-align: center;
     margin-top: 5vh;
 }
 
-@media screen and (max-width: 1226px) {
-    .div_content > p{
-        font-size: 23px;
-    }
-}
-
-@media screen and (max-width: 1068px) {
-    .div_content{
-        width: 78%;
-        height: 400px;
-    }
-}
-
-@media screen and (max-width: 878px) {
-    .all_cards{
-        flex-direction: column;
+@media screen and (max-width: 1080px) {
+    .inicio {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
     }
 
-    .div_content{
-        width: 300px;
-        height: 350px;
+    .img_bloco_comando {
+        width: 60vw ;
     }
 
-    .div_content > p{
-        padding: 30px 20px;
-        font-size: 18px;
+    .div_content {
+        width: 94vw;
+        margin-top: 5vh;
+    }
+
+    .div_content p {
+        padding: 2vh 3vw;
+        font-size: 12px;
+    }
+
+    .tittle_developers {
+        font-size: 32px;
     }
 }

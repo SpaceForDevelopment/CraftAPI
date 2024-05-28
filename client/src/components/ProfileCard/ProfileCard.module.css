@@ -47,18 +47,22 @@
     width: 15vw;
 }
 
-@media screen and (max-width: 878px) {
+@media screen and (max-width: 1080px) {
     .card_content{
-        margin-top: 30px;
-        width: 300px;
-        margin-right: 0;
+        margin-top: 2vh;
+        width: 47vw;
+        height: 30vh;
     }
 
     .names{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .card_icons{
-        width: 25px;
+        font-size: 20px;
+    }
+
+    .photos {
+        width: 30vw;
     }
 }
