@@ -10,7 +10,7 @@ function Home() {
     
     return (
         <div className={styles.content}>
-            <PageTitle title='Craft api' />
+            <PageTitle title='Sejam bem-vindos!' />
             <div className={styles.div_content}>
                 <p>
                     Olá! Somos Artur e Letícia, criadores deste projeto! Tudo bem com você? <br /> <br />
