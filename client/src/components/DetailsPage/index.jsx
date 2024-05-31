@@ -26,7 +26,9 @@ export function DetailsPage({ id, subject, singularSubject }) {
                 const data = await response.json();
 
                 if (data[singularSubject].name) {
-                    data[singularSubject].name = removeAccents(data[singularSubject].name);
+                    data[singularSubject].name = removeAccents(
+                        data[singularSubject].name
+                    );
                 }
 
                 setApiData(data[singularSubject]);
@@ -63,11 +65,13 @@ export function DetailsPage({ id, subject, singularSubject }) {
                     </p>
                     <br />
                     <p>
-                        <b>Possui na edição bedrock?</b> {apiData.bedrockEdition}
+                        <b>Possui na edição bedrock?</b>{' '}
+                        {apiData.bedrockEdition}
                     </p>
                     <br />
                     <p>
-                        <b>Possui na edição education?</b> {apiData.educationEdition}
+                        <b>Possui na edição education?</b>{' '}
+                        {apiData.educationEdition}
                     </p>
                     <br />
                 </>
@@ -115,17 +119,23 @@ export function DetailsPage({ id, subject, singularSubject }) {
                     </p>
                     <br />
                     <p>
-                        <b>Picareta mínima para quebrar:</b> {apiData.minimumPickaxe}
+                        <b>Picareta mínima para quebrar:</b>{' '}
+                        {apiData.minimumPickaxe}
                     </p>
                     <br />
                     <p>
-                        <b>Nível de resistência à explosão:</b> {apiData.explosionResistance}
+                        <b>Nível de resistência à explosão:</b>{' '}
+                        {apiData.explosionResistance}
                     </p>
                     <br />
                 </>
             )}
             <hr className="hr_details" />
-            <img src={apiData?.image} className="image_details" alt={apiData?.name} />
+            <img
+                src={apiData?.image}
+                className="image_details"
+                alt={apiData?.name}
+            />
         </div>
     );
 }

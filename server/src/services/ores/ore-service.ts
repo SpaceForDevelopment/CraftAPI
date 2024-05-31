@@ -47,7 +47,10 @@ export const createOreService = async (oreData: OreInterface) => {
     }
 };
 
-export const updateOreService = async (idOre: string, oreData: OreInterface) => {
+export const updateOreService = async (
+    idOre: string,
+    oreData: OreInterface
+) => {
     try {
         validateOreData(oreData);
 

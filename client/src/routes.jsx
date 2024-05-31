@@ -18,11 +18,23 @@ export function AppRoutes() {
                     <Route path="/" element={<BasePage />}>
                         <Route index element={<Home />}></Route>
                         <Route path="/mobs" element={<Mobs />}></Route>
-                        <Route path="/detalhes-mob/:id" element={<MobDetails />} />
-                        <Route path="/equipamentos" element={<Equipment />}></Route>
-                        <Route path="/detalhes-equipamento/:id" element={<EquipmentDetails />} />
+                        <Route
+                            path="/detalhes-mob/:id"
+                            element={<MobDetails />}
+                        />
+                        <Route
+                            path="/equipamentos"
+                            element={<Equipment />}
+                        ></Route>
+                        <Route
+                            path="/detalhes-equipamento/:id"
+                            element={<EquipmentDetails />}
+                        />
                         <Route path="/minerios" element={<Ores />}></Route>
-                        <Route path="/detalhes-minerio/:id" element={<OreDetails />} />
+                        <Route
+                            path="/detalhes-minerio/:id"
+                            element={<OreDetails />}
+                        />
                         <Route path="/terms" element={<TermsOfService />} />
                     </Route>
                     <Route path="*" element={<Page404 />}></Route>

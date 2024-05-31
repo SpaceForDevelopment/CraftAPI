@@ -3,7 +3,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const verifyTokenInBack = async (req: Request, res: Response, next: NextFunction) => {
+export const verifyTokenInBack = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+) => {
     try {
         const auth = req.headers.authorization;
         const authArray = auth?.split(' ');

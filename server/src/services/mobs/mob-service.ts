@@ -47,7 +47,10 @@ export const createMobService = async (mobData: MobInterface) => {
     }
 };
 
-export const updateMobService = async (idMob: string, mobData: MobInterface) => {
+export const updateMobService = async (
+    idMob: string,
+    mobData: MobInterface
+) => {
     try {
         validateMobData(mobData);
 

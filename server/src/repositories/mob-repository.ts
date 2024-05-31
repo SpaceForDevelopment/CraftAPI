@@ -31,7 +31,11 @@ export const updateMobRepository = async (
     id: string,
     mobData: Partial<MobInterface>
 ): Promise<mongoose.Document | null> => {
-    const updatedMob = await Mob.findOneAndUpdate({ _id: id }, { ...mobData }, { rawResult: true });
+    const updatedMob = await Mob.findOneAndUpdate(
+        { _id: id },
+        { ...mobData },
+        { rawResult: true }
+    );
 
     return updatedMob;
 };

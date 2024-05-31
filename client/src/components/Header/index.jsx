@@ -41,7 +41,11 @@ export function Header() {
                 <Link to="/mobs" onClick={showNavbar} className="nav_link">
                     Mobs
                 </Link>
-                <Link to="/equipamentos" onClick={showNavbar} className="nav_link">
+                <Link
+                    to="/equipamentos"
+                    onClick={showNavbar}
+                    className="nav_link"
+                >
                     Equipamentos
                 </Link>
                 <Link to="/minerios" onClick={showNavbar} className="nav_link">

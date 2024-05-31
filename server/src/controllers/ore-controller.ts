@@ -37,9 +37,13 @@ export const findOreByIdController = async (req: Request, res: Response) => {
             Ore: ore,
         });
     } catch (error) {
-        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+        if (
+            error instanceof Error &&
+            error.message.includes('Cast to ObjectId failed')
+        ) {
             res.status(400).json({
-                message: 'O "id" fornecido não é válido para exibição do minério.',
+                message:
+                    'O "id" fornecido não é válido para exibição do minério.',
             });
         } else {
             res.status(500).json({
@@ -86,9 +90,13 @@ export const updateOreController = async (req: Request, res: Response) => {
             Ore: updatedOre,
         });
     } catch (error) {
-        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+        if (
+            error instanceof Error &&
+            error.message.includes('Cast to ObjectId failed')
+        ) {
             res.status(400).json({
-                message: 'O "id" fornecido não é válido para atualização do minério.',
+                message:
+                    'O "id" fornecido não é válido para atualização do minério.',
             });
         } else {
             res.status(500).json({
@@ -112,9 +120,13 @@ export const deleteOreController = async (req: Request, res: Response) => {
             message: 'Exclusão feita com sucesso!',
         });
     } catch (error) {
-        if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
+        if (
+            error instanceof Error &&
+            error.message.includes('Cast to ObjectId failed')
+        ) {
             res.status(400).json({
-                message: 'O "id" fornecido não é válido para exclusão do minério.',
+                message:
+                    'O "id" fornecido não é válido para exclusão do minério.',
             });
         } else {
             res.status(500).json({
