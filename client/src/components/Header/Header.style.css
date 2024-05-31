@@ -1,38 +1,24 @@
 header {
+    width: 100%;
+    padding: 0 2em;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 80px;
-    padding: 0 2rem;
     background-color: var(--bg-color);
-    z-index: 10;
-    position: sticky;
-    top: 0;
-    left: 0;
-    text-decoration: none;
+    color: var(--white-color);
 }
 
-header.scrolled {
-    box-shadow: 2px 2px 10px #0f0f0f6f;
-    transition: ease-in-out 0.5s;
-}
-
-header h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Minecrafter';
-    font-size: 30px;
+header .logo h2 {
+    font-family: 'Minecrafter', sans-serif;
     color: var(--primary-color);
-    text-decoration: none;
 }
 
 nav a {
     margin: 0 1rem;
-    font-style: regular;
+    color: var(--white-color);
     text-decoration: none;
     transition: ease all 0.5s;
-    color: var(--white-color);
 }
 
 nav a:hover {
@@ -42,10 +28,10 @@ nav a:hover {
 header .nav_btn {
     padding: 5px;
     cursor: pointer;
-    background: var(--cor-branca);
-    color: transparent;
+    background: transparent;
     border: none;
     outline: none;
+    color: var(--textColor);
     display: none;
     font-size: 1.3rem;
 }
@@ -56,34 +42,13 @@ nav {
     align-items: center;
 }
 
-#botao-contato-header {
-    background-color: var(--roxo-claro);
-    color: var(--cor-branca);
-    padding: 1vh 2vw;
-    border-radius: 5px;
-}
-
-#botao-contato-header:hover {
-    opacity: 80%;
-    transition: ease-in-out 0.5s;
-}
-
-@media only screen and (max-width: 1080px) {
+@media screen and (max-width: 1024px) {
     header {
         justify-content: space-between;
     }
 
-    header a {
-        color: var(--roxo-claro);
-    }
-
     header .nav_btn {
         display: block;
-    }
-
-    header .nav_btn {
-        background: var(--cor-branca);
-        color: var(--roxo-claro);
     }
 
     header nav {
@@ -97,7 +62,7 @@ nav {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background-color: var(--cor-branca);
+        background-color: var(--bg-color);
         transition: 1s;
         z-index: 1000;
     }
@@ -109,10 +74,14 @@ nav {
     nav .nav_close_btn {
         position: absolute;
         top: 2rem;
-        right: 2rem;
+        right: 1rem;
     }
 
     nav a {
         font-size: 1.2rem;
+    }
+
+    header .logo img {
+        width: 40px;
     }
 }

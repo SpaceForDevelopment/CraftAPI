@@ -1,8 +1,8 @@
-import styles from './Card.module.css';
+import './Card.style.css';
 
 export function Card({ image, name, type }) {
     return (
-        <section className={styles.card}>
+        <section className="card">
             <div>
                 <img src={image} alt={name} />
                 <h2>{name}</h2>

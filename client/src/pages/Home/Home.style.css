@@ -6,7 +6,7 @@
     flex-direction: column;
 }
 
-.inicio {
+.presentation_section {
     width: 100%;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@
     text-align: start;
 }
 
-.img_bloco_comando {
+.command_block {
     width: 25vw;
 }
 
@@ -48,7 +48,7 @@
     flex-wrap: wrap;
 }
 
-.tittle_developers {
+.title_developers {
     font-family: 'Minecrafter';
     color: var(--primary-color);
     font-size: 40px;
@@ -57,7 +57,7 @@
 }
 
 @media screen and (max-width: 1080px) {
-    .inicio {
+    .presentation_section {
         width: 100%;
         display: flex;
         align-items: center;
@@ -65,7 +65,7 @@
         flex-direction: column-reverse;
     }
 
-    .img_bloco_comando {
+    .command_block {
         width: 60vw;
     }
 
@@ -79,7 +79,7 @@
         font-size: 12px;
     }
 
-    .tittle_developers {
+    .title_developers {
         font-size: 32px;
     }
 }

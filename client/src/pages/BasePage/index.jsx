@@ -3,7 +3,7 @@ import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { Container } from '../../components/Container';
 
-function BasePage() {
+export function BasePage() {
     return (
         <main>
             <Header />
@@ -14,5 +14,3 @@ function BasePage() {
         </main>
     );
 }
-
-export default BasePage;
