@@ -1,33 +1,41 @@
 .card_content{
-    width: 400px;
-    height: 400px;
-    background-color: var(--bg-color);
-    background-position: center;
-    background-size: cover;
+    width: 25vw;
+    height: 60vh;
+    margin-top: 4vh;
     color: var(--white-color);
-    font-weight: bolder;
-    font-size: 40px;
+    background-color: var(--bg-color);
+    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    border-radius: 40px;
-    margin-right: 30px;
+    border-radius: 20px;
+}
+
+.card_content_icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 2vh;
+    font-size: 25px;
 }
 
 .card_icons{
-    width: 30px;
-    margin-right: 20px;
-    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    color: var(--white-color);
 }
 
 .card_icons:hover{
-    padding: 3px;
-    border-radius: 30px;
     cursor: pointer;
-    background-color: var(--primary-color);
-    transition: ease-in-out 0.5s;
+    color: var(--primary-color);
+    transition: ease-in-out 0.2s;
 }
 
 .names{
@@ -36,22 +44,25 @@
 }
 
 .photos{
-    border-radius: 100px;
-    width: 200px;
+    width: 15vw;
 }
 
-@media screen and (max-width: 878px) {
+@media screen and (max-width: 1080px) {
     .card_content{
-        margin-top: 30px;
-        width: 300px;
-        margin-right: 0;
+        margin-top: 2vh;
+        width: 47vw;
+        height: 30vh;
     }
 
     .names{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .card_icons{
-        width: 25px;
+        font-size: 20px;
+    }
+
+    .photos {
+        width: 30vw;
     }
 }

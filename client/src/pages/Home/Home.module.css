@@ -6,61 +6,80 @@
     flex-direction: column;
 }
 
+.inicio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 5vh 0;
+}
+
 .div_content{
+    width: 58vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 60%;
-    margin-bottom: 20px;
-    border-radius: 40px;
-    height: 350px;
-    background-color: var(--primary-color);
-    box-shadow: 5px 5px 5px var(--shadow-light-color);
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px #c67e4e;
 }
 
 .div_content > p{
-    padding: 50px 60px;
-    font-size: 25px;
-    font-weight: bolder;
-    color: var(--white-color);
-    text-shadow: 3px 3px 3px var(--shadow-light-color);
+    padding: 5vh 2vw;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: var(--bg-color);
+    text-align: start;
+}
+
+.img_bloco_comando {
+    width: 25vw;
 }
 
 .all_cards{
-    margin-top: 30px;
+    margin-top: 5vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1226px) {
-    .div_content > p{
-        font-size: 23px;
-    }
+.tittle_developers {
+    font-family: 'Minecrafter';
+    color: var(--primary-color);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 5vh;
 }
 
-@media screen and (max-width: 1068px) {
-    .div_content{
-        width: 78%;
-        height: 400px;
-    }
-}
-
-@media screen and (max-width: 878px) {
-    .all_cards{
-        flex-direction: column;
+@media screen and (max-width: 1080px) {
+    .inicio {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
     }
 
-    .div_content{
-        width: 300px;
-        height: 350px;
+    .img_bloco_comando {
+        width: 60vw ;
     }
 
-    .div_content > p{
-        padding: 30px 20px;
-        font-size: 18px;
+    .div_content {
+        width: 94vw;
+        margin-top: 5vh;
+    }
+
+    .div_content p {
+        padding: 2vh 3vw;
+        font-size: 12px;
+    }
+
+    .tittle_developers {
+        font-size: 32px;
     }
 }
