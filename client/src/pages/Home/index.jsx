@@ -2,9 +2,9 @@ import styles from './Home.module.css';
 import { useEffect } from 'react';
 import { ProfileCard } from '../../components/ProfileCard';
 import { PageTitle } from '../../components/PageTitle';
-import blocoComando from '../../assets/images/Img/bloco_de_comando.jpg';
-import Artur from '../../assets/images/Img/Artur.png';
-import Leticia from '../../assets/images/Img/Leticia.png';
+import commandBlockPhoto from '../../assets/images/Home/commandBlock.jpg';
+import arturAvatar from '../../assets/images/Home/artur.png';
+import leticiaAvatar from '../../assets/images/Home/leticia.png';
 
 function Home() {
     useEffect(() => {
@@ -14,42 +14,34 @@ function Home() {
     return (
         <section className={styles.content}>
             <PageTitle title='Sejam bem-vindos!' />
-
-             <div className={styles.inicio}>
+            <div className={styles.inicio}>
                 <div className={styles.div_content}>
                     <p>
-                        Bem-vindo ao nosso cantinho do Minecraft! 🎮✨ <br />
-                        Este site nasceu de uma missão épica: criar uma API super útil para um trabalho escolar e mostrá-la em 
-                        toda a sua glória em uma página da web. E olha só, conseguimos!
-
-                        <br /><br />
-                        Aqui, nós mergulhamos de cabeça no universo do Minecraft para trazer dados e informações que podem tornar
-                        sua experiência no jogo ainda mais incrível. Seja você um aventureiro que adora explorar minas, um guerreiro
-                        que enfrenta mobs, ou um construtor que cria mundos maravilhosos, nossa API tem algo especial para você.
-
-                        <br /><br />
-                        Obrigado por visitar e bom jogo! 🛠️🗺️🚀 <br />
-                        Equipe CraftAPI
+                        Bem-vindo ao nosso hub de Minecraft! 🎮 <br /><br />
+                        Este site nasceu de uma missão: criar uma API útil para um trabalho escolar e apresentá-la da 
+                        melhor forma possível em uma página da web.<br /><br />
+                        Aqui, mergulhamos de cabeça no universo do Minecraft para trazer dados e informações que podem tornar 
+                        sua experiência no jogo ainda mais incrível. Seja você um aventureiro que adora explorar minas, um 
+                        guerreiro que enfrenta mobs, ou um construtor que cria mundos maravilhosos, nossa API tem algo especial 
+                        para você.<br /><br />
+                        Obrigado por visitar e bom jogo! 🛠️🗺️🚀
                     </p>
                 </div>
-
                 <div>
-                    <img src={blocoComando} alt="Bloco de Comando" className={styles.img_bloco_comando} />
+                    <img src={commandBlockPhoto} alt="Bloco de Comando" className={styles.img_bloco_comando} />
                 </div>
-             </div>
-
-            <h2 className={styles.tittle_developers}>Nossos Desevnvolvedores</h2>
-
+            </div>
+            <h2 className={styles.tittle_developers}>Nossos Desenvolvedores</h2>
             <div className={styles.all_cards}>
                 <ProfileCard
-                    profilePhoto={Artur}
+                    profilePhoto={arturAvatar}
                     name='Artur Bomtempo'
                     githubLink='https://github.com/ArturColen'
                     portfolioLink='https://arturbomtempo.dev/'
                     linkedinLink='https://www.linkedin.com/in/artur-bomtempo/'
                 />
                 <ProfileCard
-                    profilePhoto={Leticia}
+                    profilePhoto={leticiaAvatar}
                     name='Letícia França'
                     githubLink='https://github.com/LeticiaSFranca'
                     portfolioLink='https://lsfranca.vercel.app/'

@@ -1,9 +1,11 @@
 import styles from './Footer.module.css';
 
 export function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer className={styles.footer}>
-            All rights reserved © by<a href="https://gf-company.vercel.app/" target="_blank" rel="noopener noreferrer"> GF Company</a>.
+            Copyright &copy; {currentYear} GF Company. Todos os direitos reservados.
         </footer>
     );
 }
