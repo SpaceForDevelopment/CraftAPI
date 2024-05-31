@@ -1,4 +1,4 @@
-import styles from './ItemsPage.module.css';
+import './ItemsPage.style.css';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '../Card';
@@ -32,12 +32,12 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
         <>
             <PageTitle title={pluralSubject} />
             {apiData.length > 0 ? (
-                <div className={styles.cards_container}>
+                <div className="cards_container">
                     {apiData.map((item) => (
                         <Link
                             key={item._id}
                             to={`/detalhes-${singularSubject}/${item._id}`}
-                            className={styles.card_link}
+                            className="card_link"
                         >
                             <Card
                                 key={item._id}
@@ -49,7 +49,7 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
                     ))}
                 </div>
             ) : (
-                <p className={styles.message}>Carregando {pluralSubject}...</p>
+                <p className="message">Carregando {pluralSubject}...</p>
             )}
         </>
     );

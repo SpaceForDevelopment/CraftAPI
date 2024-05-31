@@ -1,4 +1,4 @@
-import styles from './DetailsPage.module.css';
+import './DetailsPage.style.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -39,10 +39,10 @@ export function DetailsPage({ id, subject, singularSubject }) {
     }, [id, subject]);
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.name_details}>{apiData?.name}</h1>
+        <div className="details_container">
+            <h1 className="name_details">{apiData?.name}</h1>
             <br />
-            <hr className={styles.hr_details} />
+            <hr className="hr_details" />
             <br />
             {subject === 'mobs' && apiData && (
                 <>
@@ -124,8 +124,8 @@ export function DetailsPage({ id, subject, singularSubject }) {
                     <br />
                 </>
             )}
-            <hr className={styles.hr_details} />
-            <img src={apiData?.image} className={styles.image_details} alt={apiData?.name} />
+            <hr className="hr_details" />
+            <img src={apiData?.image} className="image_details" alt={apiData?.name} />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import { PageTitle } from '../../components/PageTitle';
 import { Terms } from '../../components/Terms';
 
-function TermsOfService() {
+export function TermsOfService() {
     return (
         <>
             <PageTitle title="Terms of service" />
@@ -30,5 +30,3 @@ function TermsOfService() {
         </>
     );
 }
-
-export default TermsOfService;

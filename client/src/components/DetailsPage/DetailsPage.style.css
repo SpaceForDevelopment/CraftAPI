@@ -1,4 +1,4 @@
-.container {
+.details_container {
     text-align: center;
     padding: 50px;
     background-color: var(--bg-color);
@@ -29,12 +29,12 @@
     width: 100px;
 }
 
-.container > p {
+.details_container > p {
     max-width: 500px;
 }
 
 @media screen and (max-width: 615px) {
-    .container {
+    .details_container {
         width: 90%;
     }
 }

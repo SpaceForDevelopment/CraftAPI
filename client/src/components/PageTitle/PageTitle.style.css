@@ -3,7 +3,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: var(--primary-color);
-    font-size: 70px;
+    font-size: 60px;
     text-align: center;
     margin: 3vh 0 5vh 0;
 }

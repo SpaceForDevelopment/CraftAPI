@@ -1,4 +1,4 @@
-import styles from './Home.module.css';
+import './Home.style.css';
 import { useEffect } from 'react';
 import { ProfileCard } from '../../components/ProfileCard';
 import { PageTitle } from '../../components/PageTitle';
@@ -6,16 +6,16 @@ import commandBlockPhoto from '../../assets/images/Home/commandBlock.jpg';
 import arturAvatar from '../../assets/images/Home/artur.png';
 import leticiaAvatar from '../../assets/images/Home/leticia.png';
 
-function Home() {
+export function Home() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
-        <section className={styles.content}>
+        <section className="content">
             <PageTitle title="Sejam bem-vindos!" />
-            <div className={styles.inicio}>
-                <div className={styles.div_content}>
+            <div className="presentation_section">
+                <div className="div_content">
                     <p>
                         Bem-vindo ao nosso hub de Minecraft! 🎮 <br />
                         <br />
@@ -34,15 +34,11 @@ function Home() {
                     </p>
                 </div>
                 <div>
-                    <img
-                        src={commandBlockPhoto}
-                        alt="Bloco de Comando"
-                        className={styles.img_bloco_comando}
-                    />
+                    <img src={commandBlockPhoto} alt="Bloco de Comando" className="command_block" />
                 </div>
             </div>
-            <h2 className={styles.tittle_developers}>Nossos Desenvolvedores</h2>
-            <div className={styles.all_cards}>
+            <h2 className="title_developers">Nossos Desenvolvedores</h2>
+            <div className="all_cards">
                 <ProfileCard
                     profilePhoto={arturAvatar}
                     name="Artur Bomtempo"
@@ -54,12 +50,10 @@ function Home() {
                     profilePhoto={leticiaAvatar}
                     name="Letícia França"
                     githubLink="https://github.com/LeticiaSFranca"
-                    portfolioLink="https://lsfranca.vercel.app/"
+                    portfolioLink="https://www.leticiafranca.com.br/"
                     linkedinLink="https://www.linkedin.com/in/leticiasfranca/"
                 />
             </div>
         </section>
     );
 }
-
-export default Home;

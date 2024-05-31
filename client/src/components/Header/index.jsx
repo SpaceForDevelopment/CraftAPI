@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Header.module.css';
+import './Header.style.css';
 import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 import { GrAppsRounded } from 'react-icons/gr';
@@ -32,7 +32,7 @@ export function Header() {
     return (
         <header className={scrolled ? 'scrolled' : ''}>
             <Link to="/" className="logo" onClick={showNavbar}>
-                <h2>CraftAPI</h2>
+                <h2>Craft API</h2>
             </Link>
             <nav ref={navRef}>
                 <Link to="/" onClick={showNavbar} className="nav_link">
