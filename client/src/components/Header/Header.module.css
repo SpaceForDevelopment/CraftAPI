@@ -1,117 +1,118 @@
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	height: 80px;
-	padding: 0 2rem;
-	background-color: var(--bg-color);
-	z-index: 10;
-	position: sticky;
-	top: 0;
-	left: 0;
-	text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--bg-color);
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    left: 0;
+    text-decoration: none;
 }
 
 header.scrolled {
-	box-shadow: 2px 2px 10px #0f0f0f6f;
-	transition: ease-in-out 0.5s;
+    box-shadow: 2px 2px 10px #0f0f0f6f;
+    transition: ease-in-out 0.5s;
 }
 
 header h2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Minecrafter';
-	font-size: 30px;
-	color: var(--primary-color);
-	text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Minecrafter';
+    font-size: 30px;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 nav a {
-	margin: 0 1rem;
-	font-style: regular;
-	text-decoration: none;
-	transition: ease all .5s;
-	color: var(--white-color);
+    margin: 0 1rem;
+    font-style: regular;
+    text-decoration: none;
+    transition: ease all 0.5s;
+    color: var(--white-color);
 }
 
 nav a:hover {
-	border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 header .nav_btn {
-	padding: 5px;
-	cursor: pointer;
-	background: var(--cor-branca);
-	color: transparent;
-	border: none;
-	outline: none;
-	display: none;
-	font-size: 1.3rem;
+    padding: 5px;
+    cursor: pointer;
+    background: var(--cor-branca);
+    color: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    font-size: 1.3rem;
 }
 
-header div, nav {
-	display: flex;
-	align-items: center;
+header div,
+nav {
+    display: flex;
+    align-items: center;
 }
 
 #botao-contato-header {
-	background-color: var(--roxo-claro);
-	color: var(--cor-branca);
-	padding: 1vh 2vw;
-	border-radius: 5px;
+    background-color: var(--roxo-claro);
+    color: var(--cor-branca);
+    padding: 1vh 2vw;
+    border-radius: 5px;
 }
 
 #botao-contato-header:hover {
-	opacity: 80%;
-	transition: ease-in-out 0.5s;
+    opacity: 80%;
+    transition: ease-in-out 0.5s;
 }
 
 @media only screen and (max-width: 1080px) {
-	header {
-		justify-content: space-between;
-	}
+    header {
+        justify-content: space-between;
+    }
 
-	header a {
-		color: var(--roxo-claro);
-	}
+    header a {
+        color: var(--roxo-claro);
+    }
 
-	header .nav_btn {
-		display: block;
-	}
+    header .nav_btn {
+        display: block;
+    }
 
-	header .nav_btn {
-		background: var(--cor-branca);
-		color: var(--roxo-claro);
-	}
+    header .nav_btn {
+        background: var(--cor-branca);
+        color: var(--roxo-claro);
+    }
 
-	header nav {
-		position: fixed;
-		top: -100vh;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.5rem;
-		background-color: var(--cor-branca);
-		transition: 1s;
-		z-index: 1000;
-	}
+    header nav {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--cor-branca);
+        transition: 1s;
+        z-index: 1000;
+    }
 
-	header .responsive_nav {
-		transform: translateY(100vh);
-	}
+    header .responsive_nav {
+        transform: translateY(100vh);
+    }
 
-	nav .nav_close_btn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
+    nav .nav_close_btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
 
-	nav a {
-		font-size: 1.2rem;
-	}
+    nav a {
+        font-size: 1.2rem;
+    }
 }

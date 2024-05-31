@@ -1,5 +1,11 @@
 import express from 'express';
-import { findAllMobsController, findMobByIdController, createMobController, updateMobController, deleteMobController } from '../controllers/mob-controller.js';
+import {
+    findAllMobsController,
+    findMobByIdController,
+    createMobController,
+    updateMobController,
+    deleteMobController,
+} from '../controllers/mob-controller.js';
 import { verifyTokenInBack } from '../middlewares/token-middleware';
 
 const mobRouter = express.Router();

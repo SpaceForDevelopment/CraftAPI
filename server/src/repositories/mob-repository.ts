@@ -15,7 +15,7 @@ export const createMobRepository = ({
     bedrockEdition,
     educationEdition,
     image,
-}: MobInterface) => 
+}: MobInterface) =>
     Mob.create({
         name,
         type,
@@ -27,14 +27,14 @@ export const createMobRepository = ({
         image,
     });
 
-export const updateMobRepository = async (id: string, mobData: Partial<MobInterface>): Promise<mongoose.Document | null> => {
-    const updatedMob = await Mob.findOneAndUpdate (
-        { _id: id },
-        { ...mobData },
-        { rawResult: true }
-    );
-    
+export const updateMobRepository = async (
+    id: string,
+    mobData: Partial<MobInterface>
+): Promise<mongoose.Document | null> => {
+    const updatedMob = await Mob.findOneAndUpdate({ _id: id }, { ...mobData }, { rawResult: true });
+
     return updatedMob;
 };
 
-export const deleteMobRepository = (id: string) => Mob.findOneAndDelete({ _id: id }, { rawResult: true });
+export const deleteMobRepository = (id: string) =>
+    Mob.findOneAndDelete({ _id: id }, { rawResult: true });

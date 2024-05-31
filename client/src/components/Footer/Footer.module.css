@@ -1,4 +1,4 @@
-.footer{
+.footer {
     width: 100%;
     height: 10vh;
     margin-top: 10vh;
@@ -22,13 +22,13 @@
     opacity: 80%;
 }
 
-.logo_cotemig{
+.logo_cotemig {
     margin-top: 20px;
     width: 180px;
 }
 
 @media screen and (max-width: 576px) {
-    .footer{
+    .footer {
         font-size: 13px;
     }
 }

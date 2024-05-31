@@ -1,4 +1,4 @@
-.content{
+.content {
     width: 100%;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@
     margin: 5vh 0;
 }
 
-.div_content{
+.div_content {
     width: 58vw;
     display: flex;
     align-items: center;
@@ -26,10 +26,10 @@
     box-shadow: 3px 3px 10px #c67e4e;
 }
 
-.div_content > p{
+.div_content > p {
     padding: 5vh 2vw;
     font-size: 16px;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--bg-color);
     text-align: start;
 }
@@ -38,7 +38,7 @@
     width: 25vw;
 }
 
-.all_cards{
+.all_cards {
     margin-top: 5vh;
     width: 100%;
     display: flex;
@@ -66,7 +66,7 @@
     }
 
     .img_bloco_comando {
-        width: 60vw ;
+        width: 60vw;
     }
 
     .div_content {

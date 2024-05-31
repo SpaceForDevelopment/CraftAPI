@@ -7,4 +7,4 @@ export const configureCORS = (app: express.Express) => {
         res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
         next();
     });
-}
+};

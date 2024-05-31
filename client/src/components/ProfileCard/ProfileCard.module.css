@@ -1,4 +1,4 @@
-.card_content{
+.card_content {
     width: 25vw;
     height: 60vh;
     margin-top: 4vh;
@@ -23,7 +23,7 @@
     font-size: 25px;
 }
 
-.card_icons{
+.card_icons {
     width: 100%;
     display: flex;
     align-items: center;
@@ -32,33 +32,33 @@
     color: var(--white-color);
 }
 
-.card_icons:hover{
+.card_icons:hover {
     cursor: pointer;
     color: var(--primary-color);
     transition: ease-in-out 0.2s;
 }
 
-.names{
+.names {
     margin-top: 20px;
     font-size: 25px;
 }
 
-.photos{
+.photos {
     width: 15vw;
 }
 
 @media screen and (max-width: 1080px) {
-    .card_content{
+    .card_content {
         margin-top: 2vh;
         width: 47vw;
         height: 30vh;
     }
 
-    .names{
+    .names {
         font-size: 18px;
     }
 
-    .card_icons{
+    .card_icons {
         font-size: 20px;
     }
 

@@ -9,7 +9,7 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        
+
         const loadDataAPI = async () => {
             try {
                 const response = await fetch(`https://server-craft-api.vercel.app/${subject}`);
@@ -20,36 +20,37 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
 
                 const data = await response.json();
                 setApiData(data[subject]);
-            }
-            catch (error) {
+            } catch (error) {
                 console.error('Erro ao buscar dados:', error);
             }
-        }
+        };
 
         loadDataAPI();
     }, []);
-    
+
     return (
         <>
             <PageTitle title={pluralSubject} />
-            {
-                apiData.length > 0 ? (
-                    <div className={styles.cards_container}>
-                        {apiData.map((item) => (
-                            <Link key={item._id} to={`/detalhes-${singularSubject}/${item._id}`} className={styles.card_link}>
-                                <Card
-                                    key={item._id}
-                                    image={item.image}
-                                    name={item.name}
-                                    type={item.type}
-                                />
-                            </Link>
-                        ))}
-                    </div>
-                ) : (
-                    <p className={styles.message}>Carregando {pluralSubject}...</p>
-                )
-            }
+            {apiData.length > 0 ? (
+                <div className={styles.cards_container}>
+                    {apiData.map((item) => (
+                        <Link
+                            key={item._id}
+                            to={`/detalhes-${singularSubject}/${item._id}`}
+                            className={styles.card_link}
+                        >
+                            <Card
+                                key={item._id}
+                                image={item.image}
+                                name={item.name}
+                                type={item.type}
+                            />
+                        </Link>
+                    ))}
+                </div>
+            ) : (
+                <p className={styles.message}>Carregando {pluralSubject}...</p>
+            )}
         </>
     );
 }

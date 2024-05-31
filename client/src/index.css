@@ -1,43 +1,43 @@
 @font-face {
-  font-family: 'Minecrafter';
-  src: url('./assets/fonts/Minecrafter/Minecrafter.Reg.ttf') format('truetype');
+    font-family: 'Minecrafter';
+    src: url('./assets/fonts/Minecrafter/Minecrafter.Reg.ttf') format('truetype');
 }
 
-:root{
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  /* === Color Variables === */
-  --white-color: #f0f0f0;
-  --primary-color: #60af28;
-  --bg-color: #171615;
-  --shadow-color: #0f0f0f;
-  --shadow-light-color: #0f0f0f98;
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    /* === Color Variables === */
+    --white-color: #f0f0f0;
+    --primary-color: #60af28;
+    --bg-color: #171615;
+    --shadow-color: #0f0f0f;
+    --shadow-light-color: #0f0f0f98;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-::selection{
-  background-color: var(--primary-color);
-  color: var(--white-color);
+::selection {
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
-body::-webkit-scrollbar{
-  width: 5px;
+body::-webkit-scrollbar {
+    width: 5px;
 }
 
-body::-webkit-scrollbar-track{
-  background: #E3E3E3;
+body::-webkit-scrollbar-track {
+    background: #e3e3e3;
 }
 
-body::-webkit-scrollbar-thumb{
-  background-color: #171615;
-  width: 10px;
+body::-webkit-scrollbar-thumb {
+    background-color: #171615;
+    width: 10px;
 }

@@ -24,7 +24,7 @@ app.use('/ores', oreRouter);
 
 app.use((req: Request, res: Response) => {
     res.status(404).json({
-        message: 'Rota não encontrada.'
+        message: 'Rota não encontrada.',
     });
 });
 

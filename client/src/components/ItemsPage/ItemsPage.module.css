@@ -1,4 +1,4 @@
-.cards_container{
+.cards_container {
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -6,30 +6,30 @@
     font-weight: bolder;
 }
 
-.card_link{
+.card_link {
     text-decoration: none;
 }
 
-.message{
+.message {
     color: var(--bg-color);
     font-size: 20px;
     font-weight: bold;
 }
 
 @media screen and (max-width: 1237px) {
-    .cards_container{
+    .cards_container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 933px) {
-    .cards_container{
+    .cards_container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 629px) {
-    .cards_container{
+    .cards_container {
         grid-template-columns: repeat(1, 1fr);
     }
 }

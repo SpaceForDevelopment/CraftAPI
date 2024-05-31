@@ -1,5 +1,11 @@
 import express from 'express';
-import { findAllOresController, findOreByIdController, createOreController, updateOreController, deleteOreController } from '../controllers/ore-controller.js';
+import {
+    findAllOresController,
+    findOreByIdController,
+    createOreController,
+    updateOreController,
+    deleteOreController,
+} from '../controllers/ore-controller.js';
 import { verifyTokenInBack } from '../middlewares/token-middleware';
 
 const oreRouter = express.Router();

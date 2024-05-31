@@ -1,13 +1,18 @@
 import { EquipmentInterface } from '../../interfaces/equipment-interface.js';
-import { createEquipmentRepository, deleteEquipmentRepository, findAllEquipmentRepository, findEquipmentByIdRepository, updateEquipmentRepository } from '../../repositories/equipment-repository.js';
+import {
+    createEquipmentRepository,
+    deleteEquipmentRepository,
+    findAllEquipmentRepository,
+    findEquipmentByIdRepository,
+    updateEquipmentRepository,
+} from '../../repositories/equipment-repository.js';
 import { validateEquipmentData } from './equipmentValidations-service.js';
 
 export const findAllEquipmentService = async () => {
     try {
         const equipment = await findAllEquipmentRepository();
         return equipment;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -25,8 +30,7 @@ export const findEquipmentByIdService = async (idEquipment: string) => {
         }
 
         return equipment;
-    } 
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -38,13 +42,15 @@ export const createEquipmentService = async (equipmentData: EquipmentInterface) 
         const createdEquipment = await createEquipmentRepository(equipmentData);
 
         return createdEquipment;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
 
-export const updateEquipmentService = async (idEquipment: string, equipmentData: EquipmentInterface) => {
+export const updateEquipmentService = async (
+    idEquipment: string,
+    equipmentData: EquipmentInterface
+) => {
     try {
         validateEquipmentData(equipmentData);
 
@@ -61,8 +67,7 @@ export const updateEquipmentService = async (idEquipment: string, equipmentData:
         }
 
         return updatedEquipmentDocument;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -76,8 +81,7 @@ export const deleteEquipmentService = async (idEquipment: string) => {
         }
 
         return deletedEquipment;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };

@@ -1,13 +1,18 @@
 import { MobInterface } from '../../interfaces/mob-interface.js';
-import { createMobRepository, deleteMobRepository, findAllMobsRepository, findMobByIdRepository, updateMobRepository } from '../../repositories/mob-repository.js';
+import {
+    createMobRepository,
+    deleteMobRepository,
+    findAllMobsRepository,
+    findMobByIdRepository,
+    updateMobRepository,
+} from '../../repositories/mob-repository.js';
 import { validateMobData } from './mobValidations-service.js';
 
 export const findAllMobsService = async () => {
     try {
         const mobs = await findAllMobsRepository();
         return mobs;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -25,8 +30,7 @@ export const findMobByIdService = async (idMob: string) => {
         }
 
         return mob;
-    } 
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -38,8 +42,7 @@ export const createMobService = async (mobData: MobInterface) => {
         const createdMob = await createMobRepository(mobData);
 
         return createdMob;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -61,8 +64,7 @@ export const updateMobService = async (idMob: string, mobData: MobInterface) => 
         }
 
         return updatedMobDocument;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -76,8 +78,7 @@ export const deleteMobService = async (idMob: string) => {
         }
 
         return deletedMob;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };

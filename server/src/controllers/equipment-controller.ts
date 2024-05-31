@@ -1,19 +1,24 @@
 import { Request, Response } from 'express';
 import { EquipmentInterface } from '../interfaces/equipment-interface.js';
 import { validateEquipmentData } from '../services/equipment/equipmentValidations-service.js';
-import { createEquipmentService, deleteEquipmentService, findAllEquipmentService, findEquipmentByIdService, updateEquipmentService } from '../services/equipment/equipment-service.js';
+import {
+    createEquipmentService,
+    deleteEquipmentService,
+    findAllEquipmentService,
+    findEquipmentByIdService,
+    updateEquipmentService,
+} from '../services/equipment/equipment-service.js';
 
 export const findAllEquipmentController = async (req: Request, res: Response) => {
     try {
         const equipment = await findAllEquipmentService();
 
         res.status(200).json({
-            Equipment: equipment
+            Equipment: equipment,
         });
-    }
-    catch (error) {
+    } catch (error) {
         res.status(404).json({
-            message: (error as Error).message
+            message: (error as Error).message,
         });
     }
 };
@@ -29,16 +34,14 @@ export const findEquipmentByIdController = async (req: Request, res: Response) =
         const equipment = await findEquipmentByIdService(idEquipment);
 
         res.status(200).json({
-            Equipment: equipment
+            Equipment: equipment,
         });
-    }
-    catch (error) {
+    } catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
                 message: 'O "id" fornecido não é válido para exibição do equipamento.',
             });
-        } 
-        else {
+        } else {
             res.status(500).json({
                 message: (error as Error).message,
             });
@@ -58,8 +61,7 @@ export const createEquipmentController = async (req: Request, res: Response) => 
             message: 'Equipamento criado com sucesso',
             Equipment: createdEquipment,
         });
-    }
-    catch (error) {
+    } catch (error) {
         res.status(500).json({
             message: (error as Error).message,
         });
@@ -83,14 +85,12 @@ export const updateEquipmentController = async (req: Request, res: Response) => 
             message: 'Dados atualizados com sucesso.',
             Equipment: updatedEquipment,
         });
-    }
-    catch (error) {
+    } catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
                 message: 'O "id" fornecido não é válido para atualização do equipamento.',
             });
-        } 
-        else {
+        } else {
             res.status(500).json({
                 message: (error as Error).message,
             });
@@ -109,16 +109,14 @@ export const deleteEquipmentController = async (req: Request, res: Response) => 
         await deleteEquipmentService(idEquipment);
 
         res.status(200).json({
-            message: 'Exclusão feita com sucesso!'
+            message: 'Exclusão feita com sucesso!',
         });
-    }
-    catch (error) {
+    } catch (error) {
         if (error instanceof Error && error.message.includes('Cast to ObjectId failed')) {
             res.status(400).json({
                 message: 'O "id" fornecido não é válido para exclusão do equipamento.',
             });
-        } 
-        else {
+        } else {
             res.status(500).json({
                 message: (error as Error).message,
             });

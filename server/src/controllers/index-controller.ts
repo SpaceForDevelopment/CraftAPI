@@ -11,10 +11,9 @@ export const indexController = async (req: Request, res: Response) => {
             duo: duo,
             class: idClass,
             subject: subject,
-            school: school
+            school: school,
         });
-    }
-    catch (error) {
+    } catch (error) {
         res.status(500).json({
             message: (error as Error).message,
         });

@@ -1,25 +1,25 @@
-.term_container{
+.term_container {
     width: 60%;
     text-align: center;
 }
 
-.subtitle{
+.subtitle {
     font-size: 1.7em;
     margin: 4vh 0 2vh 0;
 }
 
-.content{
+.content {
     font-size: 1.1em;
 }
 
 @media screen and (max-width: 629px) {
-    .content{
+    .content {
         font-size: 1em;
     }
 }
 
 @media screen and (max-width: 467px) {
-    .content{
-        font-size: .9em;
+    .content {
+        font-size: 0.9em;
     }
 }

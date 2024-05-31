@@ -1,5 +1,11 @@
 import express from 'express';
-import { findAllEquipmentController, findEquipmentByIdController, createEquipmentController, updateEquipmentController, deleteEquipmentController } from '../controllers/equipment-controller.js';
+import {
+    findAllEquipmentController,
+    findEquipmentByIdController,
+    createEquipmentController,
+    updateEquipmentController,
+    deleteEquipmentController,
+} from '../controllers/equipment-controller.js';
 import { verifyTokenInBack } from '../middlewares/token-middleware';
 
 const equipmentRouter = express.Router();

@@ -14,7 +14,7 @@ export const createOreRepository = ({
     minimumPickaxe,
     explosionResistance,
     image,
-}: OreInterface) => 
+}: OreInterface) =>
     Ore.create({
         name,
         type,
@@ -25,14 +25,14 @@ export const createOreRepository = ({
         image,
     });
 
-export const updateOreRepository = async (id: string, oreData: Partial<OreInterface>): Promise<mongoose.Document | null> => {
-    const updatedOre = await Ore.findOneAndUpdate (
-        { _id: id },
-        { ...oreData },
-        { rawResult: true }
-    );
-    
+export const updateOreRepository = async (
+    id: string,
+    oreData: Partial<OreInterface>
+): Promise<mongoose.Document | null> => {
+    const updatedOre = await Ore.findOneAndUpdate({ _id: id }, { ...oreData }, { rawResult: true });
+
     return updatedOre;
 };
 
-export const deleteOreRepository = (id: string) => Ore.findOneAndDelete({ _id: id }, { rawResult: true });
+export const deleteOreRepository = (id: string) =>
+    Ore.findOneAndDelete({ _id: id }, { rawResult: true });

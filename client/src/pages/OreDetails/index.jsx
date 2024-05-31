@@ -3,14 +3,8 @@ import { DetailsPage } from '../../components/DetailsPage';
 
 function OreDetails() {
     const { id } = useParams();
-    
-    return (
-        <DetailsPage
-            id={id}
-            subject='ores'
-            singularSubject='Ore'
-        />
-    );
+
+    return <DetailsPage id={id} subject="ores" singularSubject="Ore" />;
 }
 
 export default OreDetails;

@@ -12,10 +12,12 @@ export function DetailsPage({ id, subject, singularSubject }) {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        
+
         const loadApiData = async () => {
             try {
-                const response = await fetch(`https://server-craft-api.vercel.app/${subject}/search?id=${id}`);
+                const response = await fetch(
+                    `https://server-craft-api.vercel.app/${subject}/search?id=${id}`
+                );
 
                 if (!response.ok) {
                     navigate('/erro-404');
@@ -28,11 +30,10 @@ export function DetailsPage({ id, subject, singularSubject }) {
                 }
 
                 setApiData(data[singularSubject]);
-            }
-            catch (error) {
+            } catch (error) {
                 console.error('Erro ao buscar dados: ', error);
             }
-        }
+        };
 
         loadApiData();
     }, [id, subject]);
@@ -45,47 +46,81 @@ export function DetailsPage({ id, subject, singularSubject }) {
             <br />
             {subject === 'mobs' && apiData && (
                 <>
-                    <p><b>Tipo:</b> {apiData.type}</p>
+                    <p>
+                        <b>Tipo:</b> {apiData.type}
+                    </p>
                     <br />
-                    <p><b>Função:</b> {apiData.role}</p>
+                    <p>
+                        <b>Função:</b> {apiData.role}
+                    </p>
                     <br />
-                    <p><b>Quantidade de vida :</b> {apiData.hitPoints}</p>
+                    <p>
+                        <b>Quantidade de vida :</b> {apiData.hitPoints}
+                    </p>
                     <br />
-                    <p><b>Possui na edição java?</b> {apiData.javaEdition}</p>
+                    <p>
+                        <b>Possui na edição java?</b> {apiData.javaEdition}
+                    </p>
                     <br />
-                    <p><b>Possui na edição bedrock?</b> {apiData.bedrockEdition}</p>
+                    <p>
+                        <b>Possui na edição bedrock?</b> {apiData.bedrockEdition}
+                    </p>
                     <br />
-                    <p><b>Possui na edição education?</b> {apiData.educationEdition}</p>
-                    <br /> 
+                    <p>
+                        <b>Possui na edição education?</b> {apiData.educationEdition}
+                    </p>
+                    <br />
                 </>
             )}
             {subject === 'equipment' && apiData && (
                 <>
-                    <p><b>Tipo:</b> {apiData.type}</p>
+                    <p>
+                        <b>Tipo:</b> {apiData.type}
+                    </p>
                     <br />
-                    <p><b>Função:</b> {apiData.role}</p>
+                    <p>
+                        <b>Função:</b> {apiData.role}
+                    </p>
                     <br />
-                    <p><b>Materiais para criação:</b> {apiData.materials}</p>
+                    <p>
+                        <b>Materiais para criação:</b> {apiData.materials}
+                    </p>
                     <br />
-                    <p><b>Durabilidade:</b> {apiData.durability}</p>
+                    <p>
+                        <b>Durabilidade:</b> {apiData.durability}
+                    </p>
                     <br />
-                    <p><b>Raridade:</b> {apiData.rarity}</p>
+                    <p>
+                        <b>Raridade:</b> {apiData.rarity}
+                    </p>
                     <br />
-                    <p><b>É renovável?</b> {apiData.renewable}</p>
+                    <p>
+                        <b>É renovável?</b> {apiData.renewable}
+                    </p>
                     <br />
                 </>
             )}
             {subject === 'ores' && apiData && (
                 <>
-                    <p><b>Tipo:</b> {apiData.type}</p>
+                    <p>
+                        <b>Tipo:</b> {apiData.type}
+                    </p>
                     <br />
-                    <p><b>Disponível no(a)</b> {apiData.availability}</p>
+                    <p>
+                        <b>Disponível no(a)</b> {apiData.availability}
+                    </p>
                     <br />
-                    <p><b>Descrição:</b> {apiData.description}</p>
+                    <p>
+                        <b>Descrição:</b> {apiData.description}
+                    </p>
                     <br />
-                    <p><b>Picareta mínima para quebrar:</b> {apiData.minimumPickaxe}</p>
+                    <p>
+                        <b>Picareta mínima para quebrar:</b> {apiData.minimumPickaxe}
+                    </p>
                     <br />
-                    <p><b>Nível de resistência à explosão:</b> {apiData.explosionResistance}</p>
+                    <p>
+                        <b>Nível de resistência à explosão:</b> {apiData.explosionResistance}
+                    </p>
                     <br />
                 </>
             )}

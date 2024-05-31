@@ -1,4 +1,4 @@
-.card{
+.card {
     padding: 15px;
     background-color: var(--bg-color);
     color: var(--white-color);
@@ -12,20 +12,20 @@
     box-shadow: 3px 3px 3px var(--shadow-color);
 }
 
-.card img{
+.card img {
     width: 90px;
     height: 90px;
     object-fit: cover;
     padding-bottom: 10px;
 }
 
-.card hr{
+.card hr {
     margin: 1vh 0;
-    opacity: .4;
+    opacity: 0.4;
 }
 
 @media screen and (max-width: 576px) {
-    .card{
+    .card {
         padding: 15px 5px;
     }
 }

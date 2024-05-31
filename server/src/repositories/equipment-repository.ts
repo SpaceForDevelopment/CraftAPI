@@ -27,14 +27,18 @@ export const createEquipmentRepository = ({
         image,
     });
 
-export const updateEquipmentRepository = async (id: string, equipmentData: Partial<EquipmentInterface>): Promise<mongoose.Document | null> => {
-    const updatedEquipment = await Equipment.findOneAndUpdate (
+export const updateEquipmentRepository = async (
+    id: string,
+    equipmentData: Partial<EquipmentInterface>
+): Promise<mongoose.Document | null> => {
+    const updatedEquipment = await Equipment.findOneAndUpdate(
         { _id: id },
         { ...equipmentData },
         { rawResult: true }
     );
 
     return updatedEquipment;
-}
+};
 
-export const deleteEquipmentRepository = (id: string) => Equipment.findOneAndDelete({ _id: id }, { rawResult: true });
+export const deleteEquipmentRepository = (id: string) =>
+    Equipment.findOneAndDelete({ _id: id }, { rawResult: true });

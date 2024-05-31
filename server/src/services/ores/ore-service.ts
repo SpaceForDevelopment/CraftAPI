@@ -1,13 +1,18 @@
 import { OreInterface } from '../../interfaces/ore-interface.js';
-import { createOreRepository, deleteOreRepository, findAllOresRepository, findOreByIdRepository, updateOreRepository } from '../../repositories/ore-repository.js';
+import {
+    createOreRepository,
+    deleteOreRepository,
+    findAllOresRepository,
+    findOreByIdRepository,
+    updateOreRepository,
+} from '../../repositories/ore-repository.js';
 import { validateOreData } from './oreValidations-service.js';
 
 export const findAllOresService = async () => {
     try {
         const ores = await findAllOresRepository();
         return ores;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -25,8 +30,7 @@ export const findOreByIdService = async (idOre: string) => {
         }
 
         return ore;
-    } 
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -38,8 +42,7 @@ export const createOreService = async (oreData: OreInterface) => {
         const createdOre = await createOreRepository(oreData);
 
         return createdOre;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -61,8 +64,7 @@ export const updateOreService = async (idOre: string, oreData: OreInterface) => 
         }
 
         return updatedOreDocument;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
@@ -76,8 +78,7 @@ export const deleteOreService = async (idOre: string) => {
         }
 
         return deletedOre;
-    }
-    catch (error) {
+    } catch (error) {
         throw new Error((error as Error).message);
     }
 };
