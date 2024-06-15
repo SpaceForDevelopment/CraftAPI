@@ -6,8 +6,8 @@ export function Footer() {
     return (
         <footer className="footer">
             Copyright &copy; {currentYear}{' '}
-            <a href="https://gf-company.vercel.app/" target="_blank">
-                GF Company
+            <a href="https://gfcodes.vercel.app/" target="_blank">
+                GF Codes
             </a>
             . Todos os direitos reservados.
         </footer>
