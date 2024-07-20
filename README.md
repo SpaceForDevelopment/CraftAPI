@@ -2,7 +2,7 @@
 
 Project developed in the Framework subject of the web and mobile development technical course with the aim of consolidating the concepts learned about React Hooks, as well as reinforcing the content of API consumption.
 
-<img src="https://github.com/GF-Codes/CraftAPI/assets/96635074/5f719452-5548-479b-ad72-cbe10e404e20" alt="Image of the CraftAPI website">
+<img src="https://github.com/user-attachments/assets/28bbc674-e986-4301-867a-6ee72f364215" alt="Image of the CraftAPI website">
 
 ## 🔨 Project functionality
 

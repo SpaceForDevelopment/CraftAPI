@@ -2,20 +2,20 @@ cff-version: 1.0.0
 message: Please cite this software using these metadata.
 title: CraftAPI
 authors:
-  - family-names: Bomtempo Colen
-    given-names: Artur
-  - family-names: Silva França
-    given-names: Letícia
+    - family-names: Bomtempo Colen
+      given-names: Artur
+    - family-names: Silva França
+      given-names: Letícia
 keywords:
-  - Minecraft
-  - API
-  - CraftAPI
-  - React.js
-  - Node.js
-  - JavaScript
-  - TypeScript
-  - Express.js
-repository-code: https://github.com/GF-Codes/CraftAPI
+    - Minecraft
+    - API
+    - CraftAPI
+    - React.js
+    - Node.js
+    - JavaScript
+    - TypeScript
+    - Express.js
+repository-code: https://github.com/SpaceForDevelopment/CraftAPI
 license: MIT
 version: 1.0.3
 date-released: 2023-09-18
