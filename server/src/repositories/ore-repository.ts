@@ -29,11 +29,7 @@ export const updateOreRepository = async (
     id: string,
     oreData: Partial<OreInterface>
 ): Promise<mongoose.Document | null> => {
-    const updatedOre = await Ore.findOneAndUpdate(
-        { _id: id },
-        { ...oreData },
-        { rawResult: true }
-    );
+    const updatedOre = await Ore.findOneAndUpdate({ _id: id }, { ...oreData }, { rawResult: true });
 
     return updatedOre;
 };

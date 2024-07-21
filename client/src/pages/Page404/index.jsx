@@ -9,7 +9,7 @@ export function Page404() {
 
     useEffect(() => {
         navigate('/erro-404');
-    }, []);
+    }, [navigate]);
 
     return (
         <>

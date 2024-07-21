@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Minecrafter';
-    src: url('./assets/fonts/Minecrafter/Minecrafter.Reg.ttf')
-        format('truetype');
+    src: url('./assets/fonts/Minecrafter/Minecrafter.Reg.ttf') format('truetype');
 }
 
 :root {

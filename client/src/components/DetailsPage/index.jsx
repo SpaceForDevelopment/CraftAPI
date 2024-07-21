@@ -1,6 +1,7 @@
 import './DetailsPage.style.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -16,7 +17,7 @@ export function DetailsPage({ id, subject, singularSubject }) {
         const loadApiData = async () => {
             try {
                 const response = await fetch(
-                    `https://server-craft-api.vercel.app/${subject}/search?id=${id}`
+                    `https://craft-api-server.vercel.app/${subject}/search?id=${id}`
                 );
 
                 if (!response.ok) {
@@ -26,9 +27,7 @@ export function DetailsPage({ id, subject, singularSubject }) {
                 const data = await response.json();
 
                 if (data[singularSubject].name) {
-                    data[singularSubject].name = removeAccents(
-                        data[singularSubject].name
-                    );
+                    data[singularSubject].name = removeAccents(data[singularSubject].name);
                 }
 
                 setApiData(data[singularSubject]);
@@ -38,7 +37,7 @@ export function DetailsPage({ id, subject, singularSubject }) {
         };
 
         loadApiData();
-    }, [id, subject]);
+    }, [id, subject, singularSubject, navigate]);
 
     return (
         <div className="details_container">
@@ -65,13 +64,11 @@ export function DetailsPage({ id, subject, singularSubject }) {
                     </p>
                     <br />
                     <p>
-                        <b>Possui na edição bedrock?</b>{' '}
-                        {apiData.bedrockEdition}
+                        <b>Possui na edição bedrock?</b> {apiData.bedrockEdition}
                     </p>
                     <br />
                     <p>
-                        <b>Possui na edição education?</b>{' '}
-                        {apiData.educationEdition}
+                        <b>Possui na edição education?</b> {apiData.educationEdition}
                     </p>
                     <br />
                 </>
@@ -119,23 +116,23 @@ export function DetailsPage({ id, subject, singularSubject }) {
                     </p>
                     <br />
                     <p>
-                        <b>Picareta mínima para quebrar:</b>{' '}
-                        {apiData.minimumPickaxe}
+                        <b>Picareta mínima para quebrar:</b> {apiData.minimumPickaxe}
                     </p>
                     <br />
                     <p>
-                        <b>Nível de resistência à explosão:</b>{' '}
-                        {apiData.explosionResistance}
+                        <b>Nível de resistência à explosão:</b> {apiData.explosionResistance}
                     </p>
                     <br />
                 </>
             )}
             <hr className="hr_details" />
-            <img
-                src={apiData?.image}
-                className="image_details"
-                alt={apiData?.name}
-            />
+            <img src={apiData?.image} className="image_details" alt={apiData?.name} />
         </div>
     );
 }
+
+DetailsPage.propTypes = {
+    id: PropTypes.string.isRequired,
+    subject: PropTypes.string.isRequired,
+    singularSubject: PropTypes.string.isRequired,
+};

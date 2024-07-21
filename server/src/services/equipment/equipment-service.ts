@@ -35,9 +35,7 @@ export const findEquipmentByIdService = async (idEquipment: string) => {
     }
 };
 
-export const createEquipmentService = async (
-    equipmentData: EquipmentInterface
-) => {
+export const createEquipmentService = async (equipmentData: EquipmentInterface) => {
     try {
         validateEquipmentData(equipmentData);
 
@@ -56,17 +54,13 @@ export const updateEquipmentService = async (
     try {
         validateEquipmentData(equipmentData);
 
-        const updatedEquipment = await updateEquipmentRepository(
-            idEquipment,
-            equipmentData
-        );
+        const updatedEquipment = await updateEquipmentRepository(idEquipment, equipmentData);
 
         if (!updatedEquipment) {
             throw new Error('Equipamento não encontrado!');
         }
 
-        const updatedEquipmentDocument =
-            await findEquipmentByIdRepository(idEquipment);
+        const updatedEquipmentDocument = await findEquipmentByIdRepository(idEquipment);
 
         if (!updatedEquipmentDocument) {
             throw new Error('Equipamento não encontrado!');

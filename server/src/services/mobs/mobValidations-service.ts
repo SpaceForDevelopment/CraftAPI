@@ -26,21 +26,15 @@ export const validateMobData = (mobData: MobInterface) => {
     }
 
     if (!mobData.hitPoints) {
-        throw new Error(
-            'Favor preencher corretamente os pontos de vida do mob!'
-        );
+        throw new Error('Favor preencher corretamente os pontos de vida do mob!');
     } else if (typeof mobData.hitPoints !== 'string') {
         throw new Error('Os pontos de vida do mob deve ser uma string válida!');
     } else if (mobData.hitPoints.trim() === '') {
-        throw new Error(
-            'Os pontos de vida do mob não pode ser um campo vazio!'
-        );
+        throw new Error('Os pontos de vida do mob não pode ser um campo vazio!');
     }
 
     if (!mobData.javaEdition) {
-        throw new Error(
-            'Favor preencher corretamente se o mob está disponível na versão Java!'
-        );
+        throw new Error('Favor preencher corretamente se o mob está disponível na versão Java!');
     } else if (typeof mobData.javaEdition !== 'string') {
         throw new Error("O campo 'javaEdition' deve ser uma string válida!");
     } else if (mobData.javaEdition.trim() === '') {
@@ -48,9 +42,7 @@ export const validateMobData = (mobData: MobInterface) => {
     }
 
     if (!mobData.bedrockEdition) {
-        throw new Error(
-            'Favor preencher corretamente se o mob está disponível na versão Bedrock!'
-        );
+        throw new Error('Favor preencher corretamente se o mob está disponível na versão Bedrock!');
     } else if (typeof mobData.bedrockEdition !== 'string') {
         throw new Error("O campo 'bedrockEdition' deve ser uma string válida!");
     } else if (mobData.bedrockEdition.trim() === '') {
@@ -62,9 +54,7 @@ export const validateMobData = (mobData: MobInterface) => {
             'Favor preencher corretamente se o mob está disponível na versão Education!'
         );
     } else if (typeof mobData.educationEdition !== 'string') {
-        throw new Error(
-            "O campo 'educationEdition' deve ser uma string válida!"
-        );
+        throw new Error("O campo 'educationEdition' deve ser uma string válida!");
     } else if (mobData.educationEdition.trim() === '') {
         throw new Error("'educationEdition' não pode ser um campo vazio!");
     }
@@ -72,9 +62,7 @@ export const validateMobData = (mobData: MobInterface) => {
     const imageLinkRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
 
     if (!mobData.image) {
-        throw new Error(
-            'Favor preencher corretamente o link da imagem do mob!'
-        );
+        throw new Error('Favor preencher corretamente o link da imagem do mob!');
     } else if (typeof mobData.image !== 'string') {
         throw new Error('O link da imagem do mob deve ser uma string válida!');
     } else if (mobData.image.trim() === '') {

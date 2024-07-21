@@ -4,8 +4,7 @@ import { Equipment } from '../models/equipment.js';
 
 export const findAllEquipmentRepository = () => Equipment.find();
 
-export const findEquipmentByIdRepository = (idEquipment: string) =>
-    Equipment.findById(idEquipment);
+export const findEquipmentByIdRepository = (idEquipment: string) => Equipment.findById(idEquipment);
 
 export const createEquipmentRepository = ({
     name,

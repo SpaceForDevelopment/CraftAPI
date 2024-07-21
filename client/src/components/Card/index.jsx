@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Card.style.css';
 
 export function Card({ image, name, type }) {
@@ -12,3 +13,9 @@ export function Card({ image, name, type }) {
         </section>
     );
 }
+
+Card.propTypes = {
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+};

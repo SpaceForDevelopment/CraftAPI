@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '../Card';
 import { PageTitle } from '../PageTitle';
+import PropTypes from 'prop-types';
 
 export function ItemsPage({ subject, singularSubject, pluralSubject }) {
     const [apiData, setApiData] = useState([]);
@@ -12,9 +13,7 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
 
         const loadDataAPI = async () => {
             try {
-                const response = await fetch(
-                    `https://server-craft-api.vercel.app/${subject}`
-                );
+                const response = await fetch(`https://craft-api-server.vercel.app/${subject}`);
 
                 if (!response.ok) {
                     throw new Error('Falha ao buscar dados');
@@ -28,7 +27,7 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
         };
 
         loadDataAPI();
-    }, []);
+    }, [subject]);
 
     return (
         <>
@@ -56,3 +55,9 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
         </>
     );
 }
+
+ItemsPage.propTypes = {
+    subject: PropTypes.string.isRequired,
+    singularSubject: PropTypes.string.isRequired,
+    pluralSubject: PropTypes.string.isRequired,
+};

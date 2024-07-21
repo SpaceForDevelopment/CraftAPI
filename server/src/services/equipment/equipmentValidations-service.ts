@@ -18,9 +18,7 @@ export const validateEquipmentData = (equipmentData: EquipmentInterface) => {
     }
 
     if (!equipmentData.role) {
-        throw new Error(
-            'Favor preencher corretamente a função do equipamento!'
-        );
+        throw new Error('Favor preencher corretamente a função do equipamento!');
     } else if (typeof equipmentData.role !== 'string') {
         throw new Error('A função do equipamento deve ser uma string válida!');
     } else if (equipmentData.role.trim() === '') {
@@ -36,43 +34,27 @@ export const validateEquipmentData = (equipmentData: EquipmentInterface) => {
             'Os campo de materiais para construção do equipamento deve ser uma string válida!'
         );
     } else if (equipmentData.materials.trim() === '') {
-        throw new Error(
-            'O campo dos materiais para construção do equipamento não pode ser vazio!'
-        );
+        throw new Error('O campo dos materiais para construção do equipamento não pode ser vazio!');
     }
 
     if (!equipmentData.durability) {
-        throw new Error(
-            'Favor preencher corretamente a durabilidade do equipamento!'
-        );
+        throw new Error('Favor preencher corretamente a durabilidade do equipamento!');
     } else if (typeof equipmentData.durability !== 'string') {
-        throw new Error(
-            'A durabilidade do equipamento deve ser uma string válida!'
-        );
+        throw new Error('A durabilidade do equipamento deve ser uma string válida!');
     } else if (equipmentData.durability.trim() === '') {
-        throw new Error(
-            'A durabilidade do equipamento não pode ser um campo vazio!'
-        );
+        throw new Error('A durabilidade do equipamento não pode ser um campo vazio!');
     }
 
     if (!equipmentData.rarity) {
-        throw new Error(
-            'Favor preencher corretamente a raridade do equipamento!'
-        );
+        throw new Error('Favor preencher corretamente a raridade do equipamento!');
     } else if (typeof equipmentData.rarity !== 'string') {
-        throw new Error(
-            'A raridade do equipamento deve ser uma string válida!'
-        );
+        throw new Error('A raridade do equipamento deve ser uma string válida!');
     } else if (equipmentData.rarity.trim() === '') {
-        throw new Error(
-            'A raridade do equipamento não pode ser um campo vazio!'
-        );
+        throw new Error('A raridade do equipamento não pode ser um campo vazio!');
     }
 
     if (!equipmentData.renewable) {
-        throw new Error(
-            'Favor preencher corretamente se o equipamento é renovável!'
-        );
+        throw new Error('Favor preencher corretamente se o equipamento é renovável!');
     } else if (typeof equipmentData.renewable !== 'string') {
         throw new Error("O campo 'renewable' deve ser uma string válida!");
     } else if (equipmentData.renewable.trim() === '') {
@@ -82,17 +64,11 @@ export const validateEquipmentData = (equipmentData: EquipmentInterface) => {
     const imageLinkRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
 
     if (!equipmentData.image) {
-        throw new Error(
-            'Favor preencher corretamente o link da imagem do equipamento!'
-        );
+        throw new Error('Favor preencher corretamente o link da imagem do equipamento!');
     } else if (typeof equipmentData.image !== 'string') {
-        throw new Error(
-            'O link da imagem do equipamento deve ser uma string válida!'
-        );
+        throw new Error('O link da imagem do equipamento deve ser uma string válida!');
     } else if (equipmentData.image.trim() === '') {
-        throw new Error(
-            'O link da imagem do equipamento não pode ser um campo vazio!'
-        );
+        throw new Error('O link da imagem do equipamento não pode ser um campo vazio!');
     } else if (!imageLinkRegex.test(equipmentData.image)) {
         throw new Error('O link da imagem do equipamento não é válido!');
     }
