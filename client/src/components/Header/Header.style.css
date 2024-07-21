@@ -78,7 +78,7 @@ nav {
     nav .nav_close_btn {
         position: absolute;
         top: 2rem;
-        right: 1rem;
+        right: 2rem;
     }
 
     nav a {
