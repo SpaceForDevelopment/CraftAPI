@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "tsx watch ./src/server.ts",
+        "dev": "tsx watch ./src/index.ts",
         "format": "prettier --write ."
     },
     "keywords": [],
