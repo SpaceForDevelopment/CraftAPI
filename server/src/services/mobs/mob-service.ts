@@ -11,6 +11,7 @@ import { validateMobData } from './mobValidations-service.js';
 export const findAllMobsService = async () => {
     try {
         const mobs = await findAllMobsRepository();
+        mobs.sort((a, b) => a.name.localeCompare(b.name));
         return mobs;
     } catch (error) {
         throw new Error((error as Error).message);

@@ -11,6 +11,7 @@ import { validateOreData } from './oreValidations-service.js';
 export const findAllOresService = async () => {
     try {
         const ores = await findAllOresRepository();
+        ores.sort((a, b) => a.name.localeCompare(b.name));
         return ores;
     } catch (error) {
         throw new Error((error as Error).message);

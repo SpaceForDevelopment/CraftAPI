@@ -11,6 +11,7 @@ import { validateEquipmentData } from './equipmentValidations-service.js';
 export const findAllEquipmentService = async () => {
     try {
         const equipment = await findAllEquipmentRepository();
+        equipment.sort((a, b) => a.name.localeCompare(b.name));
         return equipment;
     } catch (error) {
         throw new Error((error as Error).message);
