@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import './Card.style.css';
+import './ItemCard.style.css';
 
-export function Card({ image, name, type }) {
+export function ItemCard({ image, name, type }) {
     return (
         <section className="card">
             <div>
@@ -14,7 +14,7 @@ export function Card({ image, name, type }) {
     );
 }
 
-Card.propTypes = {
+ItemCard.propTypes = {
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,

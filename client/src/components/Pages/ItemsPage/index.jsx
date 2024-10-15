@@ -1,8 +1,8 @@
 import './ItemsPage.style.css';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from '../Card';
-import { PageTitle } from '../PageTitle';
+import { ItemCard } from '../../Cards/ItemCard';
+import { PageTitle } from '../../Common/PageTitle';
 import PropTypes from 'prop-types';
 
 export function ItemsPage({ subject, singularSubject, pluralSubject }) {
@@ -40,7 +40,7 @@ export function ItemsPage({ subject, singularSubject, pluralSubject }) {
                             to={`/detalhes-${singularSubject}/${item._id}`}
                             className="card_link"
                         >
-                            <Card
+                            <ItemCard
                                 key={item._id}
                                 image={item.image}
                                 name={item.name}

@@ -1,7 +1,7 @@
 import './Home.style.css';
 import { useEffect } from 'react';
-import { ProfileCard } from '../../components/ProfileCard';
-import { PageTitle } from '../../components/PageTitle';
+import { ProfileCard } from '../../components/Cards/ProfileCard';
+import { PageTitle } from '../../components/Common/PageTitle';
 import commandBlockPhoto from '../../assets/images/Home/commandBlock.jpg';
 import arturAvatar from '../../assets/images/Home/artur.png';
 import leticiaAvatar from '../../assets/images/Home/leticia.png';
