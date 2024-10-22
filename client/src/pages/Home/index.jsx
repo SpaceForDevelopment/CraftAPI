@@ -1,10 +1,11 @@
 import './Home.style.css';
 import { useEffect } from 'react';
 import { ProfileCard } from '../../components/Cards/ProfileCard';
-import { PageTitle } from '../../components/Common/PageTitle';
-import commandBlockPhoto from '../../assets/images/Home/commandBlock.jpg';
+// import { PageTitle } from '../../components/Common/PageTitle';
+import commandBlockPhoto from '../../assets/images/Home/commandBlock.png';
 import arturAvatar from '../../assets/images/Home/artur.png';
 import leticiaAvatar from '../../assets/images/Home/leticia.png';
+import Capa from '../../assets/images/Home/Capa.png';
 
 export function Home() {
     useEffect(() => {
@@ -12,8 +13,13 @@ export function Home() {
     }, []);
 
     return (
+        
         <section className="content">
-            <PageTitle title="Sejam bem-vindos!" />
+            <div id="first_section">
+                <img src={Capa} alt="Capa" id="imagem-homepage" />
+            </div>
+
+            {/* <PageTitle title="Sejam bem-vindos!" /> */}
             <div className="presentation_section">
                 <div className="div_content">
                     <p>

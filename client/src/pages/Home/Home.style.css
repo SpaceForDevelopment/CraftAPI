@@ -6,24 +6,40 @@
     flex-direction: column;
 }
 
+#first_section {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+    margin-top: -25vh;
+}
+
+#first_section img {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .presentation_section {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-direction: row;
-    margin: 5vh 0;
+    flex-direction: row-reverse;
+    margin: 10vh 0;
 }
 
 .div_content {
-    width: 58vw;
+    width: 45vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    border-radius: 20px;
-    box-shadow: 3px 3px 10px #c67e4e;
 }
 
 .div_content > p {
@@ -35,7 +51,7 @@
 }
 
 .command_block {
-    width: 25vw;
+    width: 26vw;
 }
 
 .all_cards {
@@ -51,18 +67,29 @@
 .title_developers {
     font-family: 'Minecrafter';
     color: var(--primary-color);
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     margin-top: 5vh;
 }
 
 @media screen and (max-width: 1080px) {
+    #first_section {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -2;
+        margin-top: -5vh;
+    }
+
     .presentation_section {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
+        margin: 2vh 0;
     }
 
     .command_block {
@@ -70,7 +97,7 @@
     }
 
     .div_content {
-        width: 94vw;
+        width: 90vw;
         margin-top: 5vh;
     }
 
