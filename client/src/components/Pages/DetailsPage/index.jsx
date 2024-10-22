@@ -1,7 +1,7 @@
-import './DetailsPage.style.css';
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import './DetailsPage.style.css';
 
 function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');

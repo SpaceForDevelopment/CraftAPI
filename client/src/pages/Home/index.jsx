@@ -1,11 +1,10 @@
-import './Home.style.css';
 import { useEffect } from 'react';
-import { ProfileCard } from '../../components/Cards/ProfileCard';
-// import { PageTitle } from '../../components/Common/PageTitle';
-import commandBlockPhoto from '../../assets/images/Home/commandBlock.png';
 import arturAvatar from '../../assets/images/Home/artur.png';
-import leticiaAvatar from '../../assets/images/Home/leticia.png';
 import Capa from '../../assets/images/Home/Capa.png';
+import commandBlockPhoto from '../../assets/images/Home/commandBlock.png';
+import leticiaAvatar from '../../assets/images/Home/leticia.png';
+import { ProfileCard } from '../../components/Cards/ProfileCard';
+import './Home.style.css';
 
 export function Home() {
     useEffect(() => {
@@ -13,7 +12,6 @@ export function Home() {
     }, []);
 
     return (
-        
         <section className="content">
             <div id="first_section">
                 <img src={Capa} alt="Capa" id="imagem-homepage" />
