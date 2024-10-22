@@ -1,8 +1,8 @@
-import './Page404.style.css';
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { Header } from '../../components/Common/Header';
+import { useNavigate } from 'react-router-dom';
 import { Footer } from '../../components/Common/Footer';
+import { Header } from '../../components/Common/Header';
+import './Page404.style.css';
 
 export function Page404() {
     const navigate = useNavigate();

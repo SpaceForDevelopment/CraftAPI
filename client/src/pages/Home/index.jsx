@@ -1,10 +1,10 @@
-import './Home.style.css';
 import { useEffect } from 'react';
-import { ProfileCard } from '../../components/Cards/ProfileCard';
-import { PageTitle } from '../../components/Common/PageTitle';
-import commandBlockPhoto from '../../assets/images/Home/commandBlock.jpg';
 import arturAvatar from '../../assets/images/Home/artur.png';
+import commandBlockPhoto from '../../assets/images/Home/commandBlock.png';
+import homeImage from '../../assets/images/Home/homeImage.png';
 import leticiaAvatar from '../../assets/images/Home/leticia.png';
+import { ProfileCard } from '../../components/Cards/ProfileCard';
+import './Home.style.css';
 
 export function Home() {
     useEffect(() => {
@@ -13,7 +13,10 @@ export function Home() {
 
     return (
         <section className="content">
-            <PageTitle title="Sejam bem-vindos!" />
+            <div id="first_section">
+                <img src={homeImage} alt="Capa" id="imagem-homepage" />
+            </div>
+
             <div className="presentation_section">
                 <div className="div_content">
                     <p>

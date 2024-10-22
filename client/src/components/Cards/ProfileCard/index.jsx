@@ -1,8 +1,8 @@
-import './ProfileCard.style.css';
-import { FaGithub } from 'react-icons/fa6';
+import PropTypes from 'prop-types';
 import { BsGlobe } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
-import PropTypes from 'prop-types';
+import { FaGithub } from 'react-icons/fa6';
+import './ProfileCard.style.css';
 
 export function ProfileCard({ profilePhoto, name, githubLink, portfolioLink, linkedinLink }) {
     return (

@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import './Header.style.css';
-import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { GrAppsRounded } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
+import './Header.style.css';
 
 export function Header() {
     const navRef = useRef(null);

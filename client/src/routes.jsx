@@ -1,14 +1,14 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { BasePage } from './pages/BasePage';
-import { Home } from './pages/Home';
-import { Mobs } from './pages/Mobs';
-import { MobDetails } from './pages/MobDetails';
 import { Equipment } from './pages/Equipment';
 import { EquipmentDetails } from './pages/EquipmentDetails';
-import { Ores } from './pages/Ores';
+import { Home } from './pages/Home';
+import { MobDetails } from './pages/MobDetails';
+import { Mobs } from './pages/Mobs';
 import { OreDetails } from './pages/OreDetails';
-import { TermsOfService } from './pages/TermsOfService';
+import { Ores } from './pages/Ores';
 import { Page404 } from './pages/Page404';
+import { TermsOfService } from './pages/TermsOfService';
 
 export function AppRoutes() {
     return (

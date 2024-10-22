@@ -1,9 +1,9 @@
-import './ItemsPage.style.css';
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ItemCard } from '../../Cards/ItemCard';
 import { PageTitle } from '../../Common/PageTitle';
-import PropTypes from 'prop-types';
+import './ItemsPage.style.css';
 
 export function ItemsPage({ subject, singularSubject, pluralSubject }) {
     const [apiData, setApiData] = useState([]);
