@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import arturAvatar from '../../assets/images/Home/artur.png';
-import Capa from '../../assets/images/Home/Capa.png';
 import commandBlockPhoto from '../../assets/images/Home/commandBlock.png';
+import homeImage from '../../assets/images/Home/homeImage.png';
 import leticiaAvatar from '../../assets/images/Home/leticia.png';
 import { ProfileCard } from '../../components/Cards/ProfileCard';
 import './Home.style.css';
@@ -14,10 +14,9 @@ export function Home() {
     return (
         <section className="content">
             <div id="first_section">
-                <img src={Capa} alt="Capa" id="imagem-homepage" />
+                <img src={homeImage} alt="Capa" id="imagem-homepage" />
             </div>
 
-            {/* <PageTitle title="Sejam bem-vindos!" /> */}
             <div className="presentation_section">
                 <div className="div_content">
                     <p>
